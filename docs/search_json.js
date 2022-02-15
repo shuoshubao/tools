@@ -146,9 +146,19 @@ window.ydoc_plugin_search_json = {
   "更新日志": [
     {
       "title": "Change Log0.2.0 (2021-03-22)",
-      "content": "All notable changes to this project will be documented in this file. See Conventional Commits for commit guidelines.",
+      "content": "All notable changes to this project will be documented in this file.See Conventional Commits for commit guidelines.",
       "url": "/CHANGELOG.html",
       "children": [
+        {
+          "title": "0.2.14 (2022-02-15)",
+          "url": "/CHANGELOG.html#0.2.14-2022-02-15",
+          "content": "0.2.14 (2022-02-15)Note: Version bump only for package @nbfe/tools"
+        },
+        {
+          "title": "0.2.13 (2021-11-23)",
+          "url": "/CHANGELOG.html#0.2.13-2021-11-23",
+          "content": "0.2.13 (2021-11-23)Note: Version bump only for package @nbfe/tools"
+        },
         {
           "title": "0.2.12 (2021-11-17)",
           "url": "/CHANGELOG.html#0.2.12-2021-11-17",
@@ -157,7 +167,7 @@ window.ydoc_plugin_search_json = {
         {
           "title": "Features",
           "url": "/CHANGELOG.html#0.2.12-2021-11-17-features",
-          "content": "Features增加方法 getTooltipHtml; 转换简写的链接 (3a5cdf6)\n"
+          "content": "Features增加方法getTooltipHtml; 转换简写的链接 (3a5cdf6)\n"
         },
         {
           "title": "0.2.11 (2021-10-29)",
@@ -192,7 +202,7 @@ window.ydoc_plugin_search_json = {
         {
           "title": "Bug Fixes",
           "url": "/CHANGELOG.html#0.2.8-2021-08-11-bug-fixes",
-          "content": "Bug Fixes写错了 padding 未生效 (80d372e)\n移除方法 convertObjectToArray,convertArrayToObject; 增加注释 (9e98752)\nisIPhoneX 判断 (cbea1f7)\nlodash 中有 isNil 方法 (f63bacc)\nmin max 增加第一个参数 label (efa1529)\nzh_CN.js 更名 moment.js (cb564ba)\n"
+          "content": "Bug Fixes写错了 padding未生效 (80d372e)\n移除方法convertObjectToArray,convertArrayToObject; 增加注释 (9e98752)\nisIPhoneX 判断 (cbea1f7)\nlodash中有isNil方法 (f63bacc)\nmin max 增加第一个参数 label (efa1529)\nzh_CN.js 更名 moment.js (cb564ba)\n"
         },
         {
           "title": "0.2.7 (2021-07-28)",
@@ -257,7 +267,7 @@ window.ydoc_plugin_search_json = {
         {
           "title": "Features",
           "url": "/CHANGELOG.html#0.2.2-2021-07-26-features",
-          "content": "Featuresua 相关的判断变成方法, 避免直接调用 (88d835f)\n"
+          "content": "Featuresua相关的判断变成方法, 避免直接调用 (88d835f)\n"
         },
         {
           "title": "0.2.1 (2021-05-24)",
@@ -287,7 +297,7 @@ window.ydoc_plugin_search_json = {
         {
           "title": "Bug Fixes",
           "url": "/CHANGELOG.html#0.1.11-2021-01-26-bug-fixes",
-          "content": "Bug FixesupdateUrlQuery 取 query 错误 (8dd24ce)\n"
+          "content": "Bug FixesupdateUrlQuery 取query错误 (8dd24ce)\n"
         },
         {
           "title": "0.1.10 (2021-01-22)",
@@ -302,7 +312,7 @@ window.ydoc_plugin_search_json = {
         {
           "title": "Features",
           "url": "/CHANGELOG.html#0.1.10-2021-01-22-features",
-          "content": "FeaturesparseUrl 返回 origin 和 hostname (2a36942)\n"
+          "content": "FeaturesparseUrl 返回origin 和 hostname (2a36942)\n"
         },
         {
           "title": "0.1.9 (2021-01-20)",
