@@ -1,15 +1,15 @@
 /*!
-* @nbfe/tools v0.2.12
-* (c) 2019-2021 shuoshubao <759979885@qq.com>
+* @nbfe/tools v0.2.14
+* (c) 2019-2022 shuoshubao <759979885@qq.com>
 * Released under the ISC License.
 */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('lodash')) :
     typeof define === 'function' && define.amd ? define(['exports', 'lodash'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.tools = {}, global.lodash));
-}(this, (function (exports, lodash) { 'use strict';
+})(this, (function (exports, lodash) { 'use strict';
 
-    var version = "0.2.12";
+    var version = "0.2.14";
 
     var Pagination = {
       // Options.jsx
@@ -2386,7 +2386,9 @@
       }
 
       return String(emptyText);
-    };
+    }; // 自闭合标签
+
+    var voidHtmlTags = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'menuitem', 'meta', 'param', 'source', 'track', 'wbr'];
     var attrKeyAlias = {
       className: 'class'
     };
@@ -3104,7 +3106,8 @@
     exports.trimAll = trimAll;
     exports.updateUrlQuery = updateUrlQuery;
     exports.version = version;
+    exports.voidHtmlTags = voidHtmlTags;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
