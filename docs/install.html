@@ -42,15 +42,9 @@
           <nav class="m-header-nav js-nav">
             <ul class="m-header-items">
               <li class="item active"><a class="href" href="">使用</a></li>
-              <li class="item">
-                <a class="href" href="documents/date.html">文档</a>
-              </li>
-              <li class="item">
-                <a class="href" href="CONTRIBUTING.html">贡献指南</a>
-              </li>
-              <li class="item">
-                <a class="href" href="CHANGELOG.html">更新日志</a>
-              </li>
+              <li class="item"><a class="href" href="documents/date.html">文档</a></li>
+              <li class="item"><a class="href" href="CONTRIBUTING.html">贡献指南</a></li>
+              <li class="item"><a class="href" href="CHANGELOG.html">更新日志</a></li>
             </ul>
           </nav>
           <div id="js-nav-btn" class="m-header-btn ui-font-ydoc"></div>
@@ -64,9 +58,7 @@
             <pre><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> search<span class="token punctuation">,</span> getLabelByValue<span class="token punctuation">,</span> classNames<span class="token punctuation">,</span> copyText <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nbfe/tools'</span><span class="token punctuation">;</span>
 </code></pre>
             <h1>调试</h1>
-            <p>
-              本文档为了方便调试, 特地将工具包打包成 umd 模式, 直接注入到了页面中, 挂载到了 windows.tools
-            </p>
+            <p>本文档为了方便调试, 特地将工具包打包成 umd 模式, 直接注入到了页面中, 挂载到了 windows.tools</p>
             <p>
               你可以直接打开浏览器控制台, 输入
               <code>Object.keys(tools)</code>
@@ -142,7 +134,7 @@
     <script src="https://file.ljcdn.com/bs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
-    <script src="https://shuoshubao.github.io/tools/assets/js/index.umd.js"></script>
+    <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
     <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="search_json.js"></script>
