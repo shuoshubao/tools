@@ -1,61 +1,1258 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="UTF-8"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"/><link href="https://github.githubassets.com/favicons/favicon.png" type="image/x-icon" rel="shortcut icon"/><meta name="theme-color" content="#ffffff"/><meta http-equiv="Cache-Control" content="no-transform"/><meta http-equiv="Cache-Control" content="no-siteapp"/><title>文档</title><link rel="stylesheet" href="../ydoc/styles/style.css"/><meta name="author" content="shuoshubao"/><meta name="keywords"/><meta name="description" content="工具库"/><meta id="releativePath" content=".."/><link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css"/><link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css"/><link rel="stylesheet" href="../../../../../../../../../assets/css/site.css"/><link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css"/></head><body><div class="g-doc"><div class="m-aside"><div class="m-summary" id="js-menu"><div class="m-summary-content" id="js-menu-content"><div class="m-summary-block"><ul class="m-summary-list"><li class="item"><div class="m-summary-block"><a href="date.html" class="href">日期</a><ul class="m-summary-list indent"><li class="item"><a href="date.html#formattime" class="href">formatTime</a></li><li class="item"><a href="date.html#definemomentlocalezhcn" class="href">defineMomentLocaleZhCn</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="enum.html" class="href">枚举</a><ul class="m-summary-list indent"><li class="item"><a href="enum.html#getlabelbyvalue" class="href">getLabelByValue</a></li><li class="item"><a href="enum.html#convertjsontoenum" class="href">convertJsonToEnum</a></li><li class="item"><a href="enum.html#getvaluebylabel" class="href">getValueByLabel</a></li><li class="item"><a href="enum.html#convertdatatoenum" class="href">convertDataToEnum</a></li><li class="item"><a href="enum.html#convertdatatocascader" class="href">convertDataToCascader</a></li><li class="item"><a href="enum.html#getvalueincollection" class="href">getValueInCollection</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="route.html" class="href">路由</a><ul class="m-summary-list indent"><li class="item"><a href="route.html#search" class="href">search</a></li><li class="item"><a href="route.html#stringifyurl" class="href">stringifyUrl</a></li><li class="item"><a href="route.html#linkto" class="href">linkTo</a></li><li class="item"><a href="route.html#updateurlquery" class="href">updateUrlQuery</a></li><li class="item"><a href="route.html#getparams" class="href">getParams</a></li><li class="item"><a href="route.html#parseurl" class="href">parseUrl</a></li><li class="item"><a href="route.html#getfullurl" class="href">getFullUrl</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="qs.html" class="href">qs</a><ul class="m-summary-list indent"><li class="item"><a href="qs.html#queryparse" class="href">queryParse</a></li><li class="item"><a href="qs.html#querystringify" class="href">queryStringify</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="decimal.html" class="href">浮点数计算</a><ul class="m-summary-list indent"><li class="item"><a href="decimal.html#plus" class="href">plus</a></li><li class="item"><a href="decimal.html#minus" class="href">minus</a></li><li class="item"><a href="decimal.html#mul" class="href">mul</a></li><li class="item"><a href="decimal.html#div" class="href">div</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="" class="href">DOM操作</a><ul class="m-summary-list indent"><li class="item"><a href="dom.html#classnames" class="href">classNames</a></li><li class="item"><a href="dom.html#download" class="href">download</a></li><li class="item"><a href="dom.html#copytext" class="href">copyText</a></li><li class="item"><a href="dom.html#setattrs" class="href">setAttrs</a></li><li class="item"><a href="dom.html#setstyle" class="href">setStyle</a></li><li class="item"><a href="dom.html#convertcssom" class="href">convertCssom</a></li><li class="item"><a href="dom.html#suffixclassnames" class="href">suffixClassNames</a></li><li class="item"><a href="dom.html#getcsstext" class="href">getCssText</a></li><li class="item"><a href="dom.html#getwordwidth" class="href">getWordWidth</a></li><li class="item"><a href="dom.html#downloadblob" class="href">downloadBlob</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="rules.html" class="href">表单校验</a><ul class="m-summary-list indent"><li class="item"><a href="rules.html#rules" class="href">rules</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="types.html" class="href">类型</a><ul class="m-summary-list indent"><li class="item"><a href="types.html#isemptyvalue" class="href">isEmptyValue</a></li><li class="item"><a href="types.html#isemptyarray" class="href">isEmptyArray</a></li><li class="item"><a href="types.html#isemptyobject" class="href">isEmptyObject</a></li><li class="item"><a href="types.html#isemptystring" class="href">isEmptyString</a></li><li class="item"><a href="types.html#iseverytruthy" class="href">isEveryTruthy</a></li><li class="item"><a href="types.html#iseveryfalsy" class="href">isEveryFalsy</a></li><li class="item"><a href="types.html#isuniq" class="href">isUniq</a></li><li class="item"><a href="types.html#ispromise" class="href">isPromise</a></li><li class="item"><a href="types.html#isblob" class="href">isBlob</a></li><li class="item"><a href="types.html#issometruthy" class="href">isSomeTruthy</a></li><li class="item"><a href="types.html#issomefalsy" class="href">isSomeFalsy</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="memoize.html" class="href">缓存</a><ul class="m-summary-list indent"><li class="item"><a href="memoize.html#memoize" class="href">memoize</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="dev.html" class="href">调试</a><ul class="m-summary-list indent"><li class="item"><a href="dev.html#sleep" class="href">sleep</a></li><li class="item"><a href="dev.html#fakefetch" class="href">fakeFetch</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="data.html" class="href">数据</a><ul class="m-summary-list indent"><li class="item"><a href="data.html#reserveproperties" class="href">reserveProperties</a></li><li class="item"><a href="data.html#removeproperties" class="href">removeProperties</a></li><li class="item"><a href="data.html#removeemptyproperties" class="href">removeEmptyProperties</a></li><li class="item"><a href="data.html#produceemptyobject" class="href">produceEmptyObject</a></li><li class="item"><a href="data.html#formatemptytodefault" class="href">formatEmptyToDefault</a></li><li class="item"><a href="data.html#booleanpromise" class="href">booleanPromise</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="react.html" class="href">React</a><ul class="m-summary-list indent"><li class="item"><a href="react.html#setasyncstate" class="href">setAsyncState</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="vue.html" class="href">Vue</a><ul class="m-summary-list indent"><li class="item"><a href="vue.html#pifyvalidate" class="href">pifyValidate</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="formatters.html" class="href">文本格式化</a><ul class="m-summary-list indent"><li class="item"><a href="formatters.html#formatters" class="href">formatters</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="numeral.html" class="href">数值</a><ul class="m-summary-list indent"><li class="item"><a href="numeral.html#thousands" class="href">thousands</a></li><li class="item"><a href="numeral.html#getvalueinrange" class="href">getValueInRange</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="html.html" class="href">Html字符串</a><ul class="m-summary-list indent"><li class="item"><a href="html.html#getpercentagehtml" class="href">getPercentageHtml</a></li><li class="item"><a href="html.html#createelement" class="href">createElement</a></li><li class="item"><a href="html.html#gettooltiphtml" class="href">getTooltipHtml</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="string.html" class="href">字符串处理</a><ul class="m-summary-list indent"><li class="item"><a href="string.html#trimall" class="href">trimAll</a></li><li class="item"><a href="string.html#pascalcase" class="href">pascalCase</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="ua.html" class="href">UA</a><ul class="m-summary-list indent"><li class="item"><a href="ua.html#isandroid" class="href">isAndroid</a></li><li class="item"><a href="ua.html#isios" class="href">isIOS</a></li><li class="item"><a href="ua.html#isiphone" class="href">isIPhone</a></li><li class="item"><a href="ua.html#isiphonex" class="href">isIPhoneX</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="image.html" class="href">图片</a><ul class="m-summary-list indent"><li class="item"><a href="image.html#getimagesize" class="href">getImageSize</a></li><li class="item"><a href="image.html#changeimageurltobase64" class="href">changeImageUrlToBase64</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="file.html" class="href">文件</a><ul class="m-summary-list indent"><li class="item"><a href="file.html#b64toblob" class="href">b64toBlob</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="Uint8Array.html" class="href">Uint8Array</a><ul class="m-summary-list indent"><li class="item"><a href="Uint8Array.html#utf8arraytostring" class="href">Utf8ArrayToString</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="antd-locale.html" class="href">antd-locale</a><ul class="m-summary-list indent"><li class="item"><a href="antd-locale.html#getantdlocalezhcn" class="href">getAntdLocaleZhCN</a></li></ul></div></li></ul></div></div></div><div class="m-summary-switch" id="js-summary-switch"><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="bottom"><g transform="translate(904.92214,-879.1482)"><path d="m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,-55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,-174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,-174.68583 0.6895,0 26.281,25.03215 56.8701,55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864-231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,-104.0616 -231.873,-231.248 z" fill="#fff"></path></g></svg><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="top"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="aaa" fill="#fff" fill-rule="nonzero"><path d="M231.2455,342.502 L0,111.25397 L55.6165,55.62697 C86.2056,25.03212 111.7971,-2.99999998e-05 112.4866,-2.99999998e-05 C113.176,-2.99999998e-05 192.3503,78.60859 288.4293,174.6858 L463.1185,349.3716 L637.8077,174.6858 C733.8867,78.60859 813.060896,-2.99999997e-05 813.750396,-2.99999997e-05 C814.439896,-2.99999997e-05 840.031396,25.03212 870.620496,55.62697 L926.236996,111.25397 L694.9915,342.502 C567.8065,469.6884 463.4636,573.75 463.1185,573.75 C462.7734,573.75 358.4305,469.6884 231.2455,342.502 Z" id="Shape" transform="translate(463.118498, 286.874985) scale(1, -1) translate(-463.118498, -286.874985) "></path></g></g></svg></div></div><div class="m-main" id="js-panel"><header class="m-header" id="js-header"><div class="m-header-title js-logo"><a href="../index.html" target="_self"><img class="logo" width="36" src="https://github.githubassets.com/favicons/favicon.png"/><h6 class="name">工具库</h6></a></div><div><div class="m-search">
-      <div class="icon">&#xf0fd;</div>
-      <input type="text" class="input js-input" placeholder="搜索" />
-      <div class="m-search-result js-search-result"></div>
-    </div></div><nav class="m-header-nav js-nav"><ul class="m-header-items"><li class="item "><a class="href" href="../install.html">使用</a></li><li class="item active"><a class="href" href="date.html">文档</a></li><li class="item "><a class="href" href="../CONTRIBUTING.html">贡献指南</a></li><li class="item "><a class="href" href="../CHANGELOG.html">更新日志</a></li></ul></nav><div id="js-nav-btn" class="m-header-btn ui-font-ydoc"></div></header><div class="m-content" id="js-content"><div id="markdown-body" class="m-content-container markdown-body"><div><div id="classnames" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">classNames(...args)</div></div><div class="item-method-content"><div>classNames</div><h4>See</h4><a href="https://www.npmjs.com/package/classnames" target="_blank" style="color: #1890ff;">https://www.npmjs.com/package/classnames</a><h4>Arguments</h4><div><strong style="color: #1890ff;">args</strong><strong style="color: #1890ff;"> (...*)</strong><span>: 每个className的描述</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: className 字符串</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="classNames" data-example="120,156,139,86,74,206,73,44,46,246,75,204,77,45,214,80,79,203,207,87,215,81,80,79,74,44,82,215,140,201,211,215,87,176,181,83,0,9,42,128,68,148,116,176,168,173,6,73,89,41,148,20,149,166,42,212,18,210,83,13,150,208,5,73,96,213,162,75,64,75,90,98,78,49,138,30,12,197,64,181,48,147,73,118,27,92,175,14,1,125,177,0,220,71,95,182"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">classNames</span>(<span class="hljs-string">&#x27;foo&#x27;</span>, <span class="hljs-string">&#x27;bar&#x27;</span>)
-<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre><pre><code><span class="hljs-title function_">classNames</span>(<span class="hljs-string">&#x27;foo&#x27;</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-literal">true</span> })
-<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre><pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-string">&#x27;foo-bar&#x27;</span>: <span class="hljs-literal">true</span> })
-<span class="hljs-comment">// =&gt; &#x27;foo-bar&#x27;</span></code></pre><pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-string">&#x27;foo-bar&#x27;</span>: <span class="hljs-literal">false</span> })
-<span class="hljs-comment">// =&gt; &#x27;&#x27;</span></code></pre><pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-attr">foo</span>: <span class="hljs-literal">true</span> }, { <span class="hljs-attr">bar</span>: <span class="hljs-literal">true</span> })
-<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre><pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-attr">foo</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">bar</span>: <span class="hljs-literal">true</span> })
-<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre></div></div>
-<div><div id="download" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">download(url = '', config = {})</div></div><div class="item-method-content"><div>下载文件</div><h4>Arguments</h4><div><strong style="color: #1890ff;">url</strong><strong style="color: #1890ff;"> (<code>String</code>)</strong><span>: [description]</span></div><div><strong style="color: #1890ff;">config</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: [description]</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(*)</strong><span>: undefined</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="download" data-example="120,156,139,86,74,201,47,207,203,201,79,76,209,80,207,40,41,41,40,182,210,215,79,207,44,201,40,77,210,131,80,137,197,197,169,37,197,122,201,249,185,250,105,137,101,153,201,249,121,197,48,134,94,65,94,186,186,142,66,181,2,204,8,43,5,117,152,20,144,80,87,168,213,140,201,211,215,87,176,181,83,120,182,181,255,197,242,142,167,51,87,60,217,209,253,98,239,222,103,211,218,159,236,222,166,20,11,0,184,124,52,1"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">download</span>(<span class="hljs-string">&#x27;https://github.githubassets.com/favicons/favicon.png&#x27;</span>, { <span class="hljs-attr">download</span>: <span class="hljs-string">&#x27;favicon.ico&#x27;</span> })
-<span class="hljs-comment">// =&gt; 浏览器下载文件</span></code></pre></div></div>
-<div><div id="copytext" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">copyText(text = '')</div></div><div class="item-method-content"><div>复制文本</div><h4>Arguments</h4><div><strong style="color: #1890ff;">element</strong><strong style="color: #1890ff;"> (*)</strong><span>: [description]</span></div><div><strong style="color: #1890ff;">attrs</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: [description]</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(*)</strong><span>: undefined</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="copyText" data-example="120,156,139,86,74,206,47,168,12,73,173,40,209,80,79,76,74,86,215,140,201,211,215,87,176,181,83,120,186,164,247,105,199,182,167,109,173,79,215,237,124,218,177,225,249,166,25,47,182,108,121,54,119,191,146,14,170,142,152,152,60,67,35,99,34,244,197,2,0,38,153,51,227"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">copyText</span>(<span class="hljs-string">&#x27;abc&#x27;</span>)
-<span class="hljs-comment">// =&gt; 复制内容到粘贴板</span></code></pre><pre><code><span class="hljs-title function_">copyText</span>(<span class="hljs-string">&#x27;abc\n123&#x27;</span>)
-<span class="hljs-comment">// =&gt; 复制内容到粘贴板</span></code></pre></div></div>
-<div><div id="setattrs" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">setAttrs(element, attrs = {})</div></div><div class="item-method-content"><div>给元素批量设置属性</div><h4>Arguments</h4><div><strong style="color: #1890ff;">element</strong><strong style="color: #1890ff;"> (<code>HTMLElement</code>)</strong><span>: dom元素</span></div><div><strong style="color: #1890ff;">[attrs]</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: 属性</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(*)</strong><span>: undefined</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="setAttrs" data-example="120,156,139,86,42,78,45,113,44,41,41,42,214,72,117,201,44,211,81,168,86,200,76,177,82,48,212,81,72,206,73,44,46,182,82,80,79,76,74,86,87,168,213,140,201,211,215,87,176,181,83,176,73,201,44,3,42,177,141,81,50,140,81,130,40,2,178,129,138,98,148,236,108,244,129,146,118,74,177,0,103,86,25,180"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">setAttrs</span>(eDiv, { <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">class</span>: <span class="hljs-string">&#x27;abc&#x27;</span> })
-<span class="hljs-comment">// =&gt; &lt;div id=&quot;1&quot; class=&quot;abc&quot;&gt;&lt;/div&gt;</span></code></pre></div></div>
-<div><div id="setstyle" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">setStyle(element, cssom)</div></div><div class="item-method-content"><div>给元素批量设置样式</div><h4>Arguments</h4><div><strong style="color: #1890ff;">element</strong><strong style="color: #1890ff;"> (<code>HTMLElement</code>)</strong><span>: dom元素</span></div><div><strong style="color: #1890ff;">cssom</strong><strong style="color: #1890ff;"> (<code>StyleSheet</code>)</strong><span>: cssom</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(*)</strong><span>: undefined</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="setStyle" data-example="120,156,139,86,42,78,45,9,46,169,204,73,213,72,117,201,44,211,81,168,86,40,207,76,41,201,176,82,48,52,48,208,81,72,206,207,201,47,178,82,80,47,74,77,81,87,168,213,140,201,211,215,87,176,181,83,176,73,201,44,83,40,6,233,178,141,81,66,168,47,168,176,134,233,0,106,176,142,81,178,179,209,7,170,180,83,138,5,0,170,53,32,99"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">setStyle</span>(eDiv, { <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;red&#x27;</span> })
-<span class="hljs-comment">// =&gt; &lt;div style=&quot;width: 100px; color: red;&quot;&gt;&lt;/div&gt;</span></code></pre></div></div>
-<div><div id="convertcssom" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">convertCssom(cssom = {})</div></div><div class="item-method-content"><div>给cssom加上单位px</div><h4>Arguments</h4><div><strong style="color: #1890ff;">[cssom]</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: [description]</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>Object</code>)</strong><span>: 带有'px'单位的 cssom</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="convertCssom" data-example="120,156,139,86,74,206,207,43,75,45,42,113,46,46,206,207,213,168,86,40,207,76,41,201,176,82,48,52,48,208,81,200,72,205,76,207,40,177,82,48,50,48,80,168,213,140,201,211,215,87,176,181,83,128,171,81,7,42,42,168,80,71,168,83,55,2,11,40,212,42,233,224,51,54,55,51,207,3,170,3,194,79,44,74,207,204,11,201,47,0,241,117,20,10,18,83,82,50,243,210,157,242,75,74,242,115,65,66,120,237,86,7,154,166,11,113,128,58,138,48,216,80,221,146,252,2,136,48,68,20,106,182,110,18,216,112,184,12,208,197,177,0,211,116,81,34"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">convertCssom</span>({ <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">200</span> })
-<span class="hljs-comment">// =&gt; { width: &#x27;100px&#x27;, height: &#x27;200px&#x27; }</span></code></pre><pre><code><span class="hljs-title function_">convertCssom</span>({ <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">minHeight</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">marginTop</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">paddingBottom</span>: <span class="hljs-number">10</span> })
-<span class="hljs-comment">// =&gt; { width: &#x27;100px&#x27;, &#x27;min-height&#x27;: &#x27;100px&#x27;, &#x27;margin-top&#x27;: &#x27;10px&#x27;, &#x27;padding-bottom&#x27;: &#x27;10px&#x27; }</span></code></pre></div></div>
-<div><div id="suffixclassnames" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">suffixClassNames(baseClassName = '', suffixConfig = {}, config = {})</div></div><div class="item-method-content"><div>给 className 加后缀<br><br>适用于开发组件库时, 给className加作用域</div><h4>Arguments</h4><div><strong style="color: #1890ff;">[baseClassName='']</strong><strong style="color: #1890ff;"> (<code>String</code>)</strong><span>: 基准 ClassName</span></div><div><strong style="color: #1890ff;">[suffixConfig={}]</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: classNames 对象</span></div><div><strong style="color: #1890ff;">[config={separator: '-'}]</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: classNames 对象</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: className 字符串</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="suffixClassNames" data-example="120,156,139,86,42,46,77,75,203,172,112,206,73,44,46,246,75,204,77,45,214,80,47,73,76,202,73,85,215,81,168,86,72,202,47,74,73,45,74,77,177,82,40,41,42,77,213,81,40,206,72,76,201,47,183,82,72,75,204,41,78,85,168,213,140,201,211,215,87,176,181,83,128,104,81,0,147,186,48,77,234,74,177,0,19,195,32,20"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">suffixClassNames</span>(<span class="hljs-string">&#x27;table&#x27;</span>, { <span class="hljs-attr">bordered</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">shadow</span>: <span class="hljs-literal">false</span> })
-<span class="hljs-comment">// =&gt; &#x27;table table-bordered&#x27;</span></code></pre></div></div>
-<div><div id="getcsstext" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">getCssText(cssom = {})</div></div><div class="item-method-content"><div>获取 cssText</div><h4>Arguments</h4><div><strong style="color: #1890ff;">cssom</strong><strong style="color: #1890ff;"> (<code>StyleSheet</code>)</strong><span>: cssom</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: cssText 字符串</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="getCssText" data-example="120,156,139,86,74,79,45,113,46,46,14,73,173,40,209,168,86,40,207,76,41,201,176,82,48,52,48,208,81,72,206,207,201,47,178,82,80,47,74,77,81,87,168,213,140,201,211,215,87,176,181,83,80,71,168,41,168,176,134,169,2,42,178,86,87,138,5,0,236,15,24,91"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">getCssText</span>({ <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;red&#x27;</span> })
-<span class="hljs-comment">// =&gt; &#x27;width: 100px; color: red;&#x27;</span></code></pre></div></div>
-<div><div id="getwordwidth" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">getWordWidth(word = '', cssom = {})</div></div><div class="item-method-content"><div>获取字符串在浏览器中所占的长度</div><h4>Arguments</h4><div><strong style="color: #1890ff;">word</strong><strong style="color: #1890ff;"> (<code>String</code>)</strong><span>: 字符串</span></div><div><strong style="color: #1890ff;">cssom</strong><strong style="color: #1890ff;"> (<code>StyleSheet</code>)</strong><span>: cssom</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>Number</code>)</strong><span>: 字符串在浏览器中所占的长度</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="getWordWidth" data-example="120,156,139,86,74,79,45,9,207,47,74,9,207,76,41,201,208,80,127,58,123,246,147,29,171,158,109,236,124,186,118,186,186,102,76,158,190,190,130,173,157,130,169,153,146,14,154,66,136,146,196,164,100,67,35,99,132,66,115,11,165,88,0,163,200,31,178"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">getWordWidth</span>(<span class="hljs-string">&#x27;四个汉字&#x27;</span>)
-<span class="hljs-comment">// =&gt; 56</span></code></pre><pre><code><span class="hljs-title function_">getWordWidth</span>(<span class="hljs-string">&#x27;汉字abc123&#x27;</span>)
-<span class="hljs-comment">// =&gt; 78</span></code></pre></div></div>
-<div><div id="downloadblob" class="item-method-name" style="margin-top: -65px; padding-top: 65px;"><div class="item-method-name-area">downloadBlob(blob, options = {})</div></div><div class="item-method-content"><div>下载 blob</div><h4>Arguments</h4><div><strong style="color: #1890ff;">blob</strong><strong style="color: #1890ff;"> (*)</strong><span>: blob数据</span></div><div><strong style="color: #1890ff;">[options]</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: a链接的属性</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(*)</strong><span>: undefined</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="downloadBlob" data-example="120,156,139,86,74,201,47,207,203,201,79,76,113,202,201,79,210,72,2,18,46,137,37,137,58,10,213,10,48,9,43,5,245,148,212,220,124,189,130,188,116,117,133,90,205,152,60,125,125,5,91,59,133,103,91,251,95,44,239,120,58,115,197,147,29,221,47,246,238,125,54,173,253,201,238,109,74,177,0,224,230,35,5"><svg viewbox="64 64 896 896" focusable="false" data-icon="code-sandbox" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/></svg></i></h4><div style="display: none;">暂无</div><pre><code><span class="hljs-title function_">downloadBlob</span>(blobData, { <span class="hljs-attr">download</span>: <span class="hljs-string">&#x27;demo.png&#x27;</span> })
-<span class="hljs-comment">// =&gt; 浏览器下载文件</span></code></pre></div></div></div><div class="m-content-container m-paging"><div class="m-paging-prev m-paging-item"><a href="decimal.html" class="href"><span class="ui-font-ydoc"></span>浮点数计算</a></div><div class="m-paging-next m-paging-item"><a href="rules.html" class="href">表单校验<span class="ui-font-ydoc"></span></a></div></div></div></div></div><div></div><script>
-    var $content = document.getElementById('js-content');
-    var $summaryItems = Array.prototype.slice.call(document.querySelectorAll('#js-menu .href'));
-    var $menu = document.getElementById('js-menu');
-    if (sessionStorage.prevPathname) {
-      sessionStorage.setItem('prevPrevPathname', sessionStorage.prevPathname);
-      sessionStorage.setItem('prevPrevMenuScrollTop', sessionStorage.prevMenuScrollTop);
-      sessionStorage.setItem('prevPrevContentScrollTop', sessionStorage.prevContentScrollTop);
-    }
-    if (sessionStorage.locationPathname) {
-      sessionStorage.setItem('prevPathname', sessionStorage.locationPathname);
-      sessionStorage.setItem('prevMenuScrollTop', sessionStorage.menuScrollTop);
-      sessionStorage.setItem('prevContentScrollTop', sessionStorage.contentScrollTop);
-    }
-    if ($menu && sessionStorage.menuScrollTop) {
-		  $menu.scrollTop = sessionStorage.menuScrollTop;
-    }
-    // 刷新页面但不切换 pathname 的时候，内容区恢复到记忆的高度
-    if ($content && sessionStorage.contentScrollTop && window.location.pathname == sessionStorage.locationPathname) {
-      $content.scrollTop = sessionStorage.contentScrollTop;
-    } else if (sessionStorage.prevPrevPathname && sessionStorage.prevPrevPathname === window.location.pathname) {
-      if ($menu && sessionStorage.prevPrevMenuScrollTop) {
-        $menu.scrollTop = sessionStorage.prevPrevMenuScrollTop;
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link
+      href="https://github.githubassets.com/favicons/favicon.png"
+      type="image/x-icon"
+      rel="shortcut icon"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>文档</title>
+    <link rel="stylesheet" href="../ydoc/styles/style.css" />
+    <meta name="author" content="shuoshubao" />
+    <meta name="keywords" />
+    <meta name="description" content="工具库" />
+    <meta id="releativePath" content=".." />
+    <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
+    <link
+      rel="stylesheet"
+      href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://shuoshubao.github.io/tools/assets/css/site.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/highlight.js@latest/styles/vs2015.css"
+    />
+  </head>
+  <body>
+    <div class="g-doc">
+      <div class="m-aside">
+        <div class="m-summary" id="js-menu">
+          <div class="m-summary-content" id="js-menu-content">
+            <div class="m-summary-block">
+              <ul class="m-summary-list">
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="date.html" class="href">日期</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="date.html#formattime" class="href"
+                          >formatTime</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="date.html#definemomentlocalezhcn" class="href"
+                          >defineMomentLocaleZhCn</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="enum.html" class="href">枚举</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="enum.html#getlabelbyvalue" class="href"
+                          >getLabelByValue</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="enum.html#convertjsontoenum" class="href"
+                          >convertJsonToEnum</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="enum.html#getvaluebylabel" class="href"
+                          >getValueByLabel</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="enum.html#convertdatatoenum" class="href"
+                          >convertDataToEnum</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="enum.html#convertdatatocascader" class="href"
+                          >convertDataToCascader</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="enum.html#getvalueincollection" class="href"
+                          >getValueInCollection</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="route.html" class="href">路由</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="route.html#search" class="href">search</a>
+                      </li>
+                      <li class="item">
+                        <a href="route.html#stringifyurl" class="href"
+                          >stringifyUrl</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="route.html#linkto" class="href">linkTo</a>
+                      </li>
+                      <li class="item">
+                        <a href="route.html#updateurlquery" class="href"
+                          >updateUrlQuery</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="route.html#getparams" class="href"
+                          >getParams</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="route.html#parseurl" class="href">parseUrl</a>
+                      </li>
+                      <li class="item">
+                        <a href="route.html#getfullurl" class="href"
+                          >getFullUrl</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="qs.html" class="href">qs</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="qs.html#queryparse" class="href">queryParse</a>
+                      </li>
+                      <li class="item">
+                        <a href="qs.html#querystringify" class="href"
+                          >queryStringify</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="decimal.html" class="href">浮点数计算</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="decimal.html#plus" class="href">plus</a>
+                      </li>
+                      <li class="item">
+                        <a href="decimal.html#minus" class="href">minus</a>
+                      </li>
+                      <li class="item">
+                        <a href="decimal.html#mul" class="href">mul</a>
+                      </li>
+                      <li class="item">
+                        <a href="decimal.html#div" class="href">div</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="" class="href">DOM操作</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="dom.html#classnames" class="href"
+                          >classNames</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#download" class="href">download</a>
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#copytext" class="href">copyText</a>
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#setattrs" class="href">setAttrs</a>
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#setstyle" class="href">setStyle</a>
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#convertcssom" class="href"
+                          >convertCssom</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#suffixclassnames" class="href"
+                          >suffixClassNames</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#getcsstext" class="href"
+                          >getCssText</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#getwordwidth" class="href"
+                          >getWordWidth</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="dom.html#downloadblob" class="href"
+                          >downloadBlob</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="rules.html" class="href">表单校验</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="rules.html#rules" class="href">rules</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="types.html" class="href">类型</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="types.html#isemptyvalue" class="href"
+                          >isEmptyValue</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#isemptyarray" class="href"
+                          >isEmptyArray</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#isemptyobject" class="href"
+                          >isEmptyObject</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#isemptystring" class="href"
+                          >isEmptyString</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#iseverytruthy" class="href"
+                          >isEveryTruthy</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#iseveryfalsy" class="href"
+                          >isEveryFalsy</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#isuniq" class="href">isUniq</a>
+                      </li>
+                      <li class="item">
+                        <a href="types.html#ispromise" class="href"
+                          >isPromise</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#isblob" class="href">isBlob</a>
+                      </li>
+                      <li class="item">
+                        <a href="types.html#issometruthy" class="href"
+                          >isSomeTruthy</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="types.html#issomefalsy" class="href"
+                          >isSomeFalsy</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="memoize.html" class="href">缓存</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="memoize.html#memoize" class="href">memoize</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="dev.html" class="href">调试</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="dev.html#sleep" class="href">sleep</a>
+                      </li>
+                      <li class="item">
+                        <a href="dev.html#fakefetch" class="href">fakeFetch</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="data.html" class="href">数据</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="data.html#reserveproperties" class="href"
+                          >reserveProperties</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="data.html#removeproperties" class="href"
+                          >removeProperties</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="data.html#removeemptyproperties" class="href"
+                          >removeEmptyProperties</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="data.html#produceemptyobject" class="href"
+                          >produceEmptyObject</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="data.html#formatemptytodefault" class="href"
+                          >formatEmptyToDefault</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="data.html#booleanpromise" class="href"
+                          >booleanPromise</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="react.html" class="href">React</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="react.html#setasyncstate" class="href"
+                          >setAsyncState</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="vue.html" class="href">Vue</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="vue.html#pifyvalidate" class="href"
+                          >pifyValidate</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="formatters.html" class="href">文本格式化</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="formatters.html#formatters" class="href"
+                          >formatters</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="numeral.html" class="href">数值</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="numeral.html#thousands" class="href"
+                          >thousands</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="numeral.html#getvalueinrange" class="href"
+                          >getValueInRange</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="html.html" class="href">Html字符串</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="html.html#getpercentagehtml" class="href"
+                          >getPercentageHtml</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="html.html#createelement" class="href"
+                          >createElement</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="html.html#gettooltiphtml" class="href"
+                          >getTooltipHtml</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="string.html" class="href">字符串处理</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="string.html#trimall" class="href">trimAll</a>
+                      </li>
+                      <li class="item">
+                        <a href="string.html#pascalcase" class="href"
+                          >pascalCase</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="ua.html" class="href">UA</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="ua.html#isandroid" class="href">isAndroid</a>
+                      </li>
+                      <li class="item">
+                        <a href="ua.html#isios" class="href">isIOS</a>
+                      </li>
+                      <li class="item">
+                        <a href="ua.html#isiphone" class="href">isIPhone</a>
+                      </li>
+                      <li class="item">
+                        <a href="ua.html#isiphonex" class="href">isIPhoneX</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="image.html" class="href">图片</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="image.html#getimagesize" class="href"
+                          >getImageSize</a
+                        >
+                      </li>
+                      <li class="item">
+                        <a href="image.html#changeimageurltobase64" class="href"
+                          >changeImageUrlToBase64</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="file.html" class="href">文件</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="file.html#b64toblob" class="href">b64toBlob</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="Uint8Array.html" class="href">Uint8Array</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="Uint8Array.html#utf8arraytostring" class="href"
+                          >Utf8ArrayToString</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="antd-locale.html" class="href">antd-locale</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a
+                          href="antd-locale.html#getantdlocalezhcn"
+                          class="href"
+                          >getAntdLocaleZhCN</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="m-summary-switch" id="js-summary-switch">
+          <svg
+            viewBox="0 0 926.23699 573.74994"
+            version="1.1"
+            x="0px"
+            y="0px"
+            width="15"
+            height="15"
+            class="bottom"
+          >
+            <g transform="translate(904.92214,-879.1482)">
+              <path
+                d="m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,-55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,-174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,-174.68583 0.6895,0 26.281,25.03215 56.8701,55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864-231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,-104.0616 -231.873,-231.248 z"
+                fill="#fff"
+              ></path>
+            </g></svg
+          ><svg
+            viewBox="0 0 926.23699 573.74994"
+            version="1.1"
+            x="0px"
+            y="0px"
+            width="15"
+            height="15"
+            class="top"
+          >
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g id="aaa" fill="#fff" fill-rule="nonzero">
+                <path
+                  d="M231.2455,342.502 L0,111.25397 L55.6165,55.62697 C86.2056,25.03212 111.7971,-2.99999998e-05 112.4866,-2.99999998e-05 C113.176,-2.99999998e-05 192.3503,78.60859 288.4293,174.6858 L463.1185,349.3716 L637.8077,174.6858 C733.8867,78.60859 813.060896,-2.99999997e-05 813.750396,-2.99999997e-05 C814.439896,-2.99999997e-05 840.031396,25.03212 870.620496,55.62697 L926.236996,111.25397 L694.9915,342.502 C567.8065,469.6884 463.4636,573.75 463.1185,573.75 C462.7734,573.75 358.4305,469.6884 231.2455,342.502 Z"
+                  id="Shape"
+                  transform="translate(463.118498, 286.874985) scale(1, -1) translate(-463.118498, -286.874985) "
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="m-main" id="js-panel">
+        <header class="m-header" id="js-header">
+          <div class="m-header-title js-logo">
+            <a href="../index.html" target="_self"
+              ><img
+                class="logo"
+                width="36"
+                src="https://github.githubassets.com/favicons/favicon.png"
+              />
+              <h6 class="name">工具库</h6></a
+            >
+          </div>
+          <div>
+            <div class="m-search">
+              <div class="icon">&#xf0fd;</div>
+              <input type="text" class="input js-input" placeholder="搜索" />
+              <div class="m-search-result js-search-result"></div>
+            </div>
+          </div>
+          <nav class="m-header-nav js-nav">
+            <ul class="m-header-items">
+              <li class="item">
+                <a class="href" href="../install.html">使用</a>
+              </li>
+              <li class="item active">
+                <a class="href" href="date.html">文档</a>
+              </li>
+              <li class="item">
+                <a class="href" href="../CONTRIBUTING.html">贡献指南</a>
+              </li>
+              <li class="item">
+                <a class="href" href="../CHANGELOG.html">更新日志</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="js-nav-btn" class="m-header-btn ui-font-ydoc"></div>
+        </header>
+        <div class="m-content" id="js-content">
+          <div id="markdown-body" class="m-content-container markdown-body">
+            <div>
+              <div
+                id="classnames"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">classNames(...args)</div>
+              </div>
+              <div class="item-method-content">
+                <div>classNames</div>
+                <h4>See</h4>
+                <a
+                  href="https://www.npmjs.com/package/classnames"
+                  target="_blank"
+                  style="color: #1890ff;"
+                  >https://www.npmjs.com/package/classnames</a
+                >
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">args</strong
+                  ><strong style="color: #1890ff;"> (...*)</strong
+                  ><span>: 每个className的描述</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(<code>String</code>)</strong
+                  ><span>: className 字符串</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="classNames"
+                    data-example="120,156,139,86,74,206,73,44,46,246,75,204,77,45,214,80,79,203,207,87,215,81,80,79,74,44,82,215,140,201,211,215,87,176,181,83,0,9,42,128,68,148,116,176,168,173,6,73,89,41,148,20,149,166,42,212,18,210,83,13,150,208,5,73,96,213,162,75,64,75,90,98,78,49,138,30,12,197,64,181,48,147,73,118,27,92,175,14,1,125,177,0,220,71,95,182"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">classNames</span>(<span class="hljs-string">&#x27;foo&#x27;</span>, <span class="hljs-string">&#x27;bar&#x27;</span>)
+<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre>
+                <pre><code><span class="hljs-title function_">classNames</span>(<span class="hljs-string">&#x27;foo&#x27;</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-literal">true</span> })
+<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre>
+                <pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-string">&#x27;foo-bar&#x27;</span>: <span class="hljs-literal">true</span> })
+<span class="hljs-comment">// =&gt; &#x27;foo-bar&#x27;</span></code></pre>
+                <pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-string">&#x27;foo-bar&#x27;</span>: <span class="hljs-literal">false</span> })
+<span class="hljs-comment">// =&gt; &#x27;&#x27;</span></code></pre>
+                <pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-attr">foo</span>: <span class="hljs-literal">true</span> }, { <span class="hljs-attr">bar</span>: <span class="hljs-literal">true</span> })
+<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre>
+                <pre><code><span class="hljs-title function_">classNames</span>({ <span class="hljs-attr">foo</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">bar</span>: <span class="hljs-literal">true</span> })
+<span class="hljs-comment">// =&gt; &#x27;foo bar&#x27;</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="download"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  download(url = '', config = {})
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>下载文件</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">url</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>String</code>)</strong
+                  ><span>: [description]</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">config</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: [description]</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(*)</strong
+                  ><span>: undefined</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="download"
+                    data-example="120,156,139,86,74,201,47,207,203,201,79,76,209,80,207,40,41,41,40,182,210,215,79,207,44,201,40,77,210,131,80,137,197,197,169,37,197,122,201,249,185,250,105,137,101,153,201,249,121,197,48,134,94,65,94,186,186,142,66,181,2,204,8,43,5,117,152,20,144,80,87,168,213,140,201,211,215,87,176,181,83,120,182,181,255,197,242,142,167,51,87,60,217,209,253,98,239,222,103,211,218,159,236,222,166,20,11,0,184,124,52,1"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">download</span>(<span class="hljs-string">&#x27;https://github.githubassets.com/favicons/favicon.png&#x27;</span>, { <span class="hljs-attr">download</span>: <span class="hljs-string">&#x27;favicon.ico&#x27;</span> })
+<span class="hljs-comment">// =&gt; 浏览器下载文件</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="copytext"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">copyText(text = '')</div>
+              </div>
+              <div class="item-method-content">
+                <div>复制文本</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">element</strong
+                  ><strong style="color: #1890ff;"> (*)</strong
+                  ><span>: [description]</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">attrs</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: [description]</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(*)</strong
+                  ><span>: undefined</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="copyText"
+                    data-example="120,156,139,86,74,206,47,168,12,73,173,40,209,80,79,76,74,86,215,140,201,211,215,87,176,181,83,120,186,164,247,105,199,182,167,109,173,79,215,237,124,218,177,225,249,166,25,47,182,108,121,54,119,191,146,14,170,142,152,152,60,67,35,99,34,244,197,2,0,38,153,51,227"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">copyText</span>(<span class="hljs-string">&#x27;abc&#x27;</span>)
+<span class="hljs-comment">// =&gt; 复制内容到粘贴板</span></code></pre>
+                <pre><code><span class="hljs-title function_">copyText</span>(<span class="hljs-string">&#x27;abc\n123&#x27;</span>)
+<span class="hljs-comment">// =&gt; 复制内容到粘贴板</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="setattrs"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  setAttrs(element, attrs = {})
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>给元素批量设置属性</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">element</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>HTMLElement</code>)</strong
+                  ><span>: dom元素</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">[attrs]</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: 属性</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(*)</strong
+                  ><span>: undefined</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="setAttrs"
+                    data-example="120,156,139,86,42,78,45,113,44,41,41,42,214,72,117,201,44,211,81,168,86,200,76,177,82,48,212,81,72,206,73,44,46,182,82,80,79,76,74,86,87,168,213,140,201,211,215,87,176,181,83,176,73,201,44,3,42,177,141,81,50,140,81,130,40,2,178,129,138,98,148,236,108,244,129,146,118,74,177,0,103,86,25,180"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">setAttrs</span>(eDiv, { <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">class</span>: <span class="hljs-string">&#x27;abc&#x27;</span> })
+<span class="hljs-comment">// =&gt; &lt;div id=&quot;1&quot; class=&quot;abc&quot;&gt;&lt;/div&gt;</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="setstyle"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  setStyle(element, cssom)
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>给元素批量设置样式</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">element</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>HTMLElement</code>)</strong
+                  ><span>: dom元素</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">cssom</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>StyleSheet</code>)</strong
+                  ><span>: cssom</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(*)</strong
+                  ><span>: undefined</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="setStyle"
+                    data-example="120,156,139,86,42,78,45,9,46,169,204,73,213,72,117,201,44,211,81,168,86,40,207,76,41,201,176,82,48,52,48,208,81,72,206,207,201,47,178,82,80,47,74,77,81,87,168,213,140,201,211,215,87,176,181,83,176,73,201,44,83,40,6,233,178,141,81,66,168,47,168,176,134,233,0,106,176,142,81,178,179,209,7,170,180,83,138,5,0,170,53,32,99"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">setStyle</span>(eDiv, { <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;red&#x27;</span> })
+<span class="hljs-comment">// =&gt; &lt;div style=&quot;width: 100px; color: red;&quot;&gt;&lt;/div&gt;</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="convertcssom"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  convertCssom(cssom = {})
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>给cssom加上单位px</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">[cssom]</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: [description]</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(<code>Object</code>)</strong
+                  ><span>: 带有'px'单位的 cssom</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="convertCssom"
+                    data-example="120,156,139,86,74,206,207,43,75,45,42,113,46,46,206,207,213,168,86,40,207,76,41,201,176,82,48,52,48,208,81,200,72,205,76,207,40,177,82,48,50,48,80,168,213,140,201,211,215,87,176,181,83,128,171,81,7,42,42,168,80,71,168,83,55,2,11,40,212,42,233,224,51,54,55,51,207,3,170,3,194,79,44,74,207,204,11,201,47,0,241,117,20,10,18,83,82,50,243,210,157,242,75,74,242,115,65,66,120,237,86,7,154,166,11,113,128,58,138,48,216,80,221,146,252,2,136,48,68,20,106,182,110,18,216,112,184,12,208,197,177,0,211,116,81,34"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">convertCssom</span>({ <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">height</span>: <span class="hljs-number">200</span> })
+<span class="hljs-comment">// =&gt; { width: &#x27;100px&#x27;, height: &#x27;200px&#x27; }</span></code></pre>
+                <pre><code><span class="hljs-title function_">convertCssom</span>({ <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">minHeight</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">marginTop</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">paddingBottom</span>: <span class="hljs-number">10</span> })
+<span class="hljs-comment">// =&gt; { width: &#x27;100px&#x27;, &#x27;min-height&#x27;: &#x27;100px&#x27;, &#x27;margin-top&#x27;: &#x27;10px&#x27;, &#x27;padding-bottom&#x27;: &#x27;10px&#x27; }</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="suffixclassnames"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  suffixClassNames(baseClassName = '', suffixConfig = {}, config
+                  = {})
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>
+                  给 className 加后缀<br /><br />适用于开发组件库时,
+                  给className加作用域
+                </div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">[baseClassName='']</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>String</code>)</strong
+                  ><span>: 基准 ClassName</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">[suffixConfig={}]</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: classNames 对象</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;"
+                    >[config={separator: '-'}]</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: classNames 对象</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(<code>String</code>)</strong
+                  ><span>: className 字符串</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="suffixClassNames"
+                    data-example="120,156,139,86,42,46,77,75,203,172,112,206,73,44,46,246,75,204,77,45,214,80,47,73,76,202,73,85,215,81,168,86,72,202,47,74,73,45,74,77,177,82,40,41,42,77,213,81,40,206,72,76,201,47,183,82,72,75,204,41,78,85,168,213,140,201,211,215,87,176,181,83,128,104,81,0,147,186,48,77,234,74,177,0,19,195,32,20"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">suffixClassNames</span>(<span class="hljs-string">&#x27;table&#x27;</span>, { <span class="hljs-attr">bordered</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">shadow</span>: <span class="hljs-literal">false</span> })
+<span class="hljs-comment">// =&gt; &#x27;table table-bordered&#x27;</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="getcsstext"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">getCssText(cssom = {})</div>
+              </div>
+              <div class="item-method-content">
+                <div>获取 cssText</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">cssom</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>StyleSheet</code>)</strong
+                  ><span>: cssom</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(<code>String</code>)</strong
+                  ><span>: cssText 字符串</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="getCssText"
+                    data-example="120,156,139,86,74,79,45,113,46,46,14,73,173,40,209,168,86,40,207,76,41,201,176,82,48,52,48,208,81,72,206,207,201,47,178,82,80,47,74,77,81,87,168,213,140,201,211,215,87,176,181,83,80,71,168,41,168,176,134,169,2,42,178,86,87,138,5,0,236,15,24,91"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">getCssText</span>({ <span class="hljs-attr">width</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;red&#x27;</span> })
+<span class="hljs-comment">// =&gt; &#x27;width: 100px; color: red;&#x27;</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="getwordwidth"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  getWordWidth(word = '', cssom = {})
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>获取字符串在浏览器中所占的长度</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">word</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>String</code>)</strong
+                  ><span>: 字符串</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">cssom</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>StyleSheet</code>)</strong
+                  ><span>: cssom</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(<code>Number</code>)</strong
+                  ><span>: 字符串在浏览器中所占的长度</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="getWordWidth"
+                    data-example="120,156,139,86,74,79,45,9,207,47,74,9,207,76,41,201,208,80,127,58,123,246,147,29,171,158,109,236,124,186,118,186,186,102,76,158,190,190,130,173,157,130,169,153,146,14,154,66,136,146,196,164,100,67,35,99,132,66,115,11,165,88,0,163,200,31,178"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">getWordWidth</span>(<span class="hljs-string">&#x27;四个汉字&#x27;</span>)
+<span class="hljs-comment">// =&gt; 56</span></code></pre>
+                <pre><code><span class="hljs-title function_">getWordWidth</span>(<span class="hljs-string">&#x27;汉字abc123&#x27;</span>)
+<span class="hljs-comment">// =&gt; 78</span></code></pre>
+              </div>
+            </div>
+            <div>
+              <div
+                id="downloadblob"
+                class="item-method-name"
+                style="margin-top: -65px; padding-top: 65px;"
+              >
+                <div class="item-method-name-area">
+                  downloadBlob(blob, options = {})
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>下载 blob</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">blob</strong
+                  ><strong style="color: #1890ff;"> (*)</strong
+                  ><span>: blob数据</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">[options]</strong
+                  ><strong style="color: #1890ff;">
+                    (<code>Object</code>)</strong
+                  ><span>: a链接的属性</span>
+                </div>
+                <h4>Returns</h4>
+                <span
+                  ><strong style="color: #1890ff;">(*)</strong
+                  ><span>: undefined</span></span
+                >
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="downloadBlob"
+                    data-example="120,156,139,86,74,201,47,207,203,201,79,76,113,202,201,79,210,72,2,18,46,137,37,137,58,10,213,10,48,9,43,5,245,148,212,220,124,189,130,188,116,117,133,90,205,152,60,125,125,5,91,59,133,103,91,251,95,44,239,120,58,115,197,147,29,221,47,246,238,125,54,173,253,201,238,109,74,177,0,224,230,35,5"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code><span class="hljs-title function_">downloadBlob</span>(blobData, { <span class="hljs-attr">download</span>: <span class="hljs-string">&#x27;demo.png&#x27;</span> })
+<span class="hljs-comment">// =&gt; 浏览器下载文件</span></code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="m-content-container m-paging">
+            <div class="m-paging-prev m-paging-item">
+              <a href="decimal.html" class="href"
+                ><span class="ui-font-ydoc"></span>浮点数计算</a
+              >
+            </div>
+            <div class="m-paging-next m-paging-item">
+              <a href="rules.html" class="href"
+                >表单校验<span class="ui-font-ydoc"></span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <script>
+      var $content = document.getElementById("js-content");
+      var $summaryItems = Array.prototype.slice.call(
+        document.querySelectorAll("#js-menu .href")
+      );
+      var $menu = document.getElementById("js-menu");
+      if (sessionStorage.prevPathname) {
+        sessionStorage.setItem("prevPrevPathname", sessionStorage.prevPathname);
+        sessionStorage.setItem(
+          "prevPrevMenuScrollTop",
+          sessionStorage.prevMenuScrollTop
+        );
+        sessionStorage.setItem(
+          "prevPrevContentScrollTop",
+          sessionStorage.prevContentScrollTop
+        );
       }
-      if ($content && sessionStorage.prevPrevContentScrollTop) {
-        $content.scrollTop = sessionStorage.prevPrevContentScrollTop;
+      if (sessionStorage.locationPathname) {
+        sessionStorage.setItem("prevPathname", sessionStorage.locationPathname);
+        sessionStorage.setItem(
+          "prevMenuScrollTop",
+          sessionStorage.menuScrollTop
+        );
+        sessionStorage.setItem(
+          "prevContentScrollTop",
+          sessionStorage.contentScrollTop
+        );
       }
-    }
-    sessionStorage.setItem('locationPathname', window.location.pathname);
-    </script><script src="../ydoc/scripts/plugins/dollar.min.js"></script><script src="../ydoc/scripts/plugins/responsive-nav.min.js"></script><script src="../ydoc/scripts/plugins/slideout.min.js"></script><script src="../ydoc/scripts/app.js"></script><script src="../ydoc/ydoc-plugin-search/core.js"></script><script src="../ydoc/ydoc-plugin-search/search.js"></script><script src="https://file.ljcdn.com/bs/lodash/4.17.21/lodash.min.js"></script><script src="https://file.ljcdn.com/bs/react/17.0.2/umd/react.production.min.js"></script><script src="https://file.ljcdn.com/bs/react-dom/17.0.2/umd/react-dom.production.min.js"></script><script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script><script src="https://embed.runkit.com"></script><script src="../../../../../../../../../assets/js/index.umd.js"></script><script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script><script src="../../../../../../../../../assets/js/code.js"></script><script src="../search_json.js"></script></body></html>
+      if ($menu && sessionStorage.menuScrollTop) {
+        $menu.scrollTop = sessionStorage.menuScrollTop;
+      }
+      // 刷新页面但不切换 pathname 的时候，内容区恢复到记忆的高度
+      if (
+        $content &&
+        sessionStorage.contentScrollTop &&
+        window.location.pathname == sessionStorage.locationPathname
+      ) {
+        $content.scrollTop = sessionStorage.contentScrollTop;
+      } else if (
+        sessionStorage.prevPrevPathname &&
+        sessionStorage.prevPrevPathname === window.location.pathname
+      ) {
+        if ($menu && sessionStorage.prevPrevMenuScrollTop) {
+          $menu.scrollTop = sessionStorage.prevPrevMenuScrollTop;
+        }
+        if ($content && sessionStorage.prevPrevContentScrollTop) {
+          $content.scrollTop = sessionStorage.prevPrevContentScrollTop;
+        }
+      }
+      sessionStorage.setItem("locationPathname", window.location.pathname);
+    </script>
+    <script src="../ydoc/scripts/plugins/dollar.min.js"></script>
+    <script src="../ydoc/scripts/plugins/responsive-nav.min.js"></script>
+    <script src="../ydoc/scripts/plugins/slideout.min.js"></script>
+    <script src="../ydoc/scripts/app.js"></script>
+    <script src="../ydoc/ydoc-plugin-search/core.js"></script>
+    <script src="../ydoc/ydoc-plugin-search/search.js"></script>
+    <script src="https://file.ljcdn.com/bs/lodash/4.17.21/lodash.min.js"></script>
+    <script src="https://file.ljcdn.com/bs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://file.ljcdn.com/bs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
+    <script src="https://embed.runkit.com"></script>
+    <script src="https://shuoshubao.github.io/tools/assets/js/index.umd.js"></script>
+    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
+    <script src="../search_json.js"></script>
+  </body>
+</html>
