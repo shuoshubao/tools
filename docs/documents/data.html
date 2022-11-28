@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="reserveproperties" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">reserveProperties(data = {}, keys = [])</div>
+            <div class="item-method">
+              <div id="reserveproperties" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,181,146,177,110,195,32,16,134,247,60,5,101,168,108,41,105,31,192,54,91,231,102,143,172,138,226,75,67,74,193,226,46,142,42,203,239,94,176,2,139,27,201,29,122,19,160,255,211,253,255,29,53,246,210,50,101,36,98,195,79,230,140,187,79,248,190,58,223,113,161,156,69,170,159,163,64,176,122,161,35,77,6,216,241,98,21,105,103,223,184,240,128,224,7,216,123,215,131,39,13,152,216,134,21,75,188,151,94,126,33,23,157,36,25,20,227,180,101,161,51,134,227,161,189,129,37,107,30,63,168,98,227,134,133,186,231,96,126,9,237,95,223,207,160,146,223,167,21,126,99,187,155,188,136,46,202,185,77,172,53,244,81,27,2,159,248,37,144,164,92,220,207,62,228,9,197,156,233,242,16,141,173,177,160,173,50,151,46,207,185,24,202,63,70,112,254,69,170,211,127,100,24,179,145,223,87,151,63,89,7,6,8,18,22,215,112,24,218,42,211,83,89,109,166,234,7,172,119,228,19"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>reserveProperties(data = {}, keys = [])</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>只保留对象的部分属性(删除之外的属性)</div>
@@ -377,16 +399,38 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">var</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> }
+                <pre><code class="hljs language-js"><span class="hljs-keyword">var</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> }
 <span class="hljs-title function_">reserveProperties</span>(data, [<span class="hljs-string">&#x27;a&#x27;</span>])
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
 <p><span class="hljs-comment">// =&gt; { a: 1 };</span></p></code></pre>
               </div>
             </div>
             <p></p>
-            <div>
-              <div id="removeproperties" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">removeProperties(data = {}, keys = [])</div>
+            <div class="item-method">
+              <div id="removeproperties" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,144,77,14,194,32,16,70,247,61,5,97,97,108,226,207,1,104,217,185,119,223,52,134,208,169,173,34,52,12,214,152,166,119,23,180,116,83,77,156,213,16,190,199,60,38,195,78,104,34,149,64,204,105,163,46,184,189,194,243,97,108,69,185,52,26,93,182,15,1,78,178,69,206,181,78,1,169,239,90,186,214,232,19,229,22,110,166,135,163,53,29,88,215,2,70,52,39,235,37,221,9,43,110,72,121,37,156,240,137,97,220,16,63,24,125,91,148,19,152,146,124,117,118,140,12,9,241,21,110,119,127,88,212,198,30,132,108,166,55,190,76,142,89,202,127,91,245,179,123,48,136,135,143,72,168,37,57,111,173,2,5,14,34,18,190,87,244,37,123,147,99,202,146,145,189,0,88,237,125,102"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>removeProperties(data = {}, keys = [])</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>批量删除属性</div>
@@ -439,15 +483,37 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">var</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> };
+                <pre><code class="hljs language-js"><span class="hljs-keyword">var</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> };
 <span class="hljs-title function_">removeProperties</span>(data, [<span class="hljs-string">&#x27;a&#x27;</span>]);
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
 <span class="hljs-comment">// =&gt; { b: 2, c: 3 };</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="removeemptyproperties" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">removeEmptyProperties(data = {})</div>
+            <div class="item-method">
+              <div id="removeemptyproperties" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,145,205,78,195,48,16,132,239,125,138,149,15,168,150,40,60,64,126,110,61,195,169,151,170,170,140,179,161,110,28,59,178,183,169,170,42,239,78,18,216,2,74,16,245,201,178,231,243,204,172,211,216,40,7,218,170,24,51,113,176,199,184,170,240,114,246,161,16,185,246,46,82,250,60,8,114,72,39,58,50,100,17,202,147,211,100,188,219,139,60,96,237,91,92,215,13,93,94,131,111,48,144,193,200,124,6,203,233,19,141,10,170,142,34,47,20,169,94,113,237,190,212,18,178,135,119,74,224,186,128,126,253,101,61,158,244,190,47,111,71,212,28,244,233,142,160,232,40,124,71,91,14,238,242,30,174,244,97,173,244,129,185,41,193,90,49,119,201,101,183,213,35,180,187,223,77,121,74,159,133,231,75,223,254,197,148,44,159,113,153,132,54,113,252,145,141,178,39,228,228,173,148,63,172,254,177,43,208,34,49,10,195,176,182,213,46,185,209,221,184,235,100,178,232,146,15,144,167,198,112"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>removeEmptyProperties(data = {})</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>批量删除属性值为空的属性</div>
@@ -491,15 +557,37 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">var</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">d</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">e</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">0</span> } };
+                <pre><code class="hljs language-js"><span class="hljs-keyword">var</span> data = { <span class="hljs-attr">a</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">d</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">e</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">0</span> } };
 <span class="hljs-title function_">removeEmptyProperties</span>(data, [<span class="hljs-string">&#x27;a&#x27;</span>]);
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
 <span class="hljs-comment">// =&gt; { b: 0, c: false, e: { a: 0 } };</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="produceemptyobject" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">produceEmptyObject(keys = [], emptyText = '')</div>
+            <div class="item-method">
+              <div id="produceemptyobject" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,149,144,49,107,195,48,16,133,247,252,138,67,129,16,131,211,66,151,14,178,181,117,238,210,45,132,162,42,151,212,137,35,139,211,185,77,8,254,239,149,112,100,40,234,144,106,144,16,247,190,187,123,175,242,78,91,48,173,246,190,22,159,237,193,175,142,120,249,238,104,43,148,233,172,231,234,49,10,20,84,153,142,27,110,17,118,189,53,220,116,246,93,40,71,221,182,55,248,114,114,124,121,253,56,160,153,224,26,150,57,239,52,233,147,23,42,204,243,65,177,222,148,128,17,125,195,51,135,127,14,120,166,198,238,133,90,204,207,79,207,114,188,111,19,110,79,1,245,98,207,18,174,51,8,39,239,48,89,35,228,158,236,63,188,237,90,205,140,137,88,198,157,139,135,59,56,194,24,73,194,114,32,73,197,95,197,148,144,35,252,42,193,244,244,219,102,90,127,116,27,79,20,174,131,110,19,242,155,178,148,83,249,238,64,98,159,17,27,74,184,14,133,156,13,242,7,108,64,187,174"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>produceEmptyObject(keys = [], emptyText = '')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>产生一个值全为空的对象</div>
@@ -556,15 +644,37 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">produceEmptyObject</span>([<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>]);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">produceEmptyObject</span>([<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>]);
 <span class="hljs-comment">// =&gt; { a: &#x27;&#x27;, b: &#x27;&#x27; }</span></code></pre>
-                <pre><code><span class="hljs-title function_">produceEmptyObject</span>([<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>], <span class="hljs-literal">null</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">produceEmptyObject</span>([<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>], <span class="hljs-literal">null</span>);
 <span class="hljs-comment">// =&gt; { a: null, b: null }</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="formatemptytodefault" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">formatEmptyToDefault(data = {}, formater = {})</div>
+            <div class="item-method">
+              <div id="formatemptytodefault" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,189,83,61,111,131,48,16,221,243,43,78,12,21,72,161,72,172,124,76,205,220,165,234,18,69,213,133,152,198,96,108,196,57,180,81,196,127,175,33,49,82,11,85,152,226,197,186,243,123,119,239,157,124,49,213,40,33,19,72,148,56,71,81,144,95,178,243,151,106,14,78,154,41,73,58,14,122,64,10,241,4,167,185,22,12,242,147,204,52,87,242,195,73,115,213,84,168,55,85,173,207,111,234,133,229,120,18,35,61,1,119,90,161,198,6,43,114,210,3,106,52,136,75,183,134,107,13,214,12,225,141,236,65,242,244,169,35,184,172,192,156,255,132,12,25,163,226,117,95,176,204,246,125,94,32,155,73,221,112,70,55,134,219,139,241,150,240,140,212,13,102,71,203,155,50,44,214,153,123,180,222,183,229,26,218,221,111,167,118,104,87,195,143,48,109,199,254,80,227,161,113,30,222,181,62,111,63,83,85,101,60,56,105,16,0,35,193,165,246,15,156,112,47,152,47,217,183,246,77,134,1,41,137,77,65,129,84,6,47,4,214,196,123,0,207,111,93,238,244,24,23,97,36,128,91,134,144,36,9,148,222,31,133,203,43,44,24,48,167,97,137,222,81,156,152,157,114,235,205,181,236,79,255,97,183,229,206,108,76,27,70,19,68,183,154,143,58,239,138,237,239,46,250,1,118,136,77,118"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>formatEmptyToDefault(data = {}, formater = {})</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将数据中的空值替换为默认值</div>
@@ -617,7 +727,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> data = {
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = {
     <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>,
     <span class="hljs-attr">b</span>: <span class="hljs-literal">null</span>,
     <span class="hljs-attr">c</span>: <span class="hljs-string">&#x27;&#x27;</span>,
@@ -633,9 +743,31 @@
 <span class="hljs-comment">// =&gt; { a: 1, b: -1, c: -1, d: &#x27; &#x27; }</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="booleanpromise" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">booleanPromise(promise, params)</div>
+            <div class="item-method">
+              <div id="booleanpromise" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,205,146,95,78,196,32,16,198,223,247,20,132,7,211,38,186,30,160,45,103,240,6,6,113,106,171,20,8,76,221,108,204,222,221,118,41,253,19,90,183,38,62,200,11,129,204,55,243,253,102,38,119,134,43,34,36,119,174,160,149,124,119,15,31,112,62,105,251,74,153,208,202,97,254,216,7,48,146,71,113,88,163,4,82,182,74,96,173,213,51,101,47,90,75,224,234,201,234,166,118,16,132,5,73,98,173,225,150,55,142,50,227,99,239,137,255,24,52,41,41,238,222,48,35,95,7,210,157,88,61,58,180,128,173,85,219,22,199,64,5,167,91,32,215,159,142,98,105,127,197,123,32,166,108,155,203,130,211,242,115,234,65,143,19,30,158,234,6,153,132,177,243,8,141,25,76,101,123,164,117,25,148,137,183,147,206,74,246,103,150,176,155,206,142,193,154,101,75,134,172,147,153,203,79,118,64,78,187,240,183,62,230,14,14,43,73,23,197,142,59,242,99,5,106,207,220,147,116,107,162,219,227,137,138,45,87,100,165,158,172,17,44,151,157,45,219,134,176,25,242,21,59,253,53,163,224,40,170,127,8,89,242,105,79,34,74,255,238,239,75,246,13,120,4,132,2"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>booleanPromise(promise, params)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将 promise变成一个只有 resolved 态</div>
@@ -694,7 +826,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-comment">// nothing</span></code></pre>
+                <pre><code class="hljs language-js"><span class="hljs-comment">// nothing</span></code></pre>
               </div>
             </div>
           </div>
@@ -758,7 +890,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

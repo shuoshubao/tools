@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="queryparse" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">queryParse(queryString = '')</div>
+            <div class="item-method">
+              <div id="queryparse" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,173,84,75,79,194,64,16,190,251,43,54,53,33,52,169,26,189,152,88,40,7,227,193,139,49,26,226,129,16,178,180,3,172,108,183,117,31,40,49,252,119,183,101,75,217,180,212,214,184,7,72,218,153,249,30,179,95,7,34,197,12,133,20,11,49,116,86,244,93,92,172,97,251,153,240,200,9,194,132,9,57,184,202,10,2,52,168,212,73,34,41,160,133,98,161,36,9,155,57,193,135,2,190,125,198,92,64,209,52,68,253,106,95,138,57,142,133,41,127,149,156,176,165,46,172,214,137,252,149,19,244,206,191,110,110,253,253,175,25,108,254,92,52,236,45,165,143,190,207,144,62,213,9,7,37,20,14,58,114,84,255,183,6,178,40,234,251,71,52,47,91,152,32,36,230,82,188,17,185,50,19,106,28,176,149,141,44,105,174,107,228,100,39,199,214,230,116,229,160,230,123,136,211,20,152,138,231,192,157,224,186,128,221,91,178,107,50,5,104,185,217,70,142,102,86,7,147,91,136,34,226,33,78,165,65,40,132,229,160,150,101,13,120,28,164,226,236,160,96,215,146,166,221,150,35,182,90,66,74,137,108,123,7,122,56,78,237,43,238,182,193,224,16,169,16,78,131,20,165,78,221,203,34,135,41,135,141,135,66,197,237,84,85,55,221,224,145,245,169,152,172,61,180,169,141,180,118,4,56,166,78,192,20,165,166,124,170,43,53,248,191,91,58,180,237,244,59,203,216,96,90,43,162,230,102,62,149,114,250,27,23,141,180,252,187,154,206,185,34,84,206,136,94,71,4,97,18,193,248,229,241,62,137,211,132,1,147,101,123,43,166,93,179,51,102,17,44,8,131,168,192,201,182,62,89,79,173,236,100,199,60,215,202,181,254,146,202,31,62,12,246,180,22,44,23,20,75,9,69,210,250,19,211,236,101,76,166,71,182,236,186,135,61,27,101,226,238,233,228,235,97,59,255,7,173,100,82,52"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>queryParse(queryString = '')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将query字符串变成对象</div>
@@ -372,35 +394,57 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">queryParse</span>()
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>()
 <span class="hljs-comment">// =&gt; {}</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;&#x27;</span>)
 <span class="hljs-comment">// =&gt; {}</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;?&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;?&#x27;</span>)
 <span class="hljs-comment">// =&gt; {}</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;?a&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;?a&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: null }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;?a=1&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;?a=1&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27; }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27; }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=true&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=true&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;true&#x27; }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27;, b: null }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b=2&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b=2&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27;, b: &#x27;2&#x27; }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b&amp;c&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b&amp;c&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27;, b: null, c: null }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b=2&amp;c&amp;d=2&amp;d=3&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b=2&amp;c&amp;d=2&amp;d=3&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27;, b: &#x27;2&#x27;, c: null, d: [&#x27;2&#x27;, &#x27;3&#x27;] }</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b=2&amp;c&amp;d=2&amp;d=3&amp;d&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryParse</span>(<span class="hljs-string">&#x27;a=1&amp;b=2&amp;c&amp;d=2&amp;d=3&amp;d&#x27;</span>)
 <span class="hljs-comment">// =&gt; { a: &#x27;1&#x27;, b: &#x27;2&#x27;, c: null, d: [&#x27;2&#x27;, &#x27;3&#x27;, null] }</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="querystringify" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">queryStringify(params = {})</div>
+            <div class="item-method">
+              <div id="querystringify" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,205,85,77,107,131,64,20,188,247,87,108,45,132,8,169,5,47,133,154,216,67,79,189,180,208,146,83,8,97,163,207,100,147,205,106,119,87,219,144,248,223,187,38,89,33,154,143,85,40,212,203,130,190,247,156,55,51,142,125,145,96,134,2,138,133,24,88,115,186,16,247,75,88,127,199,60,180,252,32,102,66,246,31,138,2,31,245,107,117,146,72,10,40,74,89,32,73,204,38,150,255,149,2,95,127,74,78,216,140,68,107,221,56,64,221,122,111,130,57,94,9,203,223,159,170,102,147,31,234,109,52,232,204,164,135,54,55,72,93,245,206,18,29,7,153,114,118,13,222,238,142,194,246,62,93,64,160,151,113,12,150,1,166,22,1,113,232,232,30,128,110,183,10,169,189,131,86,92,38,131,56,132,105,0,122,78,189,65,151,90,167,30,150,60,113,200,122,40,72,249,49,75,122,251,77,137,232,10,105,71,146,142,150,61,148,141,21,249,106,174,103,58,129,68,186,253,4,220,218,242,68,12,89,8,17,97,16,106,6,50,219,174,224,109,36,116,193,196,49,216,252,175,160,191,165,148,94,70,93,128,49,241,64,146,138,185,158,180,180,43,240,47,65,6,42,224,180,200,77,132,166,68,72,37,179,1,208,136,98,41,65,147,221,29,101,99,187,246,86,83,227,71,132,74,224,38,198,63,239,251,204,45,99,228,188,223,91,249,232,182,165,123,221,138,124,165,140,237,137,90,225,228,255,176,116,100,156,12,211,147,190,153,166,74,219,9,97,69,76,6,113,8,195,143,215,151,120,149,196,76,165,230,85,166,26,201,212,252,67,117,109,244,140,150,232,105,31,111,152,142,77,36,88,196,132,157,215,64,236,254,105,150,223,185,251,113,31,189,193,254,208,73,124,206,14,245,251,109,210,194,113,156,226,235,173,102,134,105,228,93,202,206,188,135,70,227,102,255,178,38,52,117,240,42,241,170,84,229,222,47,233,148,167,101"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>queryStringify(params = {})</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将对象变成query字符串</div>
@@ -448,31 +492,31 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">queryStringify</span>()
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>()
 <span class="hljs-comment">// =&gt; &#x27;&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>(<span class="hljs-literal">null</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>(<span class="hljs-literal">null</span>)
 <span class="hljs-comment">// =&gt; &#x27;&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({})
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({})
 <span class="hljs-comment">// =&gt; &#x27;&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=1&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-string">&#x27;1&#x27;</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-string">&#x27;1&#x27;</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=1&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=1&amp;b=2&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">null</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">null</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=1&amp;b&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=1&amp;b&amp;c&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">undefined</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">undefined</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=1&amp;c&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-literal">true</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-literal">true</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=true&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">false</span> })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">b</span>: <span class="hljs-literal">false</span> })
 <span class="hljs-comment">// =&gt; &#x27;a=true&amp;b=false&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">d</span>: [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>] })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">d</span>: [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>] })
 <span class="hljs-comment">// =&gt; &#x27;a=1&amp;b=2&amp;c&amp;d=2&amp;d=3&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">d</span>: [<span class="hljs-number">2</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">null</span>] })
+                <pre><code class="hljs language-js"><span class="hljs-title function_">queryStringify</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">d</span>: [<span class="hljs-number">2</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">null</span>] })
 <span class="hljs-comment">// =&gt; &#x27;a=1&amp;b=2&amp;c&amp;d=2&amp;d=3&amp;d&#x27;</span></code></pre>
               </div>
             </div>
@@ -537,7 +581,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="utf8arraytostring" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">Utf8ArrayToString(array)</div>
+            <div class="item-method">
+              <div id="utf8arraytostring" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,213,86,93,111,130,48,20,125,231,87,52,44,49,26,179,9,234,230,50,148,100,241,39,108,123,90,150,5,107,17,38,180,164,212,136,217,252,239,107,249,104,116,128,136,129,108,235,3,33,205,189,231,182,61,231,158,118,26,6,22,6,208,179,194,112,166,58,222,71,120,189,70,187,45,161,75,213,132,4,135,108,58,16,1,38,152,230,226,152,203,60,4,236,13,134,204,37,248,93,53,95,152,125,255,72,169,181,123,38,79,140,186,120,149,229,206,128,37,166,193,172,179,98,6,248,84,0,31,121,60,89,215,67,178,42,217,48,158,157,143,13,99,124,213,236,92,69,195,137,145,124,211,28,163,6,188,91,8,142,55,254,2,81,213,212,206,69,60,58,40,15,225,108,195,55,249,156,128,146,0,81,182,19,203,192,43,230,92,176,104,88,43,216,177,232,176,110,194,200,80,170,50,182,142,235,161,44,167,235,130,142,199,153,229,91,234,165,244,138,1,179,115,120,117,251,253,55,67,206,159,128,13,183,46,131,142,196,133,64,40,38,86,77,57,77,227,52,252,176,116,21,97,86,136,202,133,253,147,255,135,102,97,245,118,96,135,237,192,142,218,129,29,183,3,123,219,14,236,93,59,176,147,66,216,98,104,72,124,31,97,166,154,131,1,208,162,100,164,233,185,108,225,154,253,34,103,75,44,59,158,225,126,125,100,210,5,94,149,51,120,155,18,127,206,253,97,78,150,217,238,186,176,103,156,177,122,121,48,11,138,172,245,145,233,53,215,87,45,117,128,94,220,2,213,52,233,186,22,1,193,19,143,228,191,201,127,25,103,177,81,151,24,230,111,240,218,21,230,107,249,193,41,231,213,34,221,150,230,43,110,128,248,22,168,110,163,30,248,226,222,30,111,184,186,196,72,150,248,59,74,43,118,175,115,20,161,107,169,34,164,32,26,210,70,124,111,255,59,253,104,181,244,35,59,60,22,208,5,10,170,45,210,110,114,172,77,215,208,154,148,244,94,73,190,85,79,54,138,216,134,226,131,151,181,161,236,141,111,96,155,195,238"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>Utf8ArrayToString(array)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>
@@ -389,7 +411,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Uint8Array</span>(<span class="hljs-number">5</span>);
+                <pre><code class="hljs language-js"><span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Uint8Array</span>(<span class="hljs-number">5</span>);
 arr[<span class="hljs-number">0</span>] = <span class="hljs-number">0x3d</span>;
 arr[<span class="hljs-number">1</span>] = <span class="hljs-number">0x35f</span>;
 arr[<span class="hljs-number">2</span>] = <span class="hljs-number">0x35f</span>;
@@ -461,7 +483,7 @@ arr[<span class="hljs-number">4</span>] = <span class="hljs-number">0x35e</span>
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

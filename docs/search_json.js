@@ -156,6 +156,16 @@ window.ydoc_plugin_search_json = {
       "url": "/CHANGELOG.html",
       "children": [
         {
+          "title": "0.2.17 (2022-11-26)",
+          "url": "/CHANGELOG.html#0.2.17-2022-11-26",
+          "content": "0.2.17 (2022-11-26)"
+        },
+        {
+          "title": "Bug Fixes",
+          "url": "/CHANGELOG.html#0.2.17-2022-11-26-bug-fixes",
+          "content": "Bug Fixes修复eslint问题 (9708d0b)\n修改示例 (a8f5999)\nrequire => import (3a2d60a)\n"
+        },
+        {
           "title": "0.2.16 (2022-11-23)",
           "url": "/CHANGELOG.html#0.2.16-2022-11-23",
           "content": "0.2.16 (2022-11-23)"

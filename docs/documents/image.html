@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="getimagesize" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">getImageSize(url = '')</div>
+            <div class="item-method">
+              <div id="getimagesize" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,197,146,95,79,131,48,20,197,223,253,20,77,77,150,45,153,127,226,139,137,108,125,247,205,196,71,99,76,101,21,234,74,75,110,47,206,185,240,221,45,131,50,73,97,56,95,228,161,132,246,156,91,126,231,222,133,205,185,38,177,226,214,46,105,170,222,237,197,90,108,55,6,86,148,197,70,91,92,92,85,2,70,22,129,14,37,42,65,222,10,29,163,52,250,133,178,68,224,125,198,19,241,40,191,132,183,45,201,52,116,230,28,120,102,41,43,64,57,65,120,110,17,164,78,40,155,156,127,222,220,70,245,218,20,108,94,51,178,156,36,24,145,221,25,113,79,88,161,101,0,129,5,232,97,136,86,168,197,102,12,117,191,227,56,31,192,100,210,122,196,30,62,159,9,101,195,236,32,172,50,31,135,156,42,28,255,81,83,141,144,117,186,35,179,164,55,201,191,224,237,123,232,225,102,81,251,47,238,142,203,30,30,48,185,0,220,82,102,33,62,116,221,181,246,247,78,163,149,225,171,131,249,8,7,183,91,221,94,51,237,142,193,112,104,193,168,118,211,239,105,97,224,200,101,188,246,114,199,51,39,79,99,115,187,145,43,76,59,195,59,31,157,245,84,200,36,197,142,233,121,246,163,7,229,41,161,10,0,3,255,152,234,174,199,195,17,129,178,125,52,141,236,174,71,165,139,236,85,56,221,245,145,224,234,74,117,96,39,148,34,101,24,103,181,85,70,223,107,91,171,201"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>getImageSize(url = '')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>获取图片的尺寸</div>
@@ -336,7 +358,7 @@
                     <code>String</code>
                     )
                   </strong>
-                  <span>: [description]</span>
+                  <span>: 图片的url</span>
                 </div>
                 <h4>Returns</h4>
                 <span>
@@ -345,7 +367,7 @@
                     <code>Object</code>
                     )
                   </strong>
-                  <span>: [description]</span>
+                  <span>: 图片的尺寸 { width, height }</span>
                 </span>
                 <h4>
                   <span>Example</span>
@@ -372,7 +394,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code>(<span class="hljs-title function_">async</span>() =&gt; {
+                <pre><code class="hljs language-js">(<span class="hljs-title function_">async</span>() =&gt; {
   <span class="hljs-keyword">const</span> size = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getImageSize</span>(<span class="hljs-string">&#x27;https://github.githubassets.com/favicons/favicon.png&#x27;</span>);
   <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(size);
 })();
@@ -380,9 +402,31 @@
               </div>
             </div>
             <p></p>
-            <div>
-              <div id="changeimageurltobase64" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">changeImageUrlToBase64(url)</div>
+            <div class="item-method">
+              <div id="changeimageurltobase64" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,173,84,203,110,219,48,16,188,247,43,8,21,8,108,32,109,138,160,104,129,202,214,33,143,67,129,30,138,162,65,143,197,70,218,72,76,41,82,32,87,126,32,240,191,119,173,135,85,70,78,196,20,241,141,242,206,238,204,112,150,11,87,129,22,169,2,231,150,81,161,238,221,187,63,184,93,27,155,69,73,106,180,163,197,217,190,32,17,139,81,29,73,82,40,238,106,157,146,52,250,55,215,23,160,115,252,90,66,142,55,86,253,52,23,224,240,211,199,190,193,82,212,86,137,229,73,78,177,120,120,35,248,55,110,121,24,45,239,122,216,140,81,239,3,134,59,2,75,238,151,164,162,67,206,198,32,71,86,234,60,74,78,222,110,206,63,199,25,16,124,145,123,182,237,185,195,205,231,29,189,9,138,22,169,182,186,167,201,44,227,6,181,155,146,230,227,158,41,212,184,158,50,191,249,194,226,191,91,83,74,135,79,43,239,141,138,146,241,127,21,88,40,221,158,152,83,102,133,135,251,218,223,84,127,8,114,196,203,139,44,115,190,242,215,145,215,68,170,23,55,143,15,92,120,198,145,104,84,214,84,104,105,203,153,176,169,151,190,112,164,209,202,64,54,128,159,209,1,110,171,15,99,102,115,47,225,47,53,45,5,189,2,119,116,222,10,172,132,91,54,69,241,146,213,236,7,251,146,153,180,46,81,247,240,144,53,73,45,2,225,181,194,127,112,147,155,210,210,242,183,36,254,63,129,180,97,117,109,191,16,186,57,210,165,209,132,155,96,174,231,217,107,240,124,16,107,153,81,113,42,10,148,121,65,98,199,172,57,51,126,179,39,101,12,57,106,186,12,49,106,142,47,110,210,114,24,186,180,231,71,109,104,19,226,103,102,97,237,109,19,139,58,61,226,138,174,203,91,180,81,242,161,171,11,171,241,60,155,116,126,68,206,127,128,102,225,41,33,115,197,111,249,205,143,111,161,33,105,94,253,179,251,10,243,71,79,255,192,121,215,61,231,252,105,23,255,5,70,18,94,222"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>changeImageUrlToBase64(url)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将图片的 http-url 变成 base64</div>
@@ -394,7 +438,7 @@
                     <code>String</code>
                     )
                   </strong>
-                  <span>: [description]</span>
+                  <span>: 图片的url</span>
                 </div>
                 <h4>Returns</h4>
                 <span>
@@ -403,7 +447,7 @@
                     <code>String</code>
                     )
                   </strong>
-                  <span>: [description]</span>
+                  <span>: 图片的base64数据</span>
                 </span>
                 <h4>
                   <span>Example</span>
@@ -493,7 +537,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

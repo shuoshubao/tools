@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="thousands" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">thousands(num)</div>
+            <div class="item-method">
+              <div id="thousands" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,165,82,77,111,130,48,24,190,251,43,106,183,152,54,48,89,182,195,14,64,61,239,188,163,251,72,7,21,235,176,37,109,201,92,148,255,190,34,96,36,96,192,141,11,9,188,207,231,251,6,58,163,2,68,41,213,58,132,235,116,163,239,190,216,207,183,84,49,36,145,20,218,4,94,57,64,64,208,153,51,220,164,12,172,114,17,25,46,197,7,36,102,45,115,77,69,172,27,76,8,68,190,5,225,44,49,62,216,79,128,125,186,44,253,106,49,53,212,194,157,18,127,56,244,192,236,143,79,166,32,185,175,17,254,16,61,95,53,220,104,90,178,227,218,209,0,76,49,147,43,209,64,173,106,37,84,92,149,102,201,133,113,65,204,162,55,155,233,82,145,199,47,182,197,23,163,184,72,106,40,178,138,120,62,162,123,157,165,188,209,67,221,121,125,36,133,100,118,179,123,120,242,231,213,171,30,199,131,221,181,194,172,164,218,82,243,44,140,205,98,115,141,49,167,88,150,210,136,93,182,167,88,194,118,25,36,30,90,132,104,49,125,199,232,53,222,63,22,216,185,197,94,83,133,219,227,176,29,203,189,50,214,217,73,56,118,57,127,186,136,229,169,142,106,193,99,234,216,72,46,254,181,170,193,235,107,123,60,89,244,39,133,255,11,163,204,79,126"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>thousands(num)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>千分位展示</div>
@@ -372,17 +394,39 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">thousands</span>(<span class="hljs-number">123</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">thousands</span>(<span class="hljs-number">123</span>);
 <span class="hljs-comment">// =&gt; &#x27;123&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">thousands</span>(<span class="hljs-number">1234</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">thousands</span>(<span class="hljs-number">1234</span>);
 <span class="hljs-comment">// =&gt; &#x27;1,234&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">thousands</span>(<span class="hljs-number">1234567</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">thousands</span>(<span class="hljs-number">1234567</span>);
 <span class="hljs-comment">// =&gt; &#x27;1,234,567&#x27;</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="getvalueinrange" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">getValueInRange(value, min, max)</div>
+            <div class="item-method">
+              <div id="getvalueinrange" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,157,207,191,14,130,48,16,6,240,157,167,184,116,32,144,104,124,128,66,119,87,7,87,115,193,130,213,114,144,182,40,198,240,238,150,6,76,12,131,127,58,116,186,223,247,221,101,182,69,130,66,163,181,57,59,233,179,93,95,228,253,214,152,35,19,69,67,214,101,155,113,64,64,182,152,115,202,105,9,101,71,133,83,13,29,152,168,164,219,163,238,228,150,118,72,149,156,101,14,201,18,183,104,176,182,76,92,71,176,130,90,145,255,176,159,76,10,121,92,57,14,143,8,252,91,234,215,138,170,156,91,146,144,4,177,246,204,167,165,147,253,224,141,116,157,161,57,195,59,30,212,240,123,239,184,174,63,224,191,94,236,191,236,125,119,161,154,71,3,127,2,31,51,149,132"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>getValueInRange(value, min, max)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>取区间值</div>
@@ -448,11 +492,11 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">getValueInRange</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getValueInRange</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>);
 <span class="hljs-comment">// =&gt; 2</span></code></pre>
-                <pre><code><span class="hljs-title function_">getValueInRange</span>(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getValueInRange</span>(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>);
 <span class="hljs-comment">// =&gt; 3</span></code></pre>
-                <pre><code><span class="hljs-title function_">getValueInRange</span>(<span class="hljs-number">12</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getValueInRange</span>(<span class="hljs-number">12</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>);
 <span class="hljs-comment">// =&gt; 7</span></code></pre>
               </div>
             </div>
@@ -517,7 +561,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

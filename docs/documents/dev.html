@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="sleep" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">sleep(time = -1)</div>
+            <div class="item-method">
+              <div id="sleep" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,82,203,78,195,48,16,188,247,43,44,31,170,22,213,10,5,113,33,137,249,5,14,220,43,39,89,192,224,71,100,175,105,17,226,223,73,82,187,2,165,73,241,197,210,106,118,102,118,119,10,223,10,67,106,37,188,47,233,171,122,243,236,29,62,247,214,53,148,215,214,120,44,178,30,192,73,49,194,161,68,5,228,57,152,26,165,53,59,202,189,2,104,19,190,36,171,113,75,43,156,208,158,114,148,26,58,4,27,35,76,208,21,56,202,183,145,39,126,107,82,46,95,48,39,95,11,210,189,113,219,121,207,131,161,167,163,214,32,185,84,29,199,180,232,117,106,124,248,207,184,78,152,198,234,216,114,102,216,196,122,19,33,155,25,229,187,211,156,247,131,211,124,98,206,218,106,13,6,41,207,50,2,94,73,131,172,145,94,84,10,152,129,3,178,174,2,196,88,214,58,171,165,7,6,7,168,3,90,199,28,96,112,38,170,92,90,226,31,240,28,208,192,254,82,62,134,74,183,173,199,163,163,233,117,165,205,82,62,157,27,7,222,170,15,56,101,172,207,196,180,129,42,72,133,59,217,49,122,192,62,6,54,164,104,172,34,211,230,87,70,174,102,238,179,133,219,116,161,117,190,248,206,127,0,165,220,29,3"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>sleep(time = -1)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>
@@ -369,17 +391,39 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">await</span> <span class="hljs-title function_">sleep</span>()
+                <pre><code class="hljs language-js"><span class="hljs-keyword">await</span> <span class="hljs-title function_">sleep</span>()
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span>)
 <span class="hljs-comment">// =&gt; 随机时间(2s-5s)后输出: 1</span></code></pre>
-                <pre><code><span class="hljs-keyword">await</span> <span class="hljs-title function_">sleep</span>(<span class="hljs-number">3</span>)
+                <pre><code class="hljs language-js"><span class="hljs-keyword">await</span> <span class="hljs-title function_">sleep</span>(<span class="hljs-number">3</span>)
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span>)
 <span class="hljs-comment">// =&gt; 3秒后输出: 1</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="fakefetch" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">fakeFetch(data = {}, time = -1)</div>
+            <div class="item-method">
+              <div id="fakefetch" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,145,77,14,130,48,16,133,247,158,162,233,194,64,226,79,92,3,93,186,246,6,166,226,32,104,105,73,103,208,24,195,221,165,10,36,166,16,233,102,166,205,123,147,249,94,99,172,164,102,169,146,136,9,207,213,21,215,55,120,62,140,61,115,145,26,141,20,111,157,64,176,216,211,81,65,10,88,86,235,148,10,163,143,92,100,242,6,123,160,52,239,61,9,11,124,91,37,173,44,145,139,179,36,217,42,94,205,138,81,81,66,219,174,125,177,174,203,19,88,46,118,221,200,174,132,44,89,94,40,98,175,5,107,143,111,27,16,44,80,109,245,52,195,32,212,240,248,71,250,121,105,49,15,214,148,5,66,39,31,33,236,35,225,98,154,222,2,26,117,135,33,41,135,211,95,190,84,227,100,94,232,168,0,170,126,23,23,100,184,153,225,162,28,244,28,128,32,156,90,109,230,122,191,156,129,251,244,48,26,134,52,93,239,106,19,189,1,196,230,218,191"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>fakeFetch(data = {}, time = -1)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>模拟接口请求</div>
@@ -427,7 +471,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fakeFetch</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, <span class="hljs-number">1.5</span>)
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fakeFetch</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, <span class="hljs-number">1.5</span>)
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);
 <span class="hljs-comment">// =&gt; 1.5秒后输出: { a: 1 }</span></code></pre>
               </div>
@@ -493,7 +537,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

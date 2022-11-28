@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="trimall" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">trimAll(str = '')</div>
+            <div class="item-method">
+              <div id="trimall" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,149,143,77,10,194,48,16,133,247,61,69,136,80,20,127,10,110,92,164,13,120,15,65,66,140,49,154,166,97,50,197,138,120,119,35,166,110,226,66,103,49,3,51,223,123,204,171,131,23,142,72,43,66,104,232,201,158,195,242,162,110,215,14,14,148,203,206,5,172,171,23,192,73,157,113,104,208,42,114,236,157,68,211,185,61,229,8,166,221,90,59,42,26,50,205,69,94,128,104,3,229,1,33,2,249,61,238,141,211,148,151,147,97,189,97,239,158,12,211,152,145,166,212,200,200,189,32,177,114,135,207,251,160,176,7,55,126,19,141,87,63,100,0,229,173,144,42,169,190,4,0,165,213,224,41,175,118,97,94,233,196,45,254,75,50,99,197,131,61,1,3,182,127,196"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>trimAll(str = '')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>trim 所有空白</div>
@@ -372,13 +394,35 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">trimAll</span>(<span class="hljs-string">&#x27; a b c &#x27;</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">trimAll</span>(<span class="hljs-string">&#x27; a b c &#x27;</span>);
 <span class="hljs-comment">// =&gt; &#x27;abc&#x27;</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="pascalcase" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">pascalCase(str = '')</div>
+            <div class="item-method">
+              <div id="pascalcase" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,149,143,193,10,194,48,12,134,239,123,138,82,97,108,7,17,188,120,232,214,139,224,107,72,168,117,86,107,87,146,12,21,241,221,173,56,135,80,47,230,144,64,242,255,63,249,26,138,16,132,241,64,212,202,131,63,210,252,100,111,151,30,119,82,155,62,16,55,139,151,64,139,38,211,177,99,111,197,126,8,134,93,31,182,82,71,32,3,126,13,100,63,166,86,84,185,47,2,194,153,164,38,198,36,200,239,105,239,66,39,117,57,187,46,87,234,221,199,192,113,212,162,45,59,86,226,94,136,84,121,194,68,128,150,7,12,127,32,12,49,90,220,56,156,184,127,252,159,153,12,156,237,55,118,149,8,234,90,21,15,245,4,182,162,120,204"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>pascalCase(str = '')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>帕斯卡</div>
@@ -426,15 +470,15 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a b c&#x27;</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a b c&#x27;</span>);
 <span class="hljs-comment">// =&gt; &#x27;ABC&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a-b-c&#x27;</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a-b-c&#x27;</span>);
 <span class="hljs-comment">// =&gt; &#x27;ABC&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a_b_c&#x27;</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a_b_c&#x27;</span>);
 <span class="hljs-comment">// =&gt; &#x27;ABC&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a,b,c&#x27;</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;a,b,c&#x27;</span>);
 <span class="hljs-comment">// =&gt; &#x27;ABC&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;aBc&#x27;</span>);
+                <pre><code class="hljs language-js"><span class="hljs-title function_">pascalCase</span>(<span class="hljs-string">&#x27;aBc&#x27;</span>);
 <span class="hljs-comment">// =&gt; &#x27;ABc&#x27;</span></code></pre>
               </div>
             </div>
@@ -499,7 +543,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="setasyncstate" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">setAsyncState(context, newState)</div>
+            <div class="item-method">
+              <div id="setasyncstate" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,144,81,14,130,48,16,68,255,61,197,134,15,3,9,234,1,128,38,222,192,196,3,152,6,171,162,165,37,221,69,36,134,187,91,144,34,9,18,221,159,166,205,78,103,222,196,88,112,5,169,228,136,137,119,145,87,92,221,68,93,105,115,244,88,170,21,82,188,105,23,24,196,147,61,202,72,10,56,149,42,165,76,171,131,199,80,208,22,107,149,238,137,147,112,186,4,252,169,180,224,134,231,216,57,144,120,80,8,74,84,99,85,0,201,242,76,17,60,23,96,103,170,31,34,26,65,165,81,243,25,135,69,107,240,139,164,123,177,24,59,163,243,12,93,148,47,233,29,178,199,230,201,140,64,45,239,159,22,90,28,119,121,83,181,211,243,175,255,43,119,220,144,239,26,11,161,183,10,162,238,219,198,158,77,244,2,96,3,163,56"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>setAsyncState(context, newState)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>setState =&gt; promise</div>
@@ -332,7 +354,7 @@
                 <div>
                   <strong style="color: #1890ff;">context</strong>
                   <strong style="color: #1890ff;">(*)</strong>
-                  <span>: [description]</span>
+                  <span>: this</span>
                 </div>
                 <div>
                   <strong style="color: #1890ff;">newState</strong>
@@ -373,7 +395,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setState</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, <span class="hljs-function">() =&gt;</span> {
+                <pre><code class="hljs language-js"><span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setState</span>({ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;do something here&#x27;</span>);
 });
 <span class="hljs-comment">// 等价于</span>
@@ -442,7 +464,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

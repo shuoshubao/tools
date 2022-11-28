@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="plus" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">plus(...args)</div>
+            <div class="item-method">
+              <div id="plus" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,173,145,65,14,130,48,16,69,247,156,162,233,194,64,130,232,190,208,83,184,55,181,20,68,107,75,166,173,196,24,238,174,104,134,196,148,133,38,206,118,254,235,188,159,150,174,23,134,72,45,156,171,232,81,159,220,250,172,110,131,133,154,114,105,141,243,229,102,10,112,82,70,57,223,121,173,72,19,140,244,157,53,123,202,123,29,28,198,43,146,198,68,47,64,92,28,229,69,81,8,104,49,155,145,106,213,122,70,238,9,121,78,76,205,62,160,124,0,243,131,80,163,133,247,10,137,116,186,153,21,95,112,160,234,32,21,98,49,128,81,186,180,196,146,61,168,107,78,100,128,207,154,168,255,110,251,239,198,211,23,236,6,139,234,179,67,198,94,231,198,124,225,17,19,46,7,5,148,111,81,148,37,35,123,0,200,129,183,199"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>plus(...args)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>浮点数计算-加法</div>
@@ -374,17 +396,39 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">plus</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.2</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">plus</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.2</span>)
 <span class="hljs-comment">// =&gt; 0.3</span></code></pre>
-                <pre><code><span class="hljs-title function_">plus</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">plus</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>)
 <span class="hljs-comment">// =&gt; 0.3</span></code></pre>
-                <pre><code><span class="hljs-title function_">plus</span>([<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>])
+                <pre><code class="hljs language-js"><span class="hljs-title function_">plus</span>([<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>])
 <span class="hljs-comment">// =&gt; 0.3</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="minus" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">minus(a, b)</div>
+            <div class="item-method">
+              <div id="minus" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,149,143,65,10,194,48,16,69,247,61,197,144,133,180,208,34,174,219,228,20,238,75,26,163,86,147,73,200,36,20,17,239,110,5,211,77,54,58,235,247,248,111,6,242,18,65,25,73,196,217,213,220,168,187,235,199,226,194,137,9,229,144,226,176,255,0,2,134,130,139,115,52,26,206,9,85,156,29,142,76,216,25,19,101,158,67,93,42,94,6,105,137,9,217,194,244,5,27,224,187,75,236,225,89,193,122,165,178,213,4,29,83,192,63,114,188,217,106,234,117,240,151,7,146,57,46,46,59,83,11,93,41,97,178,147,14,76,28,114,127,211,87,175,254,13,131,82,112,99"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>minus(a, b)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>浮点数计算-减法</div>
@@ -443,13 +487,35 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">minus</span>(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">minus</span>(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>)
 <span class="hljs-comment">// =&gt; 0.2</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="mul" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">mul(...args)</div>
+            <div class="item-method">
+              <div id="mul" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,173,145,65,14,194,32,16,69,247,158,130,176,48,109,82,49,174,105,57,133,123,131,148,214,42,133,102,0,27,99,122,119,91,149,38,134,46,52,113,182,243,31,243,126,200,109,199,53,18,138,91,91,224,147,58,219,205,69,222,122,3,37,102,194,104,235,242,237,20,96,40,143,114,174,113,74,162,202,107,225,26,163,15,152,181,94,133,116,129,146,24,232,56,240,214,98,70,8,225,80,219,119,54,69,197,186,118,20,221,87,104,156,152,154,117,64,58,15,250,7,159,74,113,231,100,32,146,233,102,74,190,224,64,150,94,200,128,197,64,136,226,165,101,40,217,129,188,102,72,120,248,172,25,244,95,109,255,221,120,252,129,125,111,130,249,172,144,210,231,181,33,91,120,67,251,246,40,1,179,93,240,164,171,129,62,0,23,253,182,220"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>mul(...args)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>浮点数计算-乘法</div>
@@ -499,17 +565,39 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">mul</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.2</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">mul</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.2</span>)
 <span class="hljs-comment">// =&gt; 0.02</span></code></pre>
-                <pre><code><span class="hljs-title function_">mul</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">mul</span>(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>)
 <span class="hljs-comment">// =&gt; 0.001</span></code></pre>
-                <pre><code><span class="hljs-title function_">mul</span>([<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>])
+                <pre><code class="hljs language-js"><span class="hljs-title function_">mul</span>([<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>])
 <span class="hljs-comment">// =&gt; 0.001</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="div" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">div(a, b)</div>
+            <div class="item-method">
+              <div id="div" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,149,146,177,110,131,48,16,134,119,158,226,196,80,133,136,52,237,12,120,168,50,54,91,247,234,192,87,226,212,54,8,219,77,34,212,119,175,155,154,44,208,22,60,90,223,167,251,239,183,115,211,162,134,74,162,49,69,124,144,71,179,121,167,203,169,233,120,204,170,70,27,155,111,191,1,6,249,136,179,194,74,130,55,167,43,43,26,253,26,51,46,62,6,186,128,213,88,104,177,67,101,98,134,41,148,1,76,160,184,171,109,6,125,4,254,140,149,233,44,156,170,61,158,253,144,223,66,93,111,124,162,61,218,67,144,238,103,44,160,240,28,232,137,244,35,186,38,187,163,234,153,116,125,27,178,194,36,157,211,212,148,90,38,73,182,168,5,75,170,157,236,64,59,85,82,23,179,199,135,1,93,175,67,103,255,78,232,200,186,78,47,120,116,229,228,203,169,185,237,159,94,99,37,176,93,238,150,193,205,162,207,44,138,122,104,165,51,127,69,69,51,196,68,206,193,59,61,40,161,231,58,198,149,193,113,114,158,97,133,34,243,227,248,159,62,207,241,160,224,196,159,46,222,251,2,93,62,45,129"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>div(a, b)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>浮点数计算-除法</div>
@@ -568,7 +656,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-title function_">div</span>(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">div</span>(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>)
 <span class="hljs-comment">// =&gt; 3</span></code></pre>
               </div>
             </div>
@@ -633,7 +721,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

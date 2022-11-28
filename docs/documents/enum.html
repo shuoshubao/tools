@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="getlabelbyvalue" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">getLabelByValue(value, data = [], emptyText = '--')</div>
+            <div class="item-method">
+              <div id="getlabelbyvalue" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,146,65,79,196,32,20,132,239,251,43,8,38,155,109,178,213,196,139,7,90,14,158,189,105,188,24,99,176,125,173,40,165,4,94,215,109,204,254,119,97,151,174,154,54,173,92,8,100,134,153,247,133,204,25,161,73,161,132,115,57,125,83,239,46,253,128,254,179,181,37,229,69,171,29,102,87,65,192,73,54,210,161,68,5,164,234,116,129,178,213,47,148,215,128,119,226,21,212,109,255,40,84,7,131,51,39,155,177,217,8,43,26,71,249,46,40,183,164,20,40,188,240,233,121,75,160,49,216,63,192,30,253,121,236,115,104,165,174,41,95,95,236,175,111,88,154,158,246,24,21,183,132,228,235,26,25,249,90,17,191,198,111,76,15,40,17,26,31,25,154,92,254,99,216,74,234,50,90,39,198,27,132,148,207,140,126,6,20,218,46,113,62,222,248,220,251,35,128,33,121,55,81,213,216,214,128,197,62,194,253,129,146,79,1,157,125,61,248,147,132,45,113,148,213,208,126,19,40,38,145,252,130,203,2,118,86,255,198,63,59,140,10,95,43,170,79,141,14,75,189,254,38,156,63,22,91,29,216,55,121,76,3,16"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>getLabelByValue(value, data = [], emptyText = '--')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>通过 value 获取 label</div>
@@ -332,7 +354,7 @@
                 <div>
                   <strong style="color: #1890ff;">value</strong>
                   <strong style="color: #1890ff;">(*)</strong>
-                  <span>: [description]</span>
+                  <span>: value 值</span>
                 </div>
                 <div>
                   <strong style="color: #1890ff;">[data=[{ value, label }]]</strong>
@@ -386,20 +408,42 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">value</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }]
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">value</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }]
 <span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-number">5</span>, data)
 <span class="hljs-comment">// =&gt; &#x27;优秀&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-string">&#x27;5&#x27;</span>, data)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-string">&#x27;5&#x27;</span>, data)
 <span class="hljs-comment">// =&gt; &#x27;优秀&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-literal">null</span>, data)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-literal">null</span>, data)
 <span class="hljs-comment">// =&gt; &#x27;--&#x27;</span></code></pre>
-                <pre><code><span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-literal">null</span>, data, <span class="hljs-string">&#x27;暂无&#x27;</span>)
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getLabelByValue</span>(<span class="hljs-literal">null</span>, data, <span class="hljs-string">&#x27;暂无&#x27;</span>)
 <span class="hljs-comment">// =&gt; &#x27;暂无&#x27;</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="convertjsontoenum" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">convertJsonToEnum(data = {})</div>
+            <div class="item-method">
+              <div id="convertjsontoenum" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,141,145,61,111,195,32,20,69,247,252,138,39,134,40,150,220,116,175,63,182,44,93,186,116,171,162,138,224,215,198,49,1,11,30,84,85,228,255,94,72,130,171,202,137,106,70,115,14,186,247,186,180,61,87,32,36,183,182,98,123,121,176,15,29,126,127,105,211,176,90,104,101,169,124,140,64,13,229,132,163,150,36,194,135,83,130,90,173,222,207,188,71,67,207,86,171,87,189,81,238,152,220,10,86,83,189,231,134,31,45,171,27,78,60,16,167,225,74,103,80,45,63,169,128,211,2,194,153,122,99,60,131,228,140,250,47,223,249,75,8,247,178,59,160,72,109,214,51,218,160,34,211,162,189,26,171,24,51,155,227,25,108,156,192,164,77,133,132,178,91,151,105,148,222,160,207,225,173,203,193,111,255,238,146,250,94,230,137,39,178,115,130,245,206,238,83,172,95,251,246,200,156,200,176,218,115,233,82,147,39,232,242,89,146,228,59,148,163,228,71,103,200,138,197,125,247,206,95,141,221,46,218,16,230,216,134,39,134,226,7,24,240,228,155"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>convertJsonToEnum(data = {})</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将 json 转换成 [{ value, label }]</div>
@@ -447,14 +491,36 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> data = { 优秀: <span class="hljs-number">5</span>, 良好: <span class="hljs-number">4</span>, 及格: <span class="hljs-number">3</span> }
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = { 优秀: <span class="hljs-number">5</span>, 良好: <span class="hljs-number">4</span>, 及格: <span class="hljs-number">3</span> }
 <span class="hljs-title function_">convertJsonToEnum</span>(data)
 <span class="hljs-comment">// =&gt; [{ value: 5, label: &#x27;优秀&#x27; }, { value: 4, label: &#x27;良好&#x27; }, { value: 3, label: &#x27;及格&#x27; }]</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="getvaluebylabel" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">getValueByLabel(label, data = [], emptyText = '--')</div>
+            <div class="item-method">
+              <div id="getvaluebylabel" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,149,83,193,106,132,48,20,188,239,87,4,11,203,10,107,11,189,244,224,234,161,180,151,82,104,161,75,47,165,148,172,70,155,109,140,146,60,237,74,217,127,111,162,198,42,186,171,205,37,40,51,111,230,189,55,217,200,12,115,20,48,44,165,103,125,178,189,116,190,72,249,157,138,208,242,131,148,75,216,92,105,128,143,54,3,28,80,96,4,69,57,15,128,166,252,195,242,99,2,175,152,229,228,182,124,196,59,194,12,211,67,171,33,57,195,2,39,210,242,153,70,174,81,136,1,43,224,219,251,26,145,36,131,114,75,14,160,190,135,60,9,130,242,216,242,151,23,135,235,27,215,113,234,187,145,106,46,27,121,203,24,92,244,179,64,234,12,107,180,13,50,210,182,7,74,246,174,54,161,189,184,83,84,26,25,230,72,115,131,201,80,249,204,48,229,79,187,61,9,140,228,74,235,216,118,227,82,159,142,135,25,53,213,118,10,34,224,65,166,124,155,222,243,60,233,213,173,27,56,78,181,209,91,49,85,6,148,182,177,113,57,195,68,68,121,104,116,135,112,3,180,252,211,1,40,218,152,232,157,77,165,173,250,163,116,95,170,24,24,229,98,196,106,38,210,76,141,167,108,34,246,23,13,239,244,116,199,171,87,124,219,254,79,36,244,36,187,155,61,195,18,4,114,193,187,43,56,219,76,161,31,88,131,158,185,227,190,66,251,188,220,197,209,253,5,41,105,90,179"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>getValueByLabel(label, data = [], emptyText = '--')</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>通过 label 获取 value</div>
@@ -462,9 +528,9 @@
                 <a href="javascript:void(0)" target="undefined" style="color: #1890ff;">getLabelByValue</a>
                 <h4>Arguments</h4>
                 <div>
-                  <strong style="color: #1890ff;">value</strong>
+                  <strong style="color: #1890ff;">label</strong>
                   <strong style="color: #1890ff;">(*)</strong>
-                  <span>: [description]</span>
+                  <span>: label 值</span>
                 </div>
                 <div>
                   <strong style="color: #1890ff;">[data=[{ value, label }]]</strong>
@@ -518,14 +584,36 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">value</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }]
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">value</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">value</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }]
 <span class="hljs-title function_">getValueByLabel</span>(<span class="hljs-string">&#x27;优秀&#x27;</span>, data)
 <span class="hljs-comment">// =&gt; 5</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="convertdatatoenum" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">convertDataToEnum(res, options = {})</div>
+            <div class="item-method">
+              <div id="convertdatatoenum" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,157,85,65,107,219,48,20,190,239,87,104,30,148,26,220,4,118,41,196,137,119,105,79,43,180,135,177,203,24,67,113,212,212,157,44,27,73,113,27,58,195,14,185,245,176,211,96,140,210,210,123,33,237,169,237,10,251,53,75,210,254,139,201,138,237,216,181,146,40,245,193,32,252,190,247,189,247,189,79,207,77,22,66,2,92,12,25,107,25,7,248,144,109,124,69,253,163,128,118,12,199,13,8,227,205,122,18,224,128,102,37,142,123,28,35,176,223,35,46,247,2,242,69,198,71,136,242,45,200,225,135,96,155,244,252,12,219,2,235,85,120,8,41,244,153,225,80,196,44,16,132,73,14,38,34,79,226,20,101,130,214,90,151,219,224,228,21,16,79,21,159,151,233,237,103,60,10,150,74,145,30,219,246,67,222,255,8,113,15,165,184,117,81,130,105,166,68,75,200,40,226,61,74,50,194,79,159,109,9,138,151,213,88,146,114,70,20,66,126,32,122,174,2,25,167,30,233,26,206,218,155,227,183,155,246,244,157,194,45,69,184,27,248,62,34,220,112,234,117,128,61,198,193,228,247,224,241,118,56,250,59,72,65,57,99,148,244,253,30,245,53,88,101,104,153,58,79,131,97,27,97,189,52,50,116,78,26,138,72,7,209,157,36,66,153,41,155,155,225,204,247,15,9,58,40,55,90,226,152,236,144,124,168,41,112,52,8,133,75,251,134,35,43,43,10,20,139,34,82,39,218,43,77,84,106,222,154,142,243,157,206,85,233,34,94,48,159,37,145,150,176,147,9,26,66,148,229,236,101,27,38,244,138,78,43,172,62,12,51,214,151,105,29,41,133,94,116,113,138,206,28,255,188,158,60,12,132,53,199,195,31,255,238,190,63,93,222,143,127,13,71,23,127,198,103,87,147,155,135,209,249,105,3,136,165,209,70,20,124,3,83,15,61,119,175,222,22,120,173,181,6,246,48,244,200,110,251,16,185,249,40,162,210,22,88,105,4,101,152,26,10,57,167,66,195,194,230,105,128,200,210,6,22,237,42,128,37,92,108,231,199,88,71,173,146,123,101,69,202,251,183,200,183,145,149,47,19,211,94,153,19,207,189,243,21,206,194,146,200,184,203,106,215,106,181,103,50,202,194,172,37,147,84,169,186,178,4,217,34,52,103,250,235,169,177,200,62,90,13,73,230,25,107,250,35,18,228,177,253,31,3,151,137,163"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>convertDataToEnum(res, options = {})</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将任意数据返回转换成 Enum [{ value, label }]</div>
@@ -584,14 +672,36 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> res = { <span class="hljs-attr">code</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">data</span>: { <span class="hljs-attr">list</span>: [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }] }, <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success&#x27;</span> }
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> res = { <span class="hljs-attr">code</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">data</span>: { <span class="hljs-attr">list</span>: [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }] }, <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success&#x27;</span> }
 <span class="hljs-title function_">convertDataToEnum</span>(res, { <span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;data.list&#x27;</span>, <span class="hljs-attr">valueKey</span>: <span class="hljs-string">&#x27;code&#x27;</span>, <span class="hljs-attr">labelKey</span>: <span class="hljs-string">&#x27;desc&#x27;</span> })
 <span class="hljs-comment">// =&gt; [{ value: 5, label: &#x27;优秀&#x27; }, { value: 4, label: &#x27;良好&#x27; }, { value: 3, label: &#x27;及格&#x27; }]</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="convertdatatocascader" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">convertDataToCascader(res, config)</div>
+            <div class="item-method">
+              <div id="convertdatatocascader" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,157,85,207,79,131,48,24,189,251,87,52,152,44,91,130,154,120,49,25,27,30,244,166,71,111,203,98,42,116,80,237,10,105,203,116,49,252,239,182,133,110,214,22,87,198,129,164,225,123,239,251,241,190,71,23,188,134,20,100,4,114,190,140,74,242,206,175,62,208,254,179,98,121,148,102,21,229,98,113,163,2,82,176,112,226,4,22,4,129,77,67,51,129,43,250,170,227,119,136,137,71,40,224,75,245,0,121,6,115,196,12,126,9,166,46,69,13,25,220,242,40,101,136,199,64,194,55,184,232,227,103,96,57,41,68,2,190,47,128,124,92,164,191,200,46,90,61,53,20,165,204,233,2,185,96,152,22,81,58,185,252,186,189,75,186,119,15,143,15,232,29,36,13,122,66,251,0,6,29,58,64,67,224,27,34,97,52,58,116,128,38,43,49,201,25,162,97,76,38,122,128,76,126,145,170,60,171,116,94,50,163,103,148,14,203,69,171,28,29,116,85,50,153,131,250,112,237,193,177,170,150,139,177,143,82,221,102,31,173,75,106,101,17,157,240,201,40,165,199,173,227,113,9,115,121,178,86,235,68,82,134,68,195,168,193,43,180,167,63,39,53,67,121,147,153,17,121,246,254,56,228,127,76,81,51,180,147,174,104,152,109,9,119,215,199,204,13,11,180,149,99,176,193,126,2,40,4,139,82,189,223,61,122,174,170,89,25,115,172,227,96,146,223,178,119,36,198,26,35,72,204,98,31,120,86,107,11,219,38,214,81,117,26,188,139,94,43,120,100,61,120,199,104,171,178,204,146,80,41,240,198,228,155,170,33,252,50,246,122,230,209,228,100,11,127,70,18,214,133,235,11,183,24,187,163,214,58,169,189,12,49,65,221,240,242,188,49,217,166,83,249,142,208,54,150,186,247,84,237,184,127,6,193,92,200,17,233,171,225,62,100,82,5,50,216,169,190,161,20,82,167,7,115,249,31,229,39,179,219,125,156,39,141,42,90,182,219,38,63,43,176,119,90"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>convertDataToCascader(res, config)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>将任意数据返回转换成 Cascader: [{ value, label, children: [{ value, label }]}]</div>
@@ -651,14 +761,36 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> res = { <span class="hljs-attr">code</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">data</span>: { <span class="hljs-attr">list</span>: [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span>, <span class="hljs-attr">list</span>: [ { <span class="hljs-attr">code</span>: <span class="hljs-number">3.5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;一般&#x27;</span> }] }] }, <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success&#x27;</span> }
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> res = { <span class="hljs-attr">code</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">data</span>: { <span class="hljs-attr">list</span>: [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span>, <span class="hljs-attr">list</span>: [ { <span class="hljs-attr">code</span>: <span class="hljs-number">3.5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;一般&#x27;</span> }] }] }, <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;success&#x27;</span> }
 <span class="hljs-title function_">convertDataToCascader</span>(res, { <span class="hljs-attr">path</span>: <span class="hljs-string">&#x27;data.list&#x27;</span>, <span class="hljs-attr">valueKey</span>: <span class="hljs-string">&#x27;code&#x27;</span>, <span class="hljs-attr">labelKey</span>: <span class="hljs-string">&#x27;desc&#x27;</span>, <span class="hljs-attr">childrenKey</span>: <span class="hljs-string">&#x27;list&#x27;</span> })
 <span class="hljs-comment">// =&gt; [{ value: 5, label: &#x27;优秀&#x27; }, { value: 4, label: &#x27;良好&#x27; }, { value: 3, label: &#x27;及格&#x27;, children: [{ value: 3.5, label: &#x27;一般&#x27; }] }]</span></code></pre>
               </div>
             </div>
-            <div>
-              <div id="getvalueincollection" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">getValueInCollection(value, data = [], options = {})</div>
+            <div class="item-method">
+              <div id="getvalueincollection" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,157,146,193,106,132,48,16,134,239,251,20,67,10,203,10,218,66,47,61,168,185,244,84,122,108,233,69,164,4,141,54,109,140,98,198,118,23,241,221,155,184,42,44,202,186,187,30,2,14,243,205,252,243,207,4,186,98,10,18,201,180,14,201,151,252,214,222,15,63,252,149,117,74,104,82,42,141,193,131,77,160,16,204,242,80,160,228,144,53,42,65,81,170,79,66,115,142,31,76,54,252,69,61,151,82,242,62,60,226,33,236,230,21,42,86,179,66,19,250,107,41,23,82,134,204,36,70,177,11,101,101,97,109,254,218,110,40,225,64,184,205,209,135,118,3,230,155,23,91,150,221,130,137,155,50,243,124,141,181,80,57,161,219,187,253,227,147,127,124,7,202,133,94,209,235,45,36,47,42,60,188,243,61,94,128,122,222,9,12,157,97,134,201,253,171,166,20,200,11,195,90,3,239,47,88,84,38,84,58,160,11,91,25,19,9,61,179,177,105,175,118,39,147,217,189,232,21,225,53,199,166,86,107,103,213,71,140,212,183,222,176,81,108,191,22,115,8,225,146,183,103,193,200,244,143,157,163,171,157,179,234,174,200,70,129,59,235,173,115,203,104,22,140,198,67,138,135,214,107,141,79,75,76,199,228,111,58,255,31,140,29,58,174"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>getValueInCollection(value, data = [], options = {})</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>
@@ -723,10 +855,10 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }];
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }];
 <span class="hljs-title function_">getValueInCollection</span>(<span class="hljs-string">&#x27;优秀&#x27;</span>, data, { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;code&#x27;</span>, <span class="hljs-attr">valueKey</span>: <span class="hljs-string">&#x27;desc&#x27;</span> })
 <span class="hljs-comment">// =&gt; 5</span></code></pre>
-                <pre><code><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }];
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> data = [{ <span class="hljs-attr">code</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;优秀&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;良好&#x27;</span> }, { <span class="hljs-attr">code</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">desc</span>: <span class="hljs-string">&#x27;及格&#x27;</span> }];
 <span class="hljs-title function_">getValueInCollection</span>(<span class="hljs-number">5</span>, data, { <span class="hljs-attr">valueKey</span>: <span class="hljs-string">&#x27;code&#x27;</span>, <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;desc&#x27;</span> })
 <span class="hljs-comment">// =&gt; &#x27;优秀&#x27;</span></code></pre>
               </div>
@@ -792,7 +924,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

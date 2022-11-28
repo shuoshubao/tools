@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="memoize" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">memoize(fn)</div>
+            <div class="item-method">
+              <div id="memoize" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,157,148,81,79,131,48,16,199,223,247,41,26,30,12,36,19,125,22,70,98,162,15,126,6,99,76,237,142,173,179,20,108,203,150,105,246,221,109,221,110,64,24,172,200,11,129,220,255,238,127,191,187,54,213,21,149,132,9,170,245,34,88,139,141,190,253,132,253,174,84,203,32,99,165,212,38,189,115,1,25,73,123,113,134,27,1,36,175,37,51,188,148,239,65,86,64,81,242,111,64,197,130,228,146,44,110,86,38,33,63,51,98,159,126,138,203,165,24,101,107,208,86,255,250,150,76,18,250,123,92,54,38,195,190,170,162,138,22,58,200,226,56,166,106,165,79,177,81,167,153,41,190,36,236,30,109,30,91,204,195,33,19,165,132,39,128,234,164,14,157,133,40,153,92,148,27,40,108,197,35,204,216,163,112,206,37,98,185,192,4,3,131,108,152,215,246,76,213,129,194,143,134,215,21,251,10,76,173,228,132,97,114,253,252,85,83,129,166,183,23,186,172,84,89,129,50,251,32,107,77,114,142,19,105,97,61,248,33,230,57,250,11,29,224,232,191,221,57,241,168,221,37,53,244,20,220,50,57,121,11,92,26,191,189,203,209,91,104,215,190,207,199,127,143,106,169,215,60,71,7,225,53,64,212,24,213,153,206,3,78,103,222,81,186,78,166,78,171,203,220,101,56,202,14,199,23,94,6,163,131,96,2,168,106,174,139,177,147,17,70,67,155,239,79,79,87,130,51,24,62,135,178,46,62,192,2,187,63,239,242,80,210,191,63,54,227,139,180,39,155,155,61,94,99,29,4,222,240,144,85,50,59,36,191,203,199,10,87"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>memoize(fn)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>memoize/cache</div>
@@ -372,7 +394,7 @@
                   </i>
                 </h4>
                 <div style="display: none;">暂无</div>
-                <pre><code><span class="hljs-keyword">const</span> <span class="hljs-title function_">add</span> = (<span class="hljs-params">a, b</span>) =&gt; {
+                <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">add</span> = (<span class="hljs-params">a, b</span>) =&gt; {
   <span class="hljs-keyword">return</span> a + b;
 }
 <p><span class="hljs-keyword">const</span> memoizedAdd = <span class="hljs-title function_">memoizeOne</span>(add);</p>
@@ -442,7 +464,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>

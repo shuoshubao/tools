@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
     <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
     <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
-    <link rel="stylesheet" href="https://unpkg.com/highlight.js@latest/styles/vs2015.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
   </head>
   <body>
     <div class="g-doc">
@@ -322,9 +322,31 @@
         </header>
         <div class="m-content" id="js-content">
           <div id="markdown-body" class="m-content-container markdown-body">
-            <div>
-              <div id="b64toblob" class="item-method-name" style="margin-top: -65px; padding-top: 65px;">
-                <div class="item-method-name-area">b64toBlob(b64Data, contentType = 'image/jpeg', sliceSize = 512)</div>
+            <div class="item-method">
+              <div id="b64toblob" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="120,156,173,85,77,79,131,64,16,189,251,43,54,152,52,109,138,86,141,95,145,66,82,235,217,139,122,106,26,179,224,148,110,165,187,100,119,154,138,166,255,221,133,46,20,132,218,214,200,133,64,230,205,188,121,239,193,246,85,76,57,9,34,170,148,107,77,163,153,58,121,135,100,41,228,155,229,5,130,43,236,247,210,2,143,244,107,117,200,48,2,50,89,240,0,153,224,175,150,231,95,95,162,184,143,132,159,99,92,210,174,195,98,42,233,92,101,213,15,20,169,77,244,24,4,142,207,73,12,26,81,7,40,148,140,135,150,215,58,254,184,184,113,216,156,134,208,155,197,16,174,159,205,44,155,168,136,5,240,196,62,155,155,240,197,220,7,105,121,87,231,23,6,97,110,29,226,182,66,116,200,215,17,209,87,29,216,172,134,159,32,12,167,122,147,0,65,170,198,137,53,121,40,22,202,180,205,242,167,123,192,84,28,177,124,110,131,156,85,117,28,159,42,184,190,180,43,218,116,70,219,245,56,55,53,227,142,115,176,0,3,41,105,146,46,63,26,59,71,187,208,19,33,115,108,195,22,69,89,4,197,8,49,153,40,192,95,221,60,51,181,78,94,220,138,180,149,85,115,26,52,142,165,136,65,98,146,142,227,33,78,127,118,233,186,155,52,117,76,50,14,17,39,3,107,226,59,137,212,205,78,145,185,217,107,54,118,193,170,68,202,232,125,168,99,143,153,110,205,121,45,80,28,150,187,62,250,236,141,166,155,37,32,167,155,177,219,95,109,19,184,127,143,13,219,51,49,108,29,150,3,89,107,92,183,91,206,68,122,149,164,29,177,49,113,183,54,173,249,29,232,116,12,197,27,12,138,47,156,149,116,89,253,205,229,204,149,127,243,248,133,113,188,173,24,93,90,183,68,118,243,71,216,103,241,120,161,166,229,126,25,210,116,91,237,252,153,72,192,133,228,219,55,248,203,158,165,131,107,195,72,217,228,171,1,73,17,117,150,80,159,88,6,113,87,57,197,86,122,145,149,243,13,14,1,127,222"
+                  >
+                    <svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      />
+                    </svg>
+                  </i>
+                  <span>b64toBlob(b64Data, contentType = 'image/jpeg', sliceSize = 512)</span>
+                </div>
               </div>
               <div class="item-method-content">
                 <div>base64 转成 blob</div>
@@ -453,7 +475,7 @@
     <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
     <script src="https://embed.runkit.com"></script>
     <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
-    <script src="https://unpkg.com/pako@latest/dist/pako.min.js"></script>
+    <script src="https://unpkg.com/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
     <script src="../search_json.js"></script>
   </body>
