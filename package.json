@@ -1,0 +1,26 @@
+{
+  "name": "@nbfe/tools",
+  "version": "1.0.0",
+  "description": "工具库",
+  "private": true,
+  "author": "shuoshubao <759979885@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuoshubao/tools.git"
+  },
+  "scripts": {
+    "docs:generate": "nodemon bin --watch ./bin --watch ./lib --watch ./src --watch ./lib",
+    "docs:dev": "rm -rf docs && npm run docs:generate & ydoc serve",
+    "docs:build": "rm -rf docs && node bin && ydoc build"
+  },
+  "dependencies": {
+    "@nbfe/js2html": "^1.2.0",
+    "@nbfe/tools": "^0.4.0",
+    "dox": "^1.0.0",
+    "highlight.js": "^11.7.0"
+  },
+  "devDependencies": {
+    "core-js": "^3.27.2",
+    "ydoc": "^4.1.3"
+  }
+}
