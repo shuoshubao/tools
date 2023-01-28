@@ -152,7 +152,7 @@ window.ydoc_plugin_search_json = {
   "更新日志": [
     {
       "title": "Change Log0.4.0 (2023-01-02)0.3.0 (2022-12-25)0.2.0 (2021-03-22)",
-      "content": "All notable changes to this project will be documented in this file.See Conventional Commits for commit guidelines.",
+      "content": "All notable changes to this project will be documented in this file. See Conventional Commits for commit guidelines.",
       "url": "/CHANGELOG.html",
       "children": [
         {
