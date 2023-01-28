@@ -9,6 +9,7 @@
     "url": "git+https://github.com/shuoshubao/tools.git"
   },
   "scripts": {
+    "bootstrap": "babel-node bin/bootstrap",
     "docs:generate": "nodemon bin --watch ./bin --watch ./lib --watch ./src --watch ./lib",
     "docs:dev": "rm -rf docs && npm run docs:generate & ydoc serve",
     "docs:build": "rm -rf docs && node bin && ydoc build"
@@ -21,6 +22,8 @@
   },
   "devDependencies": {
     "core-js": "^3.27.2",
+    "fs-extra": "^11.1.0",
+    "node-fetch": "^3.3.0",
     "ydoc": "^4.1.3"
   }
 }
