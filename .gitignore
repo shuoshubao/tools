@@ -1,14 +1,12 @@
 .DS_Store
 node_modules
 
-# lerna
-lerna-debug.log
-
 # npm
 package-lock.json
 npm-debug.log*
 
-lib
 src/documents
 src/CHANGELOG.md
-_site
+
+coverage
+dist
