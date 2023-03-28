@@ -16,7 +16,6 @@ module.exports = {
         'https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css'
       ],
       js: [
-        'https://file.ljcdn.com/bs/lodash/4.17.21/lodash.min.js',
         'https://file.ljcdn.com/bs/react/17.0.2/umd/react.production.min.js',
         'https://file.ljcdn.com/bs/react-dom/17.0.2/umd/react-dom.production.min.js',
         'https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js',
