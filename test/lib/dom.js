@@ -3,7 +3,36 @@ import { convertCssom, getCssText, suffixClassNames } from '../../lib/dom'
 
 test('convertCssom', t => {
   const { deepEqual } = t
-  deepEqual(convertCssom({ color: 'red' }), { color: 'red' })
+  deepEqual(
+    convertCssom({
+      color: 'red'
+    }),
+    { color: 'red' }
+  )
+  deepEqual(
+    convertCssom({
+      width: 100,
+      height: 200
+    }),
+    {
+      width: '100px',
+      height: '200px'
+    }
+  )
+  deepEqual(
+    convertCssom({
+      width: 100,
+      minHeight: 100,
+      marginTop: 10,
+      paddingBottom: 10
+    }),
+    {
+      width: '100px',
+      'min-height': '100px',
+      'margin-top': '10px',
+      'padding-bottom': '10px'
+    }
+  )
 })
 
 test('getCssText', t => {
