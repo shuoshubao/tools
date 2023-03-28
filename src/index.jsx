@@ -7,7 +7,7 @@ banner:
     - { name: 'Github', href: 'https://github.com/shuoshubao/tools', primary: true }
   caption: '当前版本: v0.4.1'
 features: 
-  - { name: '零依赖', desc: '只依赖 lodash, 不重复开发一些最基础的功能' }
+  - { name: '零依赖', desc: '不重复开发一些最基础的功能' }
   - { name: '懂业务', desc: '完全基于业务和组件库提炼, 没有花里胡哨的功能' }
   - { name: '优雅', desc: '每一个方法名都经过严格的思考, 让你用一次就记得住' }
 

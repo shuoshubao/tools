@@ -56,15 +56,11 @@ export default [
   {
     input: 'lib/index.js',
     output: {
-      globals: {
-        lodash: '_'
-      },
       name: 'tools',
       file: 'dist/index.min.js',
       format: 'umd',
       banner: getBanner()
     },
-    external: ['lodash'],
     plugins: [...plugins, nodeResolve(), commonjs(), terser()]
   }
 ]

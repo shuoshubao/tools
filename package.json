@@ -22,12 +22,8 @@
     "test:watch": "npx ava --verbose --watch",
     "coverage": "npx nyc ava",
     "coverage:summary": "npx nyc --reporter=istanbul-reporter-html --reporter=text-summary ava",
-    "lodash-es": "cp dist/index.esm.js dist/index-es.js && npx replace lodash lodash-es dist/index-es.js",
-    "build": "rm -rf dist && npx rollup -c && npm run lodash-es",
+    "build": "rm -rf dist && npx rollup -c",
     "prepublishOnly": "npm run build"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
@@ -50,10 +46,10 @@
     "fs-extra": "^11.1.0",
     "highlight.js": "^11.7.0",
     "istanbul-reporter-html": "^0.3.0",
+    "lodash": "^4.17.21",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0",
     "nyc": "^15.1.0",
-    "replace": "^1.2.2",
     "rollup": "^2.67.2",
     "ydoc": "^4.1.3"
   }
