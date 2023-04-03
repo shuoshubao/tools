@@ -1,8 +1,9 @@
 import test from 'ava'
-import { thousands } from '../../lib/numeral'
+import { thousands, getValueInRange } from '../../lib/numeral'
 
 test('thousands', t => {
   const { is } = t
+
   is(thousands(), undefined)
   is(thousands(null), null)
   is(thousands(1), '1')
@@ -18,4 +19,11 @@ test('thousands', t => {
   is(thousands(1.1234), '1.1234')
   is(thousands(-1.1234), '-1.1234')
   is(thousands(-1234.1234), '-1,234.1234')
+})
+
+test('getValueInRange', t => {
+  const { is } = t
+  is(getValueInRange(1, 2, 7), 2)
+  is(getValueInRange(3, 2, 7), 3)
+  is(getValueInRange(12, 2, 7), 7)
 })
