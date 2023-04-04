@@ -130,6 +130,7 @@
                       <li class="item"><a href="types.html#isemptystring" class="href">isEmptyString</a></li>
                       <li class="item"><a href="types.html#iseverytruthy" class="href">isEveryTruthy</a></li>
                       <li class="item"><a href="types.html#iseveryfalsy" class="href">isEveryFalsy</a></li>
+                      <li class="item"><a href="types.html#gettype" class="href">getType</a></li>
                       <li class="item"><a href="types.html#isuniq" class="href">isUniq</a></li>
                       <li class="item"><a href="types.html#ispromise" class="href">isPromise</a></li>
                       <li class="item"><a href="types.html#isblob" class="href">isBlob</a></li>
@@ -169,7 +170,6 @@
                       <li class="item">
                         <a href="data.html#formatemptytodefault" class="href">formatEmptyToDefault</a>
                       </li>
-                      <li class="item"><a href="data.html#booleanpromise" class="href">booleanPromise</a></li>
                     </ul>
                   </div>
                 </li>
@@ -720,6 +720,69 @@
 <span class="hljs-comment">// =&gt; true</span></code></pre>
                 <pre><code class="hljs language-js"><span class="hljs-title function_">isEveryFalsy</span>(<span class="hljs-literal">false</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>);
 <span class="hljs-comment">// =&gt; false</span></code></pre>
+              </div>
+            </div>
+            <div class="item-method">
+              <div id="gettype" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgetType%3C%2Fspan%3E%20%3D%20value%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20class_%22%3EObject%3C%2Fspan%3E.%3Cspan%20class%3D%22hljs-property%22%3E%3Cspan%20class%3D%22hljs-keyword%22%3Eprototype%3C%2Fspan%3E%3C%2Fspan%3E.%3Cspan%20class%3D%22hljs-property%22%3EtoString%3C%2Fspan%3E.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ecall%3C%2Fspan%3E(value).%3Cspan%20class%3D%22hljs-title%20function_%22%3Eslice%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-number%22%3E8%3C%2Fspan%3E%2C%20-%3Cspan%20class%3D%22hljs-number%22%3E1%3C%2Fspan%3E)%0A%7D"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      /></svg></i
+                  ><span>getType(value)</span>
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>获取类型</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">value</strong><strong style="color: #1890ff;"> (*)</strong
+                  ><span>: 值</span>
+                </div>
+                <h4>Returns</h4>
+                <span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: 构造函数名</span></span>
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="getType"
+                    data-example="%5B%22getType()%5Cn%2F%2F%20%3D%3E%20'Undefined'%22%2C%22getType(null)%5Cn%2F%2F%20%3D%3E%20'Null'%22%2C%22getType(()%20%3D%3E%20%7B%7D)%5Cn%2F%2F%20%3D%3E%20'Function'%22%5D"
+                    ><svg
+                      viewbox="64 64 896 896"
+                      focusable="false"
+                      data-icon="code-sandbox"
+                      width="1em"
+                      height="1em"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getType</span>()
+<span class="hljs-comment">// =&gt; &#x27;Undefined&#x27;</span></code></pre>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getType</span>(<span class="hljs-literal">null</span>)
+<span class="hljs-comment">// =&gt; &#x27;Null&#x27;</span></code></pre>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getType</span>(<span class="hljs-function">() =&gt;</span> {})
+<span class="hljs-comment">// =&gt; &#x27;Function&#x27;</span></code></pre>
               </div>
             </div>
             <div class="item-method">

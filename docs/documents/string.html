@@ -130,6 +130,7 @@
                       <li class="item"><a href="types.html#isemptystring" class="href">isEmptyString</a></li>
                       <li class="item"><a href="types.html#iseverytruthy" class="href">isEveryTruthy</a></li>
                       <li class="item"><a href="types.html#iseveryfalsy" class="href">isEveryFalsy</a></li>
+                      <li class="item"><a href="types.html#gettype" class="href">getType</a></li>
                       <li class="item"><a href="types.html#isuniq" class="href">isUniq</a></li>
                       <li class="item"><a href="types.html#ispromise" class="href">isPromise</a></li>
                       <li class="item"><a href="types.html#isblob" class="href">isBlob</a></li>
@@ -169,7 +170,6 @@
                       <li class="item">
                         <a href="data.html#formatemptytodefault" class="href">formatEmptyToDefault</a>
                       </li>
-                      <li class="item"><a href="data.html#booleanpromise" class="href">booleanPromise</a></li>
                     </ul>
                   </div>
                 </li>
@@ -395,7 +395,7 @@
                     style="margin-right: 10px; cursor: pointer;"
                     arialabel="图标: code"
                     class="anticon anticon-code action-showSourceCode"
-                    data-code="%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EpascalCase%3C%2Fspan%3E%20%3D%20(%3Cspan%20class%3D%22hljs-params%22%3Estring%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E%3C%2Fspan%3E)%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20string%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ematch%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-regexp%22%3E%2F%5BA-Z%5D%7B2%2C%7D(%3F%3D%5BA-Z%5D%5Ba-z%5D%2B%5B0-9%5D*%7C%5Cb)%7C%5BA-Z%5D%3F%5Ba-z%5D%2B%5B0-9%5D*%7C%5BA-Z%5D%7C%5B0-9%5D%2B%2Fg%3C%2Fspan%3E)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-function%22%3E%3Cspan%20class%3D%22hljs-params%22%3Ex%3C%2Fspan%3E%20%3D%26gt%3B%3C%2Fspan%3E%20x.%3Cspan%20class%3D%22hljs-title%20function_%22%3EcharAt%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-number%22%3E0%3C%2Fspan%3E).%3Cspan%20class%3D%22hljs-title%20function_%22%3EtoUpperCase%3C%2Fspan%3E()%20%2B%20x.%3Cspan%20class%3D%22hljs-title%20function_%22%3Eslice%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-number%22%3E1%3C%2Fspan%3E).%3Cspan%20class%3D%22hljs-title%20function_%22%3EtoLowerCase%3C%2Fspan%3E())%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E)%0A%7D"
+                    data-code="%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EpascalCase%3C%2Fspan%3E%20%3D%20(%3Cspan%20class%3D%22hljs-params%22%3Estring%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E%3C%2Fspan%3E)%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20matchs%20%3D%20string.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ematch%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-regexp%22%3E%2F%5BA-Z%5D%7B2%2C%7D(%3F%3D%5BA-Z%5D%5Ba-z%5D%2B%5B0-9%5D*%7C%5Cb)%7C%5BA-Z%5D%3F%5Ba-z%5D%2B%5B0-9%5D*%7C%5BA-Z%5D%7C%5B0-9%5D%2B%2Fg%3C%2Fspan%3E)%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(!matchs)%20%7B%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E%0A%20%20%7D%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20matchs%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-function%22%3E%3Cspan%20class%3D%22hljs-params%22%3Ex%3C%2Fspan%3E%20%3D%26gt%3B%3C%2Fspan%3E%20%7B%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20x.%3Cspan%20class%3D%22hljs-title%20function_%22%3EcharAt%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-number%22%3E0%3C%2Fspan%3E).%3Cspan%20class%3D%22hljs-title%20function_%22%3EtoUpperCase%3C%2Fspan%3E()%20%2B%20x.%3Cspan%20class%3D%22hljs-title%20function_%22%3Eslice%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-number%22%3E1%3C%2Fspan%3E).%3Cspan%20class%3D%22hljs-title%20function_%22%3EtoLowerCase%3C%2Fspan%3E()%0A%20%20%20%20%7D)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E)%0A%7D"
                     ><svg
                       viewbox="64 64 896 896"
                       focusable="false"
