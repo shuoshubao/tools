@@ -2,7 +2,7 @@ require('core-js')
 const { readFileSync, writeFileSync } = require('fs')
 const { ensureDirSync, copySync } = require('fs-extra')
 const { parseComments } = require('dox')
-const { map, filter, sortBy, flatten } = require('lodash')
+const { map, filter, flatten } = require('lodash')
 const hljs = require('highlight.js')
 const { createElement } = require('@nbfe/tools')
 const { FilesConfig, SvgIcons } = require('./util')
@@ -25,7 +25,7 @@ ensureDirSync('src/documents')
 
 files.forEach(v => {
   const fileName = v.split(/[/|.]/)[1]
-  const { categoryName = '', functions = [] } = FilesConfig.find(v2 => {
+  const { categoryName = '' } = FilesConfig.find(v2 => {
     return v2.category === fileName
   })
   const content = readFileSync(v).toString()
@@ -45,11 +45,7 @@ files.forEach(v => {
       }
     })
   const docs = filter(parseComments(content.replaceAll('export ', '')), 'code')
-  const sortedExportList = sortBy(exportList, v2 => {
-    const index = (functions || []).indexOf(v2.funcName)
-    return index === -1 ? exportList.length : index
-  })
-  const markdownText = sortedExportList
+  const markdownText = exportList
     .map(v2 => {
       const { funcName, callText } = v2
       const { description, tags, code } = docs.find(v3 => {
@@ -229,7 +225,7 @@ files.forEach(v => {
     .join('\n')
   MenuListText.push(`- [${categoryName || fileName}](${fileName}.md)`)
   MenuListText.push(
-    ...sortedExportList.map(v3 => {
+    ...exportList.map(v3 => {
       return `  - [${v3.funcName}](${fileName}.md#${v3.funcName})`
     })
   )
