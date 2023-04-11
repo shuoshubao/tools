@@ -1,5 +1,5 @@
 import test from 'ava'
-import { plus, minus, mul, div } from '../../lib/decimal'
+import { plus, minus, multiply, divide } from '../../lib/decimal'
 
 test('plus', async t => {
   const { is } = t
@@ -13,12 +13,12 @@ test('minus', async t => {
   is(minus(0.3, 0.1), 0.2)
 })
 
-test('mul', async t => {
+test('multiply', async t => {
   const { is } = t
-  is(mul(0.1, 0.2), 0.02)
+  is(multiply(0.1, 0.2), 0.02)
 })
 
-test('div', async t => {
+test('divide', async t => {
   const { is } = t
-  is(div(0.3, 0.1), 3)
+  is(divide(0.3, 0.1), 3)
 })
