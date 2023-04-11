@@ -137,7 +137,7 @@ window.ydoc_plugin_search_json = {
     {
       "title": "",
       "content": "",
-      "url": "/documents/antd-locale.html",
+      "url": "/documents/antd.html",
       "children": []
     }
   ],
