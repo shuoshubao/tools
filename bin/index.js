@@ -55,7 +55,6 @@ files.forEach(v => {
       const { description, tags, code } = docs.find(v3 => {
         return v3.ctx.name === funcName
       })
-      const Aliases = filter(tags, { type: 'alias' })
       const See = filter(tags, { type: 'see' })
       const Returns = filter(tags, { type: 'return' })
       const Example = filter(tags, { type: 'example' })
@@ -117,23 +116,6 @@ files.forEach(v => {
                       {
                         href: isUrl ? string : 'javascript:void(0)',
                         target: isUrl ? '_blank' : undefined,
-                        style: {
-                          color: '#1890ff'
-                        }
-                      },
-                      string
-                    ]
-                  ]
-                })
-              ),
-              ...flatten(
-                Aliases.map(v3 => {
-                  const { string } = v3
-                  return [
-                    ['h4', null, 'Aliases'],
-                    [
-                      'div',
-                      {
                         style: {
                           color: '#1890ff'
                         }
