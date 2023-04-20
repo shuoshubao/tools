@@ -1,53 +1,532 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charSet="UTF-8"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"/><link rel="apple-touch-icon" sizes="180x180" href="../ydoc/images/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="../ydoc/images/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="../ydoc/images/favicon-16x16.png"/><link rel="manifest" href="../ydoc/images/manifest.json"/><link rel="mask-icon" href="../ydoc/images/safari-pinned-tab.svg" color="#5bbad5"/><meta name="theme-color" content="#ffffff"/><meta http-equiv="Cache-Control" content="no-transform"/><meta http-equiv="Cache-Control" content="no-siteapp"/><title>文档</title><link rel="stylesheet" href="../ydoc/styles/style.css"/><meta name="author" content="shuoshubao"/><meta name="keywords"/><meta name="description" content="工具库"/><meta id="releativePath" content=".."/><link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css"/><link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css"/><link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css"/><link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css"/></head><body><div class="g-doc"><div class="m-aside"><div class="m-summary" id="js-menu"><div class="m-summary-content" id="js-menu-content"><div class="m-summary-block"><ul class="m-summary-list"><li class="item"><div class="m-summary-block"><a href="date.html" class="href">日期</a><ul class="m-summary-list indent"><li class="item"><a href="date.html#formattime" class="href">formatTime</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="enum.html" class="href">枚举</a><ul class="m-summary-list indent"><li class="item"><a href="enum.html#getlabelbyvalue" class="href">getLabelByValue</a></li><li class="item"><a href="enum.html#convertjsontoenum" class="href">convertJsonToEnum</a></li><li class="item"><a href="enum.html#getvaluebylabel" class="href">getValueByLabel</a></li><li class="item"><a href="enum.html#convertdatatoenum" class="href">convertDataToEnum</a></li><li class="item"><a href="enum.html#convertdatatocascader" class="href">convertDataToCascader</a></li><li class="item"><a href="enum.html#getvalueincollection" class="href">getValueInCollection</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="route.html" class="href">路由</a><ul class="m-summary-list indent"><li class="item"><a href="route.html#getparams" class="href">getParams</a></li><li class="item"><a href="route.html#search" class="href">search</a></li><li class="item"><a href="route.html#stringifyurl" class="href">stringifyUrl</a></li><li class="item"><a href="route.html#updateurlquery" class="href">updateUrlQuery</a></li><li class="item"><a href="route.html#linkto" class="href">linkTo</a></li><li class="item"><a href="route.html#parseurl" class="href">parseUrl</a></li><li class="item"><a href="route.html#getfullurl" class="href">getFullUrl</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="qs.html" class="href">qs</a><ul class="m-summary-list indent"><li class="item"><a href="qs.html#queryparse" class="href">queryParse</a></li><li class="item"><a href="qs.html#querystringify" class="href">queryStringify</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="decimal.html" class="href">浮点数计算</a><ul class="m-summary-list indent"><li class="item"><a href="decimal.html#plus" class="href">plus</a></li><li class="item"><a href="decimal.html#minus" class="href">minus</a></li><li class="item"><a href="decimal.html#multiply" class="href">multiply</a></li><li class="item"><a href="decimal.html#divide" class="href">divide</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="dom.html" class="href">DOM操作</a><ul class="m-summary-list indent"><li class="item"><a href="dom.html#setattrs" class="href">setAttrs</a></li><li class="item"><a href="dom.html#downloadblob" class="href">downloadBlob</a></li><li class="item"><a href="dom.html#download" class="href">download</a></li><li class="item"><a href="dom.html#convertcssom" class="href">convertCssom</a></li><li class="item"><a href="dom.html#setstyle" class="href">setStyle</a></li><li class="item"><a href="dom.html#getcsstext" class="href">getCssText</a></li><li class="item"><a href="dom.html#getwordwidth" class="href">getWordWidth</a></li><li class="item"><a href="dom.html#copytext" class="href">copyText</a></li><li class="item"><a href="dom.html#classnames" class="href">classNames</a></li><li class="item"><a href="dom.html#suffixclassnames" class="href">suffixClassNames</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="rules.html" class="href">表单校验</a><ul class="m-summary-list indent"><li class="item"><a href="rules.html#rules" class="href">rules</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="types.html" class="href">类型</a><ul class="m-summary-list indent"><li class="item"><a href="types.html#gettype" class="href">getType</a></li><li class="item"><a href="types.html#isuniq" class="href">isUniq</a></li><li class="item"><a href="types.html#isemptystring" class="href">isEmptyString</a></li><li class="item"><a href="types.html#isemptyvalue" class="href">isEmptyValue</a></li><li class="item"><a href="types.html#ispromise" class="href">isPromise</a></li><li class="item"><a href="types.html#isblob" class="href">isBlob</a></li><li class="item"><a href="types.html#isemptyarray" class="href">isEmptyArray</a></li><li class="item"><a href="types.html#isemptyobject" class="href">isEmptyObject</a></li><li class="item"><a href="types.html#iseverytruthy" class="href">isEveryTruthy</a></li><li class="item"><a href="types.html#iseveryfalsy" class="href">isEveryFalsy</a></li><li class="item"><a href="types.html#issometruthy" class="href">isSomeTruthy</a></li><li class="item"><a href="types.html#issomefalsy" class="href">isSomeFalsy</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="memoize.html" class="href">缓存</a><ul class="m-summary-list indent"><li class="item"><a href="memoize.html#memoize" class="href">memoize</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="dev.html" class="href">调试</a><ul class="m-summary-list indent"><li class="item"><a href="dev.html#sleep" class="href">sleep</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="data.html" class="href">数据</a><ul class="m-summary-list indent"><li class="item"><a href="data.html#arraymove" class="href">arrayMove</a></li><li class="item"><a href="data.html#reserveproperties" class="href">reserveProperties</a></li><li class="item"><a href="data.html#removeproperties" class="href">removeProperties</a></li><li class="item"><a href="data.html#removeemptyproperties" class="href">removeEmptyProperties</a></li><li class="item"><a href="data.html#produceemptyobject" class="href">produceEmptyObject</a></li><li class="item"><a href="data.html#formatemptytodefault" class="href">formatEmptyToDefault</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="react.html" class="href">React</a><ul class="m-summary-list indent"><li class="item"><a href="react.html#setasyncstate" class="href">setAsyncState</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="vue.html" class="href">Vue</a><ul class="m-summary-list indent"><li class="item"><a href="vue.html#pifyvalidate" class="href">pifyValidate</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="formatters.html" class="href">文本格式化</a><ul class="m-summary-list indent"><li class="item"><a href="formatters.html#formatters" class="href">formatters</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="numeral.html" class="href">数值</a><ul class="m-summary-list indent"><li class="item"><a href="numeral.html#thousands" class="href">thousands</a></li><li class="item"><a href="numeral.html#getvalueinrange" class="href">getValueInRange</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="" class="href">Html字符串</a><ul class="m-summary-list indent"><li class="item"><a href="html.html#getpercentagehtml" class="href">getPercentageHtml</a></li><li class="item"><a href="html.html#createelement" class="href">createElement</a></li><li class="item"><a href="html.html#gettooltiphtml" class="href">getTooltipHtml</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="string.html" class="href">字符串处理</a><ul class="m-summary-list indent"><li class="item"><a href="string.html#trimall" class="href">trimAll</a></li><li class="item"><a href="string.html#pascalcase" class="href">pascalCase</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="ua.html" class="href">UA</a><ul class="m-summary-list indent"><li class="item"><a href="ua.html#isandroid" class="href">isAndroid</a></li><li class="item"><a href="ua.html#isios" class="href">isIOS</a></li><li class="item"><a href="ua.html#isiphone" class="href">isIPhone</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="image.html" class="href">图片</a><ul class="m-summary-list indent"><li class="item"><a href="image.html#getimagesize" class="href">getImageSize</a></li><li class="item"><a href="image.html#changeimageurltobase64" class="href">changeImageUrlToBase64</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="file.html" class="href">文件</a><ul class="m-summary-list indent"><li class="item"><a href="file.html#b64toblob" class="href">b64toBlob</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="Uint8Array.html" class="href">Uint8Array</a><ul class="m-summary-list indent"><li class="item"><a href="Uint8Array.html#utf8arraytostring" class="href">Utf8ArrayToString</a></li></ul></div></li><li class="item"><div class="m-summary-block"><a href="antd.html" class="href">antd</a><ul class="m-summary-list indent"><li class="item"><a href="antd.html#getantdlocalezhcn" class="href">getAntdLocaleZhCN</a></li><li class="item"><a href="antd.html#definemomentlocalezhcn" class="href">defineMomentLocaleZhCn</a></li></ul></div></li></ul></div></div></div><div class="m-summary-switch" id="js-summary-switch"><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="bottom"><g transform="translate(904.92214,-879.1482)"><path d="m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,-55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,-174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,-174.68583 0.6895,0 26.281,25.03215 56.8701,55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864-231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,-104.0616 -231.873,-231.248 z" fill="#fff"></path></g></svg><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="top"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="aaa" fill="#fff" fill-rule="nonzero"><path d="M231.2455,342.502 L0,111.25397 L55.6165,55.62697 C86.2056,25.03212 111.7971,-2.99999998e-05 112.4866,-2.99999998e-05 C113.176,-2.99999998e-05 192.3503,78.60859 288.4293,174.6858 L463.1185,349.3716 L637.8077,174.6858 C733.8867,78.60859 813.060896,-2.99999997e-05 813.750396,-2.99999997e-05 C814.439896,-2.99999997e-05 840.031396,25.03212 870.620496,55.62697 L926.236996,111.25397 L694.9915,342.502 C567.8065,469.6884 463.4636,573.75 463.1185,573.75 C462.7734,573.75 358.4305,469.6884 231.2455,342.502 Z" id="Shape" transform="translate(463.118498, 286.874985) scale(1, -1) translate(-463.118498, -286.874985) "></path></g></g></svg></div></div><div class="m-main" id="js-panel"><header class="m-header" id="js-header"><div class="m-header-title js-logo"><a href="../index.html" target="_self"><img class="logo" width="36" src="https://github.githubassets.com/favicons/favicon.png"/><h6 class="name">工具库</h6></a></div><div><div class="m-search">
-      <div class="icon">&#xf0fd;</div>
-      <input type="text" class="input js-input" placeholder="搜索" />
-      <div class="m-search-result js-search-result"></div>
-    </div></div><nav class="m-header-nav js-nav"><ul class="m-header-items"><li class="item "><a class="href" href="../install.html">使用</a></li><li class="item active"><a class="href" href="date.html">文档</a></li><li class="item "><a class="href" href="../CONTRIBUTING.html">贡献指南</a></li><li class="item "><a class="href" href="../CHANGELOG.html">更新日志</a></li></ul></nav><div id="js-nav-btn" class="m-header-btn ui-font-ydoc"></div></header><div class="m-content" id="js-content"><div id="markdown-body" class="m-content-container markdown-body"><div class="item-method"><div id="getpercentagehtml" class="item-method-name"><div class="item-method-name-area"><i style="margin-right: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code action-showSourceCode" data-code="%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgetPercentageHtml%3C%2Fspan%3E%20%3D%20(%3Cspan%20class%3D%22hljs-params%22%3Evalue%2C%20config%20%3D%20%7B%7D%3C%2Fspan%3E)%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%7B%0A%20%20%20%20emptyText%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B--%26%23x27%3B%3C%2Fspan%3E%2C%20%3Cspan%20class%3D%22hljs-comment%22%3E%2F%2F%20%E7%A9%BA%E6%96%87%E6%9C%AC%3C%2Fspan%3E%0A%20%20%20%20reverse%20%3D%20%3Cspan%20class%3D%22hljs-literal%22%3Efalse%3C%2Fspan%3E%2C%20%3Cspan%20class%3D%22hljs-comment%22%3E%2F%2F%20%E9%A2%9C%E8%89%B2%E5%88%87%E6%8D%A2%3C%2Fspan%3E%0A%20%20%20%20disabled%20%3D%20%3Cspan%20class%3D%22hljs-literal%22%3Efalse%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-comment%22%3E%2F%2F%20%E4%B8%8D%E4%BD%BF%E7%94%A8%E9%A2%9C%E8%89%B2%3C%2Fspan%3E%0A%20%20%7D%20%3D%20config%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20tempValue%20%3D%20formatters.%3Cspan%20class%3D%22hljs-title%20function_%22%3Epercentage%3C%2Fspan%3E(value)%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20greenColor%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%2300b365%26%23x27%3B%3C%2Fspan%3E%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20redColor%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%23f5483b%26%23x27%3B%3C%2Fspan%3E%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(value%20%26gt%3B%20%3Cspan%20class%3D%22hljs-number%22%3E0%3C%2Fspan%3E)%20%7B%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(disabled)%20%7B%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20tempValue%0A%20%20%20%20%7D%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-string%22%3E%60%26lt%3Bspan%20style%3D%26quot%3Bcolor%3A%20%3Cspan%20class%3D%22hljs-subst%22%3E%24%7Breverse%20%3F%20redColor%20%3A%20greenColor%7D%3C%2Fspan%3E%3B%26quot%3B%26gt%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7BtempValue%7D%3C%2Fspan%3E%26lt%3B%2Fspan%26gt%3B%60%3C%2Fspan%3E%0A%20%20%7D%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(value%20%26lt%3B%20%3Cspan%20class%3D%22hljs-number%22%3E0%3C%2Fspan%3E)%20%7B%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(disabled)%20%7B%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20tempValue%0A%20%20%20%20%7D%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-string%22%3E%60%26lt%3Bspan%20style%3D%26quot%3Bcolor%3A%20%3Cspan%20class%3D%22hljs-subst%22%3E%24%7Breverse%20%3F%20greenColor%20%3A%20redColor%7D%3C%2Fspan%3E%3B%26quot%3B%26gt%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7BtempValue%7D%3C%2Fspan%3E%26lt%3B%2Fspan%26gt%3B%60%3C%2Fspan%3E%0A%20%20%7D%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(value%20%3D%3D%3D%20%3Cspan%20class%3D%22hljs-number%22%3E0%3C%2Fspan%3E)%20%7B%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20tempValue%0A%20%20%7D%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20class_%22%3EString%3C%2Fspan%3E(emptyText)%0A%7D%0A%0A%3Cspan%20class%3D%22hljs-comment%22%3E%2F%2F%20%E8%87%AA%E9%97%AD%E5%90%88%E6%A0%87%E7%AD%BE%3C%2Fspan%3E%0A%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20voidHtmlTags%20%3D%20%5B%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Barea%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bbase%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bbr%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bcol%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bembed%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bhr%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bimg%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Binput%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Blink%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bmenuitem%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bmeta%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bparam%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bsource%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Btrack%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bwbr%26%23x27%3B%3C%2Fspan%3E%0A%5D%0A%0A%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20attrKeyAlias%20%3D%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-attr%22%3EclassName%3C%2Fspan%3E%3A%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bclass%26%23x27%3B%3C%2Fspan%3E%0A%7D%0A%0A%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgernerateElementText%3C%2Fspan%3E%20%3D%20(%3Cspan%20class%3D%22hljs-params%22%3EtagName%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E%2C%20attrs%20%3D%20%7B%7D%2C%20text%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E%3C%2Fspan%3E)%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20attrsText%20%3D%20%3Cspan%20class%3D%22hljs-title%20class_%22%3EObject%3C%2Fspan%3E.%3Cspan%20class%3D%22hljs-title%20function_%22%3Eentries%3C%2Fspan%3E(attrs%20%7C%7C%20%7B%7D)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-function%22%3E(%3Cspan%20class%3D%22hljs-params%22%3E%5Bk%2C%20v%5D%3C%2Fspan%3E)%20%3D%26gt%3B%3C%2Fspan%3E%20%7B%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20key%20%3D%20attrKeyAlias%5Bk%5D%20%7C%7C%20k%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(key%20%3D%3D%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bstyle%26%23x27%3B%3C%2Fspan%3E)%20%7B%0A%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%5Bkey%2C%20%3Cspan%20class%3D%22hljs-string%22%3E%60%26quot%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7BgetCssText(v)%7D%3C%2Fspan%3E%26quot%3B%60%3C%2Fspan%3E%5D.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%3D%26%23x27%3B%3C%2Fspan%3E)%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%5Bkey%2C%20%3Cspan%20class%3D%22hljs-string%22%3E%60%26quot%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7Bv%7D%3C%2Fspan%3E%26quot%3B%60%3C%2Fspan%3E%5D.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%3D%26%23x27%3B%3C%2Fspan%3E)%0A%20%20%20%20%7D)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%20%26%23x27%3B%3C%2Fspan%3E)%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20tagNameStart%20%3D%20%5BtagName%2C%20attrsText%5D.%3Cspan%20class%3D%22hljs-title%20function_%22%3Efilter%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-title%20class_%22%3EBoolean%3C%2Fspan%3E).%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%20%26%23x27%3B%3C%2Fspan%3E)%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(voidHtmlTags.%3Cspan%20class%3D%22hljs-title%20function_%22%3Eincludes%3C%2Fspan%3E(tagName))%20%7B%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-string%22%3E%60%26lt%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7BtagNameStart%7D%3C%2Fspan%3E%20%2F%26gt%3B%60%3C%2Fspan%3E%0A%20%20%7D%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-string%22%3E%60%26lt%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7BtagNameStart%7D%3C%2Fspan%3E%26gt%3B%3Cspan%20class%3D%22hljs-subst%22%3E%24%7Btext%7D%3C%2Fspan%3E%26lt%3B%2F%3Cspan%20class%3D%22hljs-subst%22%3E%24%7BtagName%7D%3C%2Fspan%3E%26gt%3B%60%3C%2Fspan%3E%0A%7D"><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-    <path d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"/>
-  </svg></i><span>getPercentageHtml(value, config = {})</span></div></div><div class="item-method-content"><div>百分比html<br><br>正: 绿; 负: 红</div><h4>Arguments</h4><div><strong style="color: #1890ff;">value</strong><strong style="color: #1890ff;"> (<code>Number</code>)</strong><span>: 值</span></div><div><strong style="color: #1890ff;">config</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: { emptyText = '--', // 空文本 reverse = false, // 颜色切换 disabled = false // 不使用颜色 }</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: html 字符串</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="getPercentageHtml" data-example="%5B%22getPercentageHtml(0.23)%5Cn%2F%2F%20%3D%3E%20'%3Cspan%20style%3D%5C%22color%3A%20%2300b365%3B%5C%22%3E23%25%3C%2Fspan%3E'%22%2C%22getPercentageHtml(-0.23)%5Cn%2F%2F%20%3D%3E%20'%3Cspan%20style%3D%5C%22color%3A%20%2300b365%3B%5C%22%3E-23%25%3C%2Fspan%3E'%22%2C%22getPercentageHtml(0.23%2C%20%7B%20disabled%3A%20true%20%7D)%5Cn%2F%2F%20%3D%3E%20'23%25'%22%5D"><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-    <path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/>
-  </svg></i></h4><div style="display: none;">暂无</div><pre><code class="hljs language-js"><span class="hljs-title function_">getPercentageHtml</span>(<span class="hljs-number">0.23</span>)
-<span class="hljs-comment">// =&gt; &#x27;&lt;span style=&quot;color: #00b365;&quot;&gt;23%&lt;/span&gt;&#x27;</span></code></pre><pre><code class="hljs language-js"><span class="hljs-title function_">getPercentageHtml</span>(-<span class="hljs-number">0.23</span>)
-<span class="hljs-comment">// =&gt; &#x27;&lt;span style=&quot;color: #00b365;&quot;&gt;-23%&lt;/span&gt;&#x27;</span></code></pre><pre><code class="hljs language-js"><span class="hljs-title function_">getPercentageHtml</span>(<span class="hljs-number">0.23</span>, { <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> })
-<span class="hljs-comment">// =&gt; &#x27;23%&#x27;</span></code></pre></div></div>
-<div class="item-method"><div id="createelement" class="item-method-name"><div class="item-method-name-area"><i style="margin-right: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code action-showSourceCode" data-code="%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EcreateElement%3C%2Fspan%3E%20%3D%20(%3Cspan%20class%3D%22hljs-params%22%3Etype%20%3D%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E%2C%20props%20%3D%20%7B%7D%2C%20children%20%3D%20%5B%5D%3C%2Fspan%3E)%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Eif%3C%2Fspan%3E%20(%3Cspan%20class%3D%22hljs-title%20function_%22%3EisString%3C%2Fspan%3E(children)%20%7C%7C%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EisNumber%3C%2Fspan%3E(children))%20%7B%0A%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgernerateElementText%3C%2Fspan%3E(type%2C%20props%2C%20children)%0A%20%20%7D%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgernerateElementText%3C%2Fspan%3E(%0A%20%20%20%20type%2C%0A%20%20%20%20props%2C%0A%20%20%20%20children%0A%20%20%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-function%22%3E%3Cspan%20class%3D%22hljs-params%22%3Ev%3C%2Fspan%3E%20%3D%26gt%3B%3C%2Fspan%3E%20%7B%0A%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EcreateElement%3C%2Fspan%3E(...v)%0A%20%20%20%20%20%20%7D)%0A%20%20%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ejoin%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26%23x27%3B%3C%2Fspan%3E)%0A%20%20)%0A%7D%0A%0A%3Cspan%20class%3D%22hljs-comment%22%3E%2F%2F%20%E8%A7%A3%E6%9E%90url%3A%20%5B%E6%96%87%E6%A1%88%7C%E9%93%BE%E6%8E%A5%5D%3C%2Fspan%3E%0A%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20linkReg%20%3D%20%3Cspan%20class%3D%22hljs-regexp%22%3E%2F%5C%5B(.%2B%3F)%5C%7C(.%2B%3F)%5C%5D%2Fg%3C%2Fspan%3E"><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-    <path d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"/>
-  </svg></i><span>createElement(type = '', props = {}, children = [])</span></div></div><div class="item-method-content"><div>createElement</div><h4>Arguments</h4><div><strong style="color: #1890ff;">type</strong><strong style="color: #1890ff;"> (<code>String</code>)</strong><span>: 标签名</span></div><div><strong style="color: #1890ff;">attrs</strong><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: 属性</span></div><div><strong style="color: #1890ff;">children</strong><strong style="color: #1890ff;"> (<code>Array</code>)</strong><span>: 子元素</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: html字符串</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="createElement" data-example="%5B%22createElement('div'%2C%20%7B%20id%3A%20'demo'%2C%20className%3A%20'demo'%20%7D%2C%20'hello')%20%2F%2F%20%3Cdiv%20id%3D%5C%22demo%5C%22%20className%3D%5C%22demo%5C%22%3Ehello%3C%2Fdiv%3E%22%5D"><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-    <path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/>
-  </svg></i></h4><div style="display: none;">暂无</div><pre><code class="hljs language-js"><span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;div&#x27;</span>, { <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;demo&#x27;</span>, <span class="hljs-attr">className</span>: <span class="hljs-string">&#x27;demo&#x27;</span> }, <span class="hljs-string">&#x27;hello&#x27;</span>) <span class="hljs-comment">// &lt;div id=&quot;demo&quot; className=&quot;demo&quot;&gt;hello&lt;/div&gt;</span></code></pre></div></div>
-<div class="item-method"><div id="gettooltiphtml" class="item-method-name"><div class="item-method-name-area"><i style="margin-right: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code action-showSourceCode" data-code="%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgetTooltipHtml%3C%2Fspan%3E%20%3D%20(%3Cspan%20class%3D%22hljs-params%22%3E...args%3C%2Fspan%3E)%20%3D%26gt%3B%20%7B%0A%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%5B%5D%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Econcat%3C%2Fspan%3E(...args)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Efilter%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-title%20class_%22%3EBoolean%3C%2Fspan%3E)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-title%20class_%22%3EString%3C%2Fspan%3E)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-function%22%3E%3Cspan%20class%3D%22hljs-params%22%3Ev%3C%2Fspan%3E%20%3D%26gt%3B%3C%2Fspan%3E%20%7B%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20v.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ereplace%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-regexp%22%3E%2F%5C%5Cn%2Fg%3C%2Fspan%3E%2C%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%26lt%3Bbr%26gt%3B%26%23x27%3B%3C%2Fspan%3E)%0A%20%20%20%20%7D)%0A%20%20%20%20.%3Cspan%20class%3D%22hljs-title%20function_%22%3Emap%3C%2Fspan%3E(%3Cspan%20class%3D%22hljs-function%22%3E%3Cspan%20class%3D%22hljs-params%22%3Ev%3C%2Fspan%3E%20%3D%26gt%3B%3C%2Fspan%3E%20%7B%0A%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20v.%3Cspan%20class%3D%22hljs-title%20function_%22%3Ereplace%3C%2Fspan%3E(linkReg%2C%20%3Cspan%20class%3D%22hljs-function%22%3E(%3Cspan%20class%3D%22hljs-params%22%3E...args%3C%2Fspan%3E)%20%3D%26gt%3B%3C%2Fspan%3E%20%7B%0A%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Econst%3C%2Fspan%3E%20%5B%2C%20text%2C%20href%5D%20%3D%20args%0A%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-keyword%22%3Ereturn%3C%2Fspan%3E%20%3Cspan%20class%3D%22hljs-title%20function_%22%3EgernerateElementText%3C%2Fspan%3E(%0A%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Ba%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20href%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-attr%22%3Etarget%3C%2Fspan%3E%3A%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B_blank%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-attr%22%3Estyle%3C%2Fspan%3E%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-attr%22%3Ecolor%3C%2Fspan%3E%3A%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3B%23fff%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-attr%22%3EfontWeight%3C%2Fspan%3E%3A%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bbold%26%23x27%3B%3C%2Fspan%3E%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22hljs-attr%22%3EtextDecoration%3C%2Fspan%3E%3A%20%3Cspan%20class%3D%22hljs-string%22%3E%26%23x27%3Bunderline%26%23x27%3B%3C%2Fspan%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20text%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%7D)%0A%20%20%20%20%7D)%0A%7D"><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-    <path d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"/>
-  </svg></i><span>getTooltipHtml(...args)</span></div></div><div class="item-method-content"><div>字符串转链接</div><h4>Arguments</h4><div><strong style="color: #1890ff;">args</strong><strong style="color: #1890ff;"> (...<code>String</code>)</strong><span>: 字符串</span></div><h4>Returns</h4><span><strong style="color: #1890ff;">(<code>String</code>[])</strong><span>: html 字符串</span></span><h4><span>Example</span><i style="margin-left: 10px; cursor: pointer;" arialabel="图标: code" class="anticon anticon-code-sandbox action-showREPL" data-funcname="getTooltipHtml" data-example="%5B%22getTooltipHtml('abc')%5Cn%2F%2F%20%3D%3E%20%5B'abc'%5D%22%2C%22getTooltipHtml('aa%5B%E9%93%BE%E6%8E%A5%7Ccc.co%5Dbb')%5Cn%2F%2F%20%3D%3E%20%5B'aa%3Ca%20heref%3D%5C%22cc.co%5C%22%20style%3D%5C%22color%3A%20%23fff%3B%20fontWeight%3A%20bold%3B%20textDecoration%3A%20underline%5C%22%3E%E9%93%BE%E6%8E%A5%3C%2Fa%3Ebb'%5D%22%5D"><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
-    <path d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"/>
-  </svg></i></h4><div style="display: none;">暂无</div><pre><code class="hljs language-js"><span class="hljs-title function_">getTooltipHtml</span>(<span class="hljs-string">&#x27;abc&#x27;</span>)
-<span class="hljs-comment">// =&gt; [&#x27;abc&#x27;]</span></code></pre><pre><code class="hljs language-js"><span class="hljs-title function_">getTooltipHtml</span>(<span class="hljs-string">&#x27;aa[链接|cc.co]bb&#x27;</span>)
-<span class="hljs-comment">// =&gt; [&#x27;aa&lt;a heref=&quot;cc.co&quot; style=&quot;color: #fff; fontWeight: bold; textDecoration: underline&quot;&gt;链接&lt;/a&gt;bb&#x27;]</span></code></pre></div></div></div><div class="m-content-container m-paging"><div class="m-paging-prev m-paging-item"><a href="numeral.html" class="href"><span class="ui-font-ydoc"></span>数值</a></div><div class="m-paging-next m-paging-item"><a href="string.html" class="href">字符串处理<span class="ui-font-ydoc"></span></a></div></div></div></div></div><div></div><script>
-    var $content = document.getElementById('js-content');
-    var $summaryItems = Array.prototype.slice.call(document.querySelectorAll('#js-menu .href'));
-    var $menu = document.getElementById('js-menu');
-    if (sessionStorage.prevPathname) {
-      sessionStorage.setItem('prevPrevPathname', sessionStorage.prevPathname);
-      sessionStorage.setItem('prevPrevMenuScrollTop', sessionStorage.prevMenuScrollTop);
-      sessionStorage.setItem('prevPrevContentScrollTop', sessionStorage.prevContentScrollTop);
-    }
-    if (sessionStorage.locationPathname) {
-      sessionStorage.setItem('prevPathname', sessionStorage.locationPathname);
-      sessionStorage.setItem('prevMenuScrollTop', sessionStorage.menuScrollTop);
-      sessionStorage.setItem('prevContentScrollTop', sessionStorage.contentScrollTop);
-    }
-    if ($menu && sessionStorage.menuScrollTop) {
-		  $menu.scrollTop = sessionStorage.menuScrollTop;
-    }
-    // 刷新页面但不切换 pathname 的时候，内容区恢复到记忆的高度
-    if ($content && sessionStorage.contentScrollTop && window.location.pathname == sessionStorage.locationPathname) {
-      $content.scrollTop = sessionStorage.contentScrollTop;
-    } else if (sessionStorage.prevPrevPathname && sessionStorage.prevPrevPathname === window.location.pathname) {
-      if ($menu && sessionStorage.prevPrevMenuScrollTop) {
-        $menu.scrollTop = sessionStorage.prevPrevMenuScrollTop;
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../ydoc/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../ydoc/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../ydoc/images/favicon-16x16.png" />
+    <link rel="manifest" href="../ydoc/images/manifest.json" />
+    <link rel="mask-icon" href="../ydoc/images/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>文档</title>
+    <link rel="stylesheet" href="../ydoc/styles/style.css" />
+    <meta name="author" content="shuoshubao" />
+    <meta name="keywords" />
+    <meta name="description" content="工具库" />
+    <meta id="releativePath" content=".." />
+    <link rel="stylesheet" href="../ydoc/ydoc-plugin-search/search.css" />
+    <link rel="stylesheet" href="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.css" />
+    <link rel="stylesheet" href="https://shuoshubao.github.io/tools/assets/css/site.css" />
+    <link rel="stylesheet" href="https://unpkg.com/highlight.js@11.7.0/styles/vs2015.css" />
+  </head>
+  <body>
+    <div class="g-doc">
+      <div class="m-aside">
+        <div class="m-summary" id="js-menu">
+          <div class="m-summary-content" id="js-menu-content">
+            <div class="m-summary-block">
+              <ul class="m-summary-list">
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="date.html" class="href">日期</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="date.html#formattime" class="href">formatTime</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="enum.html" class="href">枚举</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="enum.html#getlabelbyvalue" class="href">getLabelByValue</a></li>
+                      <li class="item"><a href="enum.html#convertjsontoenum" class="href">convertJsonToEnum</a></li>
+                      <li class="item"><a href="enum.html#getvaluebylabel" class="href">getValueByLabel</a></li>
+                      <li class="item"><a href="enum.html#convertdatatoenum" class="href">convertDataToEnum</a></li>
+                      <li class="item">
+                        <a href="enum.html#convertdatatocascader" class="href">convertDataToCascader</a>
+                      </li>
+                      <li class="item">
+                        <a href="enum.html#getvalueincollection" class="href">getValueInCollection</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="route.html" class="href">路由</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="route.html#getparams" class="href">getParams</a></li>
+                      <li class="item"><a href="route.html#search" class="href">search</a></li>
+                      <li class="item"><a href="route.html#stringifyurl" class="href">stringifyUrl</a></li>
+                      <li class="item"><a href="route.html#updateurlquery" class="href">updateUrlQuery</a></li>
+                      <li class="item"><a href="route.html#linkto" class="href">linkTo</a></li>
+                      <li class="item"><a href="route.html#parseurl" class="href">parseUrl</a></li>
+                      <li class="item"><a href="route.html#getfullurl" class="href">getFullUrl</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="qs.html" class="href">qs</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="qs.html#queryparse" class="href">queryParse</a></li>
+                      <li class="item"><a href="qs.html#querystringify" class="href">queryStringify</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="decimal.html" class="href">浮点数计算</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="decimal.html#plus" class="href">plus</a></li>
+                      <li class="item"><a href="decimal.html#minus" class="href">minus</a></li>
+                      <li class="item"><a href="decimal.html#multiply" class="href">multiply</a></li>
+                      <li class="item"><a href="decimal.html#divide" class="href">divide</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="dom.html" class="href">DOM操作</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="dom.html#setattrs" class="href">setAttrs</a></li>
+                      <li class="item"><a href="dom.html#downloadblob" class="href">downloadBlob</a></li>
+                      <li class="item"><a href="dom.html#download" class="href">download</a></li>
+                      <li class="item"><a href="dom.html#convertcssom" class="href">convertCssom</a></li>
+                      <li class="item"><a href="dom.html#setstyle" class="href">setStyle</a></li>
+                      <li class="item"><a href="dom.html#getcsstext" class="href">getCssText</a></li>
+                      <li class="item"><a href="dom.html#getwordwidth" class="href">getWordWidth</a></li>
+                      <li class="item"><a href="dom.html#copytext" class="href">copyText</a></li>
+                      <li class="item"><a href="dom.html#classnames" class="href">classNames</a></li>
+                      <li class="item"><a href="dom.html#suffixclassnames" class="href">suffixClassNames</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="rules.html" class="href">表单校验</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="rules.html#rules" class="href">rules</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="types.html" class="href">类型</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="types.html#gettype" class="href">getType</a></li>
+                      <li class="item"><a href="types.html#isuniq" class="href">isUniq</a></li>
+                      <li class="item"><a href="types.html#isemptystring" class="href">isEmptyString</a></li>
+                      <li class="item"><a href="types.html#isemptyvalue" class="href">isEmptyValue</a></li>
+                      <li class="item"><a href="types.html#ispromise" class="href">isPromise</a></li>
+                      <li class="item"><a href="types.html#isblob" class="href">isBlob</a></li>
+                      <li class="item"><a href="types.html#isemptyarray" class="href">isEmptyArray</a></li>
+                      <li class="item"><a href="types.html#isemptyobject" class="href">isEmptyObject</a></li>
+                      <li class="item"><a href="types.html#iseverytruthy" class="href">isEveryTruthy</a></li>
+                      <li class="item"><a href="types.html#iseveryfalsy" class="href">isEveryFalsy</a></li>
+                      <li class="item"><a href="types.html#issometruthy" class="href">isSomeTruthy</a></li>
+                      <li class="item"><a href="types.html#issomefalsy" class="href">isSomeFalsy</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="memoize.html" class="href">缓存</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="memoize.html#memoize" class="href">memoize</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="dev.html" class="href">调试</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="dev.html#sleep" class="href">sleep</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="data.html" class="href">数据</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="data.html#arraymove" class="href">arrayMove</a></li>
+                      <li class="item"><a href="data.html#reserveproperties" class="href">reserveProperties</a></li>
+                      <li class="item"><a href="data.html#removeproperties" class="href">removeProperties</a></li>
+                      <li class="item">
+                        <a href="data.html#removeemptyproperties" class="href">removeEmptyProperties</a>
+                      </li>
+                      <li class="item"><a href="data.html#produceemptyobject" class="href">produceEmptyObject</a></li>
+                      <li class="item">
+                        <a href="data.html#formatemptytodefault" class="href">formatEmptyToDefault</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="react.html" class="href">React</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="react.html#setasyncstate" class="href">setAsyncState</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="vue.html" class="href">Vue</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="vue.html#pifyvalidate" class="href">pifyValidate</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="formatters.html" class="href">文本格式化</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="formatters.html#formatters" class="href">formatters</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="numeral.html" class="href">数值</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="numeral.html#thousands" class="href">thousands</a></li>
+                      <li class="item"><a href="numeral.html#getvalueinrange" class="href">getValueInRange</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="" class="href">Html字符串</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="html.html#getpercentagehtml" class="href">getPercentageHtml</a></li>
+                      <li class="item"><a href="html.html#createelement" class="href">createElement</a></li>
+                      <li class="item"><a href="html.html#gettooltiphtml" class="href">getTooltipHtml</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="string.html" class="href">字符串处理</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="string.html#trimall" class="href">trimAll</a></li>
+                      <li class="item"><a href="string.html#pascalcase" class="href">pascalCase</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="ua.html" class="href">UA</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="ua.html#isandroid" class="href">isAndroid</a></li>
+                      <li class="item"><a href="ua.html#isios" class="href">isIOS</a></li>
+                      <li class="item"><a href="ua.html#isiphone" class="href">isIPhone</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="image.html" class="href">图片</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="image.html#getimagesize" class="href">getImageSize</a></li>
+                      <li class="item">
+                        <a href="image.html#changeimageurltobase64" class="href">changeImageUrlToBase64</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="file.html" class="href">文件</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="file.html#b64toblob" class="href">b64toBlob</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="Uint8Array.html" class="href">Uint8Array</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item">
+                        <a href="Uint8Array.html#utf8arraytostring" class="href">Utf8ArrayToString</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="m-summary-block">
+                    <a href="antd.html" class="href">antd</a>
+                    <ul class="m-summary-list indent">
+                      <li class="item"><a href="antd.html#getantdlocalezhcn" class="href">getAntdLocaleZhCN</a></li>
+                      <li class="item">
+                        <a href="antd.html#definemomentlocalezhcn" class="href">defineMomentLocaleZhCn</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="m-summary-switch" id="js-summary-switch">
+          <svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="bottom">
+            <g transform="translate(904.92214,-879.1482)">
+              <path
+                d="m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,-55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,-174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,-174.68583 0.6895,0 26.281,25.03215 56.8701,55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864-231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,-104.0616 -231.873,-231.248 z"
+                fill="#fff"
+              ></path>
+            </g></svg
+          ><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="top">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="aaa" fill="#fff" fill-rule="nonzero">
+                <path
+                  d="M231.2455,342.502 L0,111.25397 L55.6165,55.62697 C86.2056,25.03212 111.7971,-2.99999998e-05 112.4866,-2.99999998e-05 C113.176,-2.99999998e-05 192.3503,78.60859 288.4293,174.6858 L463.1185,349.3716 L637.8077,174.6858 C733.8867,78.60859 813.060896,-2.99999997e-05 813.750396,-2.99999997e-05 C814.439896,-2.99999997e-05 840.031396,25.03212 870.620496,55.62697 L926.236996,111.25397 L694.9915,342.502 C567.8065,469.6884 463.4636,573.75 463.1185,573.75 C462.7734,573.75 358.4305,469.6884 231.2455,342.502 Z"
+                  id="Shape"
+                  transform="translate(463.118498, 286.874985) scale(1, -1) translate(-463.118498, -286.874985) "
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="m-main" id="js-panel">
+        <header class="m-header" id="js-header">
+          <div class="m-header-title js-logo">
+            <a href="../index.html" target="_self"
+              ><img class="logo" width="36" src="https://github.githubassets.com/favicons/favicon.png" />
+              <h6 class="name">工具库</h6></a
+            >
+          </div>
+          <div>
+            <div class="m-search">
+              <div class="icon">&#xf0fd;</div>
+              <input type="text" class="input js-input" placeholder="搜索" />
+              <div class="m-search-result js-search-result"></div>
+            </div>
+          </div>
+          <nav class="m-header-nav js-nav">
+            <ul class="m-header-items">
+              <li class="item"><a class="href" href="../install.html">使用</a></li>
+              <li class="item active"><a class="href" href="date.html">文档</a></li>
+              <li class="item"><a class="href" href="../CONTRIBUTING.html">贡献指南</a></li>
+              <li class="item"><a class="href" href="../CHANGELOG.html">更新日志</a></li>
+            </ul>
+          </nav>
+          <div id="js-nav-btn" class="m-header-btn ui-font-ydoc"></div>
+        </header>
+        <div class="m-content" id="js-content">
+          <div id="markdown-body" class="m-content-container markdown-body">
+            <div class="item-method">
+              <div id="getpercentagehtml" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,103,101,116,80,101,114,99,101,110,116,97,103,101,72,116,109,108,60,47,115,112,97,110,62,32,61,32,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,118,97,108,117,101,44,32,99,111,110,102,105,103,32,61,32,123,125,60,47,115,112,97,110,62,41,32,61,38,103,116,59,32,123,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,123,10,32,32,32,32,101,109,112,116,121,84,101,120,116,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,45,45,38,35,120,50,55,59,60,47,115,112,97,110,62,44,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,99,111,109,109,101,110,116,34,62,47,47,32,231,169,186,230,150,135,230,156,172,60,47,115,112,97,110,62,10,32,32,32,32,114,101,118,101,114,115,101,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,108,105,116,101,114,97,108,34,62,102,97,108,115,101,60,47,115,112,97,110,62,44,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,99,111,109,109,101,110,116,34,62,47,47,32,233,162,156,232,137,178,229,136,135,230,141,162,60,47,115,112,97,110,62,10,32,32,32,32,100,105,115,97,98,108,101,100,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,108,105,116,101,114,97,108,34,62,102,97,108,115,101,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,99,111,109,109,101,110,116,34,62,47,47,32,228,184,141,228,189,191,231,148,168,233,162,156,232,137,178,60,47,115,112,97,110,62,10,32,32,125,32,61,32,99,111,110,102,105,103,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,116,101,109,112,86,97,108,117,101,32,61,32,102,111,114,109,97,116,116,101,114,115,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,112,101,114,99,101,110,116,97,103,101,60,47,115,112,97,110,62,40,118,97,108,117,101,41,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,103,114,101,101,110,67,111,108,111,114,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,35,48,48,98,51,54,53,38,35,120,50,55,59,60,47,115,112,97,110,62,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,114,101,100,67,111,108,111,114,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,35,102,53,52,56,51,98,38,35,120,50,55,59,60,47,115,112,97,110,62,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,118,97,108,117,101,32,38,103,116,59,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,110,117,109,98,101,114,34,62,48,60,47,115,112,97,110,62,41,32,123,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,100,105,115,97,98,108,101,100,41,32,123,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,116,101,109,112,86,97,108,117,101,10,32,32,32,32,125,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,96,38,108,116,59,115,112,97,110,32,115,116,121,108,101,61,38,113,117,111,116,59,99,111,108,111,114,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,114,101,118,101,114,115,101,32,63,32,114,101,100,67,111,108,111,114,32,58,32,103,114,101,101,110,67,111,108,111,114,125,60,47,115,112,97,110,62,59,38,113,117,111,116,59,38,103,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,116,101,109,112,86,97,108,117,101,125,60,47,115,112,97,110,62,38,108,116,59,47,115,112,97,110,38,103,116,59,96,60,47,115,112,97,110,62,10,32,32,125,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,118,97,108,117,101,32,38,108,116,59,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,110,117,109,98,101,114,34,62,48,60,47,115,112,97,110,62,41,32,123,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,100,105,115,97,98,108,101,100,41,32,123,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,116,101,109,112,86,97,108,117,101,10,32,32,32,32,125,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,96,38,108,116,59,115,112,97,110,32,115,116,121,108,101,61,38,113,117,111,116,59,99,111,108,111,114,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,114,101,118,101,114,115,101,32,63,32,103,114,101,101,110,67,111,108,111,114,32,58,32,114,101,100,67,111,108,111,114,125,60,47,115,112,97,110,62,59,38,113,117,111,116,59,38,103,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,116,101,109,112,86,97,108,117,101,125,60,47,115,112,97,110,62,38,108,116,59,47,115,112,97,110,38,103,116,59,96,60,47,115,112,97,110,62,10,32,32,125,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,118,97,108,117,101,32,61,61,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,110,117,109,98,101,114,34,62,48,60,47,115,112,97,110,62,41,32,123,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,116,101,109,112,86,97,108,117,101,10,32,32,125,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,99,108,97,115,115,95,34,62,83,116,114,105,110,103,60,47,115,112,97,110,62,40,101,109,112,116,121,84,101,120,116,41,10,125,10,10,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,99,111,109,109,101,110,116,34,62,47,47,32,232,135,170,233,151,173,229,144,136,230,160,135,231,173,190,60,47,115,112,97,110,62,10,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,118,111,105,100,72,116,109,108,84,97,103,115,32,61,32,91,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,97,114,101,97,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,98,97,115,101,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,98,114,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,99,111,108,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,101,109,98,101,100,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,104,114,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,105,109,103,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,105,110,112,117,116,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,108,105,110,107,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,109,101,110,117,105,116,101,109,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,109,101,116,97,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,112,97,114,97,109,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,115,111,117,114,99,101,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,116,114,97,99,107,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,119,98,114,38,35,120,50,55,59,60,47,115,112,97,110,62,10,93,10,10,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,97,116,116,114,75,101,121,65,108,105,97,115,32,61,32,123,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,97,116,116,114,34,62,99,108,97,115,115,78,97,109,101,60,47,115,112,97,110,62,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,99,108,97,115,115,38,35,120,50,55,59,60,47,115,112,97,110,62,10,125,10,10,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,103,101,114,110,101,114,97,116,101,69,108,101,109,101,110,116,84,101,120,116,60,47,115,112,97,110,62,32,61,32,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,116,97,103,78,97,109,101,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,38,35,120,50,55,59,60,47,115,112,97,110,62,44,32,97,116,116,114,115,32,61,32,123,125,44,32,116,101,120,116,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,38,35,120,50,55,59,60,47,115,112,97,110,62,60,47,115,112,97,110,62,41,32,61,38,103,116,59,32,123,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,97,116,116,114,115,84,101,120,116,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,99,108,97,115,115,95,34,62,79,98,106,101,99,116,60,47,115,112,97,110,62,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,101,110,116,114,105,101,115,60,47,115,112,97,110,62,40,97,116,116,114,115,32,124,124,32,123,125,41,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,109,97,112,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,102,117,110,99,116,105,111,110,34,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,91,107,44,32,118,93,60,47,115,112,97,110,62,41,32,61,38,103,116,59,60,47,115,112,97,110,62,32,123,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,107,101,121,32,61,32,97,116,116,114,75,101,121,65,108,105,97,115,91,107,93,32,124,124,32,107,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,107,101,121,32,61,61,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,115,116,121,108,101,38,35,120,50,55,59,60,47,115,112,97,110,62,41,32,123,10,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,91,107,101,121,44,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,96,38,113,117,111,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,103,101,116,67,115,115,84,101,120,116,40,118,41,125,60,47,115,112,97,110,62,38,113,117,111,116,59,96,60,47,115,112,97,110,62,93,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,106,111,105,110,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,61,38,35,120,50,55,59,60,47,115,112,97,110,62,41,10,32,32,32,32,32,32,125,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,91,107,101,121,44,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,96,38,113,117,111,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,118,125,60,47,115,112,97,110,62,38,113,117,111,116,59,96,60,47,115,112,97,110,62,93,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,106,111,105,110,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,61,38,35,120,50,55,59,60,47,115,112,97,110,62,41,10,32,32,32,32,125,41,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,106,111,105,110,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,32,38,35,120,50,55,59,60,47,115,112,97,110,62,41,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,116,97,103,78,97,109,101,83,116,97,114,116,32,61,32,91,116,97,103,78,97,109,101,44,32,97,116,116,114,115,84,101,120,116,93,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,102,105,108,116,101,114,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,99,108,97,115,115,95,34,62,66,111,111,108,101,97,110,60,47,115,112,97,110,62,41,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,106,111,105,110,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,32,38,35,120,50,55,59,60,47,115,112,97,110,62,41,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,118,111,105,100,72,116,109,108,84,97,103,115,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,105,110,99,108,117,100,101,115,60,47,115,112,97,110,62,40,116,97,103,78,97,109,101,41,41,32,123,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,96,38,108,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,116,97,103,78,97,109,101,83,116,97,114,116,125,60,47,115,112,97,110,62,32,47,38,103,116,59,96,60,47,115,112,97,110,62,10,32,32,125,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,96,38,108,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,116,97,103,78,97,109,101,83,116,97,114,116,125,60,47,115,112,97,110,62,38,103,116,59,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,116,101,120,116,125,60,47,115,112,97,110,62,38,108,116,59,47,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,117,98,115,116,34,62,36,123,116,97,103,78,97,109,101,125,60,47,115,112,97,110,62,38,103,116,59,96,60,47,115,112,97,110,62,10,125"
+                    ><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      /></svg></i
+                  ><span>getPercentageHtml(value, config = {})</span>
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>百分比html<br /><br />正: 绿; 负: 红</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">value</strong
+                  ><strong style="color: #1890ff;"> (<code>Number</code>)</strong><span>: 值</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">config</strong
+                  ><strong style="color: #1890ff;"> (<code>Object</code>)</strong
+                  ><span
+                    >: { emptyText = '--', // 空文本 reverse = false, // 颜色切换 disabled = false // 不使用颜色 }</span
+                  >
+                </div>
+                <h4>Returns</h4>
+                <span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: html 字符串</span></span>
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="getPercentageHtml"
+                    data-example="91,34,103,101,116,80,101,114,99,101,110,116,97,103,101,72,116,109,108,40,48,46,50,51,41,92,110,47,47,32,61,62,32,39,60,115,112,97,110,32,115,116,121,108,101,61,92,34,99,111,108,111,114,58,32,35,48,48,98,51,54,53,59,92,34,62,50,51,37,60,47,115,112,97,110,62,39,34,44,34,103,101,116,80,101,114,99,101,110,116,97,103,101,72,116,109,108,40,45,48,46,50,51,41,92,110,47,47,32,61,62,32,39,60,115,112,97,110,32,115,116,121,108,101,61,92,34,99,111,108,111,114,58,32,35,48,48,98,51,54,53,59,92,34,62,45,50,51,37,60,47,115,112,97,110,62,39,34,44,34,103,101,116,80,101,114,99,101,110,116,97,103,101,72,116,109,108,40,48,46,50,51,44,32,123,32,100,105,115,97,98,108,101,100,58,32,116,114,117,101,32,125,41,92,110,47,47,32,61,62,32,39,50,51,37,39,34,93"
+                    ><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getPercentageHtml</span>(<span class="hljs-number">0.23</span>)
+<span class="hljs-comment">// =&gt; &#x27;&lt;span style=&quot;color: #00b365;&quot;&gt;23%&lt;/span&gt;&#x27;</span></code></pre>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getPercentageHtml</span>(-<span class="hljs-number">0.23</span>)
+<span class="hljs-comment">// =&gt; &#x27;&lt;span style=&quot;color: #00b365;&quot;&gt;-23%&lt;/span&gt;&#x27;</span></code></pre>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getPercentageHtml</span>(<span class="hljs-number">0.23</span>, { <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span> })
+<span class="hljs-comment">// =&gt; &#x27;23%&#x27;</span></code></pre>
+              </div>
+            </div>
+            <div class="item-method">
+              <div id="createelement" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,99,114,101,97,116,101,69,108,101,109,101,110,116,60,47,115,112,97,110,62,32,61,32,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,116,121,112,101,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,38,35,120,50,55,59,60,47,115,112,97,110,62,44,32,112,114,111,112,115,32,61,32,123,125,44,32,99,104,105,108,100,114,101,110,32,61,32,91,93,60,47,115,112,97,110,62,41,32,61,38,103,116,59,32,123,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,105,102,60,47,115,112,97,110,62,32,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,105,115,83,116,114,105,110,103,60,47,115,112,97,110,62,40,99,104,105,108,100,114,101,110,41,32,124,124,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,105,115,78,117,109,98,101,114,60,47,115,112,97,110,62,40,99,104,105,108,100,114,101,110,41,41,32,123,10,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,103,101,114,110,101,114,97,116,101,69,108,101,109,101,110,116,84,101,120,116,60,47,115,112,97,110,62,40,116,121,112,101,44,32,112,114,111,112,115,44,32,99,104,105,108,100,114,101,110,41,10,32,32,125,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,103,101,114,110,101,114,97,116,101,69,108,101,109,101,110,116,84,101,120,116,60,47,115,112,97,110,62,40,10,32,32,32,32,116,121,112,101,44,10,32,32,32,32,112,114,111,112,115,44,10,32,32,32,32,99,104,105,108,100,114,101,110,10,32,32,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,109,97,112,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,102,117,110,99,116,105,111,110,34,62,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,118,60,47,115,112,97,110,62,32,61,38,103,116,59,60,47,115,112,97,110,62,32,123,10,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,99,114,101,97,116,101,69,108,101,109,101,110,116,60,47,115,112,97,110,62,40,46,46,46,118,41,10,32,32,32,32,32,32,125,41,10,32,32,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,106,111,105,110,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,38,35,120,50,55,59,60,47,115,112,97,110,62,41,10,32,32,41,10,125,10,10,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,99,111,109,109,101,110,116,34,62,47,47,32,232,167,163,230,158,144,117,114,108,58,32,91,230,150,135,230,161,136,124,233,147,190,230,142,165,93,60,47,115,112,97,110,62,10,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,108,105,110,107,82,101,103,32,61,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,114,101,103,101,120,112,34,62,47,92,91,40,46,43,63,41,92,124,40,46,43,63,41,92,93,47,103,60,47,115,112,97,110,62"
+                    ><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      /></svg></i
+                  ><span>createElement(type = '', props = {}, children = [])</span>
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>createElement</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">type</strong
+                  ><strong style="color: #1890ff;"> (<code>String</code>)</strong><span>: 标签名</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">attrs</strong
+                  ><strong style="color: #1890ff;"> (<code>Object</code>)</strong><span>: 属性</span>
+                </div>
+                <div>
+                  <strong style="color: #1890ff;">children</strong
+                  ><strong style="color: #1890ff;"> (<code>Array</code>)</strong><span>: 子元素</span>
+                </div>
+                <h4>Returns</h4>
+                <span><strong style="color: #1890ff;">(<code>String</code>)</strong><span>: html字符串</span></span>
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="createElement"
+                    data-example="91,34,99,114,101,97,116,101,69,108,101,109,101,110,116,40,39,100,105,118,39,44,32,123,32,105,100,58,32,39,100,101,109,111,39,44,32,99,108,97,115,115,78,97,109,101,58,32,39,100,101,109,111,39,32,125,44,32,39,104,101,108,108,111,39,41,32,47,47,32,60,100,105,118,32,105,100,61,92,34,100,101,109,111,92,34,32,99,108,97,115,115,78,97,109,101,61,92,34,100,101,109,111,92,34,62,104,101,108,108,111,60,47,100,105,118,62,34,93"
+                    ><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;div&#x27;</span>, { <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;demo&#x27;</span>, <span class="hljs-attr">className</span>: <span class="hljs-string">&#x27;demo&#x27;</span> }, <span class="hljs-string">&#x27;hello&#x27;</span>) <span class="hljs-comment">// &lt;div id=&quot;demo&quot; className=&quot;demo&quot;&gt;hello&lt;/div&gt;</span></code></pre>
+              </div>
+            </div>
+            <div class="item-method">
+              <div id="gettooltiphtml" class="item-method-name">
+                <div class="item-method-name-area">
+                  <i
+                    style="margin-right: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code action-showSourceCode"
+                    data-code="60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,103,101,116,84,111,111,108,116,105,112,72,116,109,108,60,47,115,112,97,110,62,32,61,32,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,46,46,46,97,114,103,115,60,47,115,112,97,110,62,41,32,61,38,103,116,59,32,123,10,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,91,93,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,99,111,110,99,97,116,60,47,115,112,97,110,62,40,46,46,46,97,114,103,115,41,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,102,105,108,116,101,114,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,99,108,97,115,115,95,34,62,66,111,111,108,101,97,110,60,47,115,112,97,110,62,41,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,109,97,112,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,99,108,97,115,115,95,34,62,83,116,114,105,110,103,60,47,115,112,97,110,62,41,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,109,97,112,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,102,117,110,99,116,105,111,110,34,62,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,118,60,47,115,112,97,110,62,32,61,38,103,116,59,60,47,115,112,97,110,62,32,123,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,118,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,114,101,112,108,97,99,101,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,114,101,103,101,120,112,34,62,47,92,92,110,47,103,60,47,115,112,97,110,62,44,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,38,108,116,59,98,114,38,103,116,59,38,35,120,50,55,59,60,47,115,112,97,110,62,41,10,32,32,32,32,125,41,10,32,32,32,32,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,109,97,112,60,47,115,112,97,110,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,102,117,110,99,116,105,111,110,34,62,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,118,60,47,115,112,97,110,62,32,61,38,103,116,59,60,47,115,112,97,110,62,32,123,10,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,118,46,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,114,101,112,108,97,99,101,60,47,115,112,97,110,62,40,108,105,110,107,82,101,103,44,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,102,117,110,99,116,105,111,110,34,62,40,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,112,97,114,97,109,115,34,62,46,46,46,97,114,103,115,60,47,115,112,97,110,62,41,32,61,38,103,116,59,60,47,115,112,97,110,62,32,123,10,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,99,111,110,115,116,60,47,115,112,97,110,62,32,91,44,32,116,101,120,116,44,32,104,114,101,102,93,32,61,32,97,114,103,115,10,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,107,101,121,119,111,114,100,34,62,114,101,116,117,114,110,60,47,115,112,97,110,62,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,116,105,116,108,101,32,102,117,110,99,116,105,111,110,95,34,62,103,101,114,110,101,114,97,116,101,69,108,101,109,101,110,116,84,101,120,116,60,47,115,112,97,110,62,40,10,32,32,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,97,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,32,32,32,32,32,32,32,32,123,10,32,32,32,32,32,32,32,32,32,32,32,32,104,114,101,102,44,10,32,32,32,32,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,97,116,116,114,34,62,116,97,114,103,101,116,60,47,115,112,97,110,62,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,95,98,108,97,110,107,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,32,32,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,97,116,116,114,34,62,115,116,121,108,101,60,47,115,112,97,110,62,58,32,123,10,32,32,32,32,32,32,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,97,116,116,114,34,62,99,111,108,111,114,60,47,115,112,97,110,62,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,35,102,102,102,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,32,32,32,32,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,97,116,116,114,34,62,102,111,110,116,87,101,105,103,104,116,60,47,115,112,97,110,62,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,98,111,108,100,38,35,120,50,55,59,60,47,115,112,97,110,62,44,10,32,32,32,32,32,32,32,32,32,32,32,32,32,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,97,116,116,114,34,62,116,101,120,116,68,101,99,111,114,97,116,105,111,110,60,47,115,112,97,110,62,58,32,60,115,112,97,110,32,99,108,97,115,115,61,34,104,108,106,115,45,115,116,114,105,110,103,34,62,38,35,120,50,55,59,117,110,100,101,114,108,105,110,101,38,35,120,50,55,59,60,47,115,112,97,110,62,10,32,32,32,32,32,32,32,32,32,32,32,32,125,10,32,32,32,32,32,32,32,32,32,32,125,44,10,32,32,32,32,32,32,32,32,32,32,116,101,120,116,10,32,32,32,32,32,32,32,32,41,10,32,32,32,32,32,32,125,41,10,32,32,32,32,125,41,10,125"
+                    ><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
+                      <path
+                        d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 00308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 00-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"
+                      /></svg></i
+                  ><span>getTooltipHtml(...args)</span>
+                </div>
+              </div>
+              <div class="item-method-content">
+                <div>字符串转链接</div>
+                <h4>Arguments</h4>
+                <div>
+                  <strong style="color: #1890ff;">args</strong
+                  ><strong style="color: #1890ff;"> (...<code>String</code>)</strong><span>: 字符串</span>
+                </div>
+                <h4>Returns</h4>
+                <span><strong style="color: #1890ff;">(<code>String</code>[])</strong><span>: html 字符串</span></span>
+                <h4>
+                  <span>Example</span
+                  ><i
+                    style="margin-left: 10px; cursor: pointer;"
+                    arialabel="图标: code"
+                    class="anticon anticon-code-sandbox action-showREPL"
+                    data-funcname="getTooltipHtml"
+                    data-example="91,34,103,101,116,84,111,111,108,116,105,112,72,116,109,108,40,39,97,98,99,39,41,92,110,47,47,32,61,62,32,91,39,97,98,99,39,93,34,44,34,103,101,116,84,111,111,108,116,105,112,72,116,109,108,40,39,97,97,91,233,147,190,230,142,165,124,99,99,46,99,111,93,98,98,39,41,92,110,47,47,32,61,62,32,91,39,97,97,60,97,32,104,101,114,101,102,61,92,34,99,99,46,99,111,92,34,32,115,116,121,108,101,61,92,34,99,111,108,111,114,58,32,35,102,102,102,59,32,102,111,110,116,87,101,105,103,104,116,58,32,98,111,108,100,59,32,116,101,120,116,68,101,99,111,114,97,116,105,111,110,58,32,117,110,100,101,114,108,105,110,101,92,34,62,233,147,190,230,142,165,60,47,97,62,98,98,39,93,34,93"
+                    ><svg viewbox="64 64 896 896" width="1em" height="1em" fill="currentColor">
+                      <path
+                        d="M709.6 210l.4-.2h.2L512 96 313.9 209.8h-.2l.7.3L151.5 304v416L512 928l360.5-208V304l-162.9-94zM482.7 843.6L339.6 761V621.4L210 547.8V372.9l272.7 157.3v313.4zM238.2 321.5l134.7-77.8 138.9 79.7 139.1-79.9 135.2 78-273.9 158-274-158zM814 548.3l-128.8 73.1v139.1l-143.9 83V530.4L814 373.1v175.2z"
+                      /></svg
+                  ></i>
+                </h4>
+                <div style="display: none;">暂无</div>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getTooltipHtml</span>(<span class="hljs-string">&#x27;abc&#x27;</span>)
+<span class="hljs-comment">// =&gt; [&#x27;abc&#x27;]</span></code></pre>
+                <pre><code class="hljs language-js"><span class="hljs-title function_">getTooltipHtml</span>(<span class="hljs-string">&#x27;aa[链接|cc.co]bb&#x27;</span>)
+<span class="hljs-comment">// =&gt; [&#x27;aa&lt;a heref=&quot;cc.co&quot; style=&quot;color: #fff; fontWeight: bold; textDecoration: underline&quot;&gt;链接&lt;/a&gt;bb&#x27;]</span></code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="m-content-container m-paging">
+            <div class="m-paging-prev m-paging-item">
+              <a href="numeral.html" class="href"><span class="ui-font-ydoc"></span>数值</a>
+            </div>
+            <div class="m-paging-next m-paging-item">
+              <a href="string.html" class="href">字符串处理<span class="ui-font-ydoc"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <script>
+      var $content = document.getElementById('js-content')
+      var $summaryItems = Array.prototype.slice.call(document.querySelectorAll('#js-menu .href'))
+      var $menu = document.getElementById('js-menu')
+      if (sessionStorage.prevPathname) {
+        sessionStorage.setItem('prevPrevPathname', sessionStorage.prevPathname)
+        sessionStorage.setItem('prevPrevMenuScrollTop', sessionStorage.prevMenuScrollTop)
+        sessionStorage.setItem('prevPrevContentScrollTop', sessionStorage.prevContentScrollTop)
       }
-      if ($content && sessionStorage.prevPrevContentScrollTop) {
-        $content.scrollTop = sessionStorage.prevPrevContentScrollTop;
+      if (sessionStorage.locationPathname) {
+        sessionStorage.setItem('prevPathname', sessionStorage.locationPathname)
+        sessionStorage.setItem('prevMenuScrollTop', sessionStorage.menuScrollTop)
+        sessionStorage.setItem('prevContentScrollTop', sessionStorage.contentScrollTop)
       }
-    }
-    sessionStorage.setItem('locationPathname', window.location.pathname);
-    </script><script src="../ydoc/scripts/plugins/dollar.min.js"></script><script src="../ydoc/scripts/plugins/responsive-nav.min.js"></script><script src="../ydoc/scripts/plugins/slideout.min.js"></script><script src="../ydoc/scripts/app.js"></script><script src="../ydoc/ydoc-plugin-search/core.js"></script><script src="../ydoc/ydoc-plugin-search/search.js"></script><script src="https://file.ljcdn.com/bs/react/17.0.2/umd/react.production.min.js"></script><script src="https://file.ljcdn.com/bs/react-dom/17.0.2/umd/react-dom.production.min.js"></script><script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script><script src="https://embed.runkit.com"></script><script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script><script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script><script src="../search_json.js"></script></body></html>
+      if ($menu && sessionStorage.menuScrollTop) {
+        $menu.scrollTop = sessionStorage.menuScrollTop
+      }
+      // 刷新页面但不切换 pathname 的时候，内容区恢复到记忆的高度
+      if ($content && sessionStorage.contentScrollTop && window.location.pathname == sessionStorage.locationPathname) {
+        $content.scrollTop = sessionStorage.contentScrollTop
+      } else if (sessionStorage.prevPrevPathname && sessionStorage.prevPrevPathname === window.location.pathname) {
+        if ($menu && sessionStorage.prevPrevMenuScrollTop) {
+          $menu.scrollTop = sessionStorage.prevPrevMenuScrollTop
+        }
+        if ($content && sessionStorage.prevPrevContentScrollTop) {
+          $content.scrollTop = sessionStorage.prevPrevContentScrollTop
+        }
+      }
+      sessionStorage.setItem('locationPathname', window.location.pathname)
+    </script>
+    <script src="../ydoc/scripts/plugins/dollar.min.js"></script>
+    <script src="../ydoc/scripts/plugins/responsive-nav.min.js"></script>
+    <script src="../ydoc/scripts/plugins/slideout.min.js"></script>
+    <script src="../ydoc/scripts/app.js"></script>
+    <script src="../ydoc/ydoc-plugin-search/core.js"></script>
+    <script src="../ydoc/ydoc-plugin-search/search.js"></script>
+    <script src="https://file.ljcdn.com/bs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://file.ljcdn.com/bs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://file.ljcdn.com/bs/antd/4.16.6/dist/antd.min.js"></script>
+    <script src="https://embed.runkit.com"></script>
+    <script src="https://unpkg.com/@nbfe/tools@latest/dist/index.min.js"></script>
+    <script src="https://shuoshubao.github.io/tools/assets/js/code.js"></script>
+    <script src="../search_json.js"></script>
+  </body>
+</html>

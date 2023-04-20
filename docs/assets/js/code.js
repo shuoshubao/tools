@@ -1,14 +1,17 @@
 /*
  * @Author: fangt11
  * @Date:   2021-08-06 20:16:27
- * @Last Modified by:   fangt11
- * @Last Modified time: 2021-08-12 12:24:27
+ * @Last Modified by:   shuoshubao
+ * @Last Modified time: 2023-04-20 11:45:40
  */
 
 window.addEventListener('load', () => {
   const { React, antd } = window
   const { createElement } = React
   const { Modal } = antd
+  const decodeText = text => {
+    return new TextDecoder().decode(new Uint8Array(text.split(',')))
+  }
   document.body.addEventListener('click', e => {
     const icon = e.target.closest('.anticon')
     if (!icon) {
@@ -18,7 +21,7 @@ window.addEventListener('load', () => {
     // ShowSourceCode
     if (classList.contains('action-showSourceCode')) {
       const { code } = dataset
-      const codeText = decodeURIComponent(code)
+      const codeText = decodeText(code)
       Modal.info({
         width: 800,
         maskClosable: true,
@@ -36,9 +39,8 @@ window.addEventListener('load', () => {
     // Try in REPL
     if (classList.contains('action-showREPL')) {
       const { funcname, example } = dataset
-      const Examples = JSON.parse(decodeURIComponent(example))
+      const Examples = JSON.parse(decodeText(example))
       const source = [
-        `require('lodash');`,
         `const { ${funcname} } = require('@nbfe/tools');`,
         '',
         Examples.reduce((prev, cur) => {
