@@ -23,6 +23,10 @@ const MenuListText = []
 ensureDirSync('src/documents')
 // copySync('CHANGELOG.md', 'src/CHANGELOG.md')
 
+const encodeText = text => {
+  return new TextEncoder().encode(text)
+}
+
 files.forEach(v => {
   const fileName = v.split(/[/|.]/)[1]
   const { categoryName = '' } = FilesConfig.find(v2 => {
@@ -85,7 +89,7 @@ files.forEach(v => {
                       },
                       ariaLabel: '图标: code',
                       className: 'anticon anticon-code action-showSourceCode',
-                      'data-code': encodeURIComponent(hljs.highlight(code.trim(), { language: 'js' }).value)
+                      'data-code': encodeText(hljs.highlight(code.trim(), { language: 'js' }).value)
                     },
                     SvgIcons.CodeOutlined
                   ],
@@ -185,7 +189,7 @@ files.forEach(v => {
                       ariaLabel: '图标: code',
                       className: 'anticon anticon-code-sandbox action-showREPL',
                       'data-funcname': funcName,
-                      'data-example': encodeURIComponent(JSON.stringify(DataSetExample))
+                      'data-example': encodeText(JSON.stringify(DataSetExample))
                     },
                     SvgIcons.CodeSandboxOutlined
                   ]
