@@ -1,12 +1,5 @@
 import test from 'ava'
-import {
-  arrayMove,
-  reserveProperties,
-  removeProperties,
-  removeEmptyProperties,
-  produceEmptyObject,
-  formatEmptyToDefault
-} from '../../lib/data'
+import { arrayMove, formatEmptyToDefault, produceEmptyObject, removeEmptyProperties, removeProperties, reserveProperties } from '../../lib/data'
 
 test('arrayMove', async t => {
   const { deepEqual } = t
@@ -47,7 +40,7 @@ test('removeEmptyProperties', async t => {
   const { is, deepEqual } = t
 
   const data = { a: '', b: 0, c: false, d: null, e: { a: 0 } }
-  removeEmptyProperties(data, ['a'])
+  removeEmptyProperties(data)
 
   deepEqual(data, { b: 0, c: false, e: { a: 0 } })
 
