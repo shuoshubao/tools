@@ -17,7 +17,7 @@ footer:
     href: 'https://github.com/shuoshubao/'
   links:
     Git仓库:
-      - { name: 'Github', href: 'https://github.com/shuoshubao/nbfe/tools' }
+      - { name: 'Github', href: 'https://github.com/shuoshubao/tools' }
 
 ---
 
