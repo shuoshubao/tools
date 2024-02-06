@@ -1,5 +1,5 @@
 import test from 'ava'
-import { trimAll, pascalCase } from '../../lib/string'
+import { pascalCase, trimAll } from '../../lib/string'
 
 test('trimAll', t => {
   const { is } = t

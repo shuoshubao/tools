@@ -1,5 +1,5 @@
-import test from 'ava'
 import Schema from 'async-validator'
+import test from 'ava'
 import { rules } from '../../lib/rules'
 
 const commonSchemaOptions = {

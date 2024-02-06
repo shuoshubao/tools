@@ -1,5 +1,5 @@
 import test from 'ava'
-import { setAttrs, convertCssom, setStyle, getCssText, getWordWidth, classNames, suffixClassNames } from '../../lib/dom'
+import { classNames, convertCssom, getCssText, getWordWidth, setAttrs, setStyle, suffixClassNames } from '../../lib/dom'
 
 test('setAttrs', t => {
   const { is } = t

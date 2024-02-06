@@ -1,25 +1,24 @@
 import test from 'ava'
-import moment from 'moment'
-import { pick as pick2, omit as omit2, inRange } from 'lodash'
+import { inRange, omit as omit2, pick as pick2 } from 'lodash'
 import {
+  get,
+  isBoolean,
+  isEqual,
+  isFunction,
+  isInteger,
+  isNil,
+  isNull,
   isNumber,
   isString,
-  isBoolean,
   isUndefined,
-  isFunction,
-  isNull,
-  isNil,
-  pick,
-  omit,
-  uniq,
-  last,
-  upperFirst,
   kebabCase,
-  get,
-  uniqWith,
-  isInteger,
+  last,
+  omit,
+  pick,
   random,
-  isEqual
+  uniq,
+  uniqWith,
+  upperFirst
 } from '../../lib/lodash'
 
 test('isNumber', async t => {

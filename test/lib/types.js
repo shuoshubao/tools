@@ -1,17 +1,17 @@
 import test from 'ava'
 import {
   getType,
-  isUniq,
-  isEmptyString,
-  isEmptyValue,
+  isBlob,
   isEmptyArray,
   isEmptyObject,
-  isPromise,
-  isBlob,
-  isEveryTruthy,
+  isEmptyString,
+  isEmptyValue,
   isEveryFalsy,
+  isEveryTruthy,
+  isPromise,
+  isSomeFalsy,
   isSomeTruthy,
-  isSomeFalsy
+  isUniq
 } from '../../lib/types'
 
 test('isUniq', async t => {

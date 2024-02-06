@@ -1,5 +1,5 @@
 import test from 'ava'
-import { plus, minus, multiply, divide } from '../../lib/decimal'
+import { divide, minus, multiply, plus } from '../../lib/decimal'
 
 test('plus', async t => {
   const { is } = t

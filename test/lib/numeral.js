@@ -1,5 +1,5 @@
 import test from 'ava'
-import { thousands, getValueInRange } from '../../lib/numeral'
+import { getValueInRange, thousands } from '../../lib/numeral'
 
 test('thousands', t => {
   const { is } = t
