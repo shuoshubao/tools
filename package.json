@@ -1,56 +1,56 @@
 {
-  "name": "@nbfe/tools",
-  "version": "0.5.2",
-  "description": "工具库",
-  "author": "shuoshubao <759979885@qq.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shuoshubao/tools.git"
-  },
-  "homepage": "https://shuoshubao.github.io/tools",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "license": "ISC",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "scripts": {
-    "docs:generate": "nodemon bin --watch ./bin --watch ./lib --watch ./src --watch ./lib",
-    "docs:dev": "npm run docs:generate & ydoc serve",
-    "docs:build": "rm -rf docs && node bin && ydoc build",
-    "test": "npx ava --verbose",
-    "test:watch": "npx ava --verbose --watch",
-    "coverage": "npx nyc ava",
-    "coverage:summary": "npx nyc --reporter=istanbul-reporter-html --reporter=text-summary ava",
-    "build": "rm -rf dist && npx rollup -c",
-    "prepublishOnly": "npm run build"
-  },
-  "devDependencies": {
-    "@ava/babel": "^1.0.1",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
-    "@nbfe/js2html": "^1.2.0",
-    "@nbfe/tools": "^0.4.0",
-    "@rollup/plugin-babel": "^5.1.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-terser": "^0.2.1",
-    "async-validator": "^3.4.0",
-    "ava": "^3.12.1",
-    "browser-env": "^3.3.0",
-    "core-js": "^3.27.2",
-    "dox": "^1.0.0",
-    "esm": "^3.2.25",
-    "fs-extra": "^11.1.0",
-    "highlight.js": "^11.7.0",
-    "istanbul-reporter-html": "^0.3.2",
-    "lodash": "^4.17.21",
-    "moment": "^2.27.0",
-    "node-fetch": "^2.6.0",
-    "nyc": "^15.1.0",
-    "rollup": "^2.67.2",
-    "ydoc": "^4.1.3"
-  }
+    "name": "@nbfe/tools",
+    "version": "0.5.2",
+    "description": "工具库",
+    "author": "shuoshubao <759979885@qq.com>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shuoshubao/tools.git"
+    },
+    "homepage": "https://shuoshubao.github.io/tools",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "license": "ISC",
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "scripts": {
+        "docs:generate": "nodemon bin --watch ./bin --watch ./lib --watch ./src --watch ./lib",
+        "docs:dev": "npm run docs:generate & ydoc serve",
+        "docs:build": "rm -rf docs && node bin && ydoc build",
+        "test": "npx ava --verbose",
+        "test:watch": "npx ava --verbose --watch",
+        "coverage": "npx nyc ava",
+        "coverage:summary": "npx nyc --reporter=istanbul-reporter-html --reporter=text-summary ava",
+        "build": "rm -rf dist && npx rollup -c",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@ava/babel": "^1.0.1",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@nbfe/js2html": "^1.2.0",
+        "@nbfe/tools": "^0.4.0",
+        "@rollup/plugin-babel": "^5.1.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-terser": "^0.2.1",
+        "async-validator": "^3.4.0",
+        "ava": "^3.12.1",
+        "browser-env": "^3.3.0",
+        "core-js": "^3.27.2",
+        "dox": "^1.0.0",
+        "esm": "^3.2.25",
+        "fs-extra": "^11.1.0",
+        "highlight.js": "^11.7.0",
+        "istanbul-reporter-html": "^0.3.2",
+        "lodash": "^4.17.21",
+        "moment": "^2.27.0",
+        "node-fetch": "^2.6.0",
+        "nyc": "^15.1.0",
+        "rollup": "^2.67.2",
+        "ydoc": "^4.1.3"
+    }
 }
