@@ -51,7 +51,10 @@ aside: false
     );
 });
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
+    base: isProduction ? '/tools/' : '/',
     outDir: './docs',
     title: '工具库',
     description: '基于大量业务项目提取的工具方法集',
