@@ -56,7 +56,7 @@ const comments = ref(data)
 <Dox :data="comments" />
 `;
 
-    writeFileSync(dataFile, JSON.stringify(comments));
+    writeFileSync(dataFile, JSON.stringify(comments, ' ', 4));
 
     writeFileSync(mdFile, mdContent.trimStart());
 });
