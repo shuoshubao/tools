@@ -5,8 +5,10 @@ node_modules
 package-lock.json
 npm-debug.log*
 
-src/documents
-src/CHANGELOG.md
-
 coverage
 dist
+
+documents
+docs
+
+.vitepress/cache
