@@ -1,6 +1,6 @@
 import { parseComments } from 'dox';
 import { readFileSync, writeFileSync } from 'fs';
-import { ensureFileSync } from 'fs-extra';
+import { ensureDirSync, ensureFileSync } from 'fs-extra';
 import { defineConfig } from 'vitepress';
 import { version } from '../package.json';
 
@@ -32,6 +32,8 @@ const DocsSidebar = [
         comments: parseComments(content.replaceAll('export ', ''))
     };
 });
+
+ensureDirSync('./documents');
 
 writeFileSync('./documents/dox.js', `export default  ${JSON.stringify(DocsSidebar, ' ', 4)}`);
 
