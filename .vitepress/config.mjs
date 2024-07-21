@@ -1,10 +1,7 @@
 import { parseComments } from 'dox';
 import { readFileSync, writeFileSync } from 'fs';
-import { ensureDirSync, ensureFileSync } from 'fs-extra';
+import { ensureDirSync } from 'fs-extra';
 import { defineConfig } from 'vitepress';
-import { version } from '../package.json';
-
-console.log(111, version);
 
 const DocsSidebar = [
     { value: 'date', label: '日期' },
@@ -37,18 +34,31 @@ ensureDirSync('./documents');
 
 writeFileSync('./documents/dox.js', `export default  ${JSON.stringify(DocsSidebar, ' ', 4)}`);
 
-DocsSidebar.forEach(v => {
-    const file = `documents/${v.value}.md`;
-    ensureFileSync(file);
-    writeFileSync(
-        file,
-        `---
+DocsSidebar.forEach(item => {
+    const { value, comments } = item;
+
+    const dataFile = `documents/${value}.dox.json`;
+
+    const mdFile = `documents/${value}.md`;
+
+    const mdContent = `
+---
 aside: false
 ---
 
-<Dox />
-`
-    );
+<script setup>
+import { ref } from 'vue';
+import data from './${value}.dox.json';
+
+const comments = ref(data)
+</script>
+
+<Dox :data="comments" />
+`;
+
+    writeFileSync(dataFile, JSON.stringify(comments));
+
+    writeFileSync(mdFile, mdContent.trimStart());
 });
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -78,12 +88,6 @@ export default defineConfig({
             {
                 rel: 'stylesheet',
                 href: 'https://registry.npmmirror.com/highlight.js/11.7.0/files/styles/vs2015.css'
-            }
-        ],
-        [
-            'script',
-            {
-                src: 'https://registry.npmmirror.com/vue/3.4.33/files/dist/vue.global.prod.js'
             }
         ]
     ],
@@ -167,6 +171,9 @@ export default defineConfig({
                 icon: 'github',
                 link: 'https://github.com/shuoshubao/tools'
             }
-        ]
+        ],
+        search: {
+            provider: 'local'
+        }
     }
 });
