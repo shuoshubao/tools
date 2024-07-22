@@ -31,16 +31,16 @@ const DocsSidebar = [
     };
 });
 
-ensureDirSync('./documents');
+ensureDirSync('./docs');
 
-writeFileSync('./documents/dox.js', `export default  ${JSON.stringify(DocsSidebar, ' ', 4)}`);
+writeFileSync('./docs/dox.js', `export default  ${JSON.stringify(DocsSidebar, ' ', 4)}`);
 
 DocsSidebar.forEach(item => {
     const { value, comments } = item;
 
-    const dataFile = `documents/${value}.dox.json`;
+    const dataFile = `docs/${value}.dox.json`;
 
-    const mdFile = `documents/${value}.md`;
+    const mdFile = `docs/${value}.md`;
 
     const mdContent = `
 ---
@@ -66,7 +66,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
     base: isProduction ? '/tools/' : '/',
-    outDir: './docs',
+    outDir: './documents',
     title: '工具库',
     description: '超实用的工具方法集合',
     head: [
@@ -101,8 +101,8 @@ export default defineConfig({
             },
             {
                 text: '文档',
-                link: '/documents/date',
-                activeMatch: '/documents/'
+                link: '/docs/date',
+                activeMatch: '/docs/'
             },
             {
                 text: '贡献指南',
@@ -115,8 +115,8 @@ export default defineConfig({
         ],
 
         sidebar: {
-            '/documents/': {
-                base: '/documents/',
+            '/docs/': {
+                base: '/docs/',
                 items: DocsSidebar.map(item => {
                     const { label, value, comments } = item;
                     return {

@@ -24,7 +24,7 @@
         "test": "ava --verbose",
         "test:watch": "ava --verbose --watch",
         "coverage": "nyc ava",
-        "coverage:summary": "nyc --reporter=istanbul-reporter-html --reporter=text-summary --report-dir=./docs/coverage ava",
+        "coverage:summary": "nyc --reporter=istanbul-reporter-html --reporter=text-summary --report-dir=./documents/coverage ava",
         "build": "rm -rf dist && rollup -c",
         "deploy": "npm run build && npm run docs:build && npm run coverage:summary",
         "prepublishOnly": "npm run build"
