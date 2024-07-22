@@ -2,22 +2,29 @@
  * @Author: shuoshubao
  * @Date: 2024-07-21 01:46:48
  * @LastEditors: shuoshubao
- * @LastEditTime: 2024-07-22 13:16:45
+ * @LastEditTime: 2024-07-22 13:46:30
  * @Description: dox 解析
 -->
 <template>
-    <el-card shadow="hover" v-for="(item, index) in CommentsList" :key="index" :style="`margin-top: ${index === 0 ? 0 : 30}px`" class="item-card">
+    <el-card
+        shadow="hover"
+        v-for="(item, index) in CommentsList"
+        :key="index"
+        :id="item.name"
+        :style="`margin-top: ${index === 0 ? 0 : 30}px`"
+        class="item-card"
+    >
         <template #header>
             <span>{{ item.name }}</span>
             <span>{{ item.callText }}</span>
-            <div style="float: right">
+            <div class="el-card-extra">
                 <el-icon @click="handleShowCode(item)">
                     <View />
                 </el-icon>
             </div>
         </template>
         <div v-html="item.description" />
-        <h4>Arguments</h4>
+        <h4>参数</h4>
         <div v-for="(item2, index2) in item.Arguments" :key="index2">
             <el-space>
                 <strong v-html="['(', delHtmlTag(item2.typesDescription), ')'].join('')" />
@@ -25,7 +32,7 @@
                 <span v-html="delHtmlTag(item2.description)" />
             </el-space>
         </div>
-        <h4>Returns</h4>
+        <h4>返回值</h4>
         <div v-for="(item2, index2) in item.Returns" :key="index2">
             <el-space>
                 <strong v-html="item2.name" />
@@ -34,12 +41,12 @@
                 <span v-html="delHtmlTag(item2.description)" />
             </el-space>
         </div>
-        <h4>Examples</h4>
+        <h4>示例</h4>
         <div v-for="(item2, index2) in item.Examples" :key="index2" class="item-example">
             <pre><code v-html="hljs.highlight(item2.string.trim(), { language: 'js' }).value" class="hljs language-js" /></pre>
         </div>
     </el-card>
-    <el-dialog v-model="sourceCodeDialog.visible" :title="sourceCodeDialog.title">
+    <el-dialog v-model="sourceCodeDialog.visible" :title="sourceCodeDialog.title" top="20px">
         <pre class="modal-source-code"><code v-html="sourceCodeDialog.code" /></pre>
     </el-dialog>
 </template>
@@ -111,6 +118,27 @@ const handleShowCode = item => {
 
 <style lang="scss" scoped>
 .item-card {
+    &:target {
+        box-shadow: var(--el-box-shadow-light);
+    }
+    ::v-deep {
+        .el-card__header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .el-card__body {
+            padding: 10px;
+        }
+    }
+    .el-card-extra {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    h4 {
+        margin: 12px 0 6px;
+    }
     .item-example {
         pre {
             margin: 0;

@@ -18,7 +18,6 @@ const DocsSidebar = [
     { value: 'vue', label: 'Vue' },
     { value: 'formatters', label: '格式化' },
     { value: 'numeral', label: '数值' },
-    { value: 'html', label: 'Html字符串' },
     { value: 'string', label: '字符串处理' },
     { value: 'image', label: '图片' }
 ].map(v => {
