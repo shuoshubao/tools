@@ -29,6 +29,9 @@
         "deploy": "npm run build && npm run docs:build && npm run coverage:summary",
         "prepublishOnly": "npm run build"
     },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    },
     "devDependencies": {
         "@ava/babel": "^1.0.1",
         "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -48,7 +51,6 @@
         "fs-extra": "^11.1.0",
         "highlight.js": "^11.7.0",
         "istanbul-reporter-html": "^0.6.0",
-        "lodash": "^4.17.21",
         "moment": "^2.27.0",
         "node-fetch": "^2.6.0",
         "nyc": "^15.1.0",
