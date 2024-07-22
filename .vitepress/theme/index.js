@@ -2,13 +2,13 @@
  * @Author: shuoshubao
  * @Date: 2024-07-21 19:29:25
  * @LastEditors: shuoshubao
- * @LastEditTime: 2024-07-22 13:02:12
+ * @LastEditTime: 2024-07-22 18:17:41
  * @Description:
  */
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
+import * as tools from '@nbfe/tools';
 import ElementPlus from 'element-plus';
 import DefaultTheme from 'vitepress/theme';
-import * as tools from '../../lib';
 import pkg from '../../package.json';
 import Dox from './Dox.vue';
 

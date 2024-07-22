@@ -1,7 +1,9 @@
 import { parseComments } from 'dox';
 import { readFileSync, writeFileSync } from 'fs';
 import { ensureDirSync } from 'fs-extra';
+import { resolve } from 'path';
 import { defineConfig } from 'vitepress';
+import { name } from '../package.json';
 
 const DocsSidebar = [
     { value: 'date', label: '日期' },
@@ -169,6 +171,14 @@ export default defineConfig({
         ],
         search: {
             provider: 'local'
+        }
+    },
+    vite: {
+        resolve: {
+            alias: {
+                lodash: resolve(__dirname, '../node_modules/lodash-es'),
+                [name]: resolve(__dirname, '../lib')
+            }
         }
     }
 });

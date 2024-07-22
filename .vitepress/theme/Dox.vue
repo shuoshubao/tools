@@ -2,7 +2,7 @@
  * @Author: shuoshubao
  * @Date: 2024-07-21 01:46:48
  * @LastEditors: shuoshubao
- * @LastEditTime: 2024-07-22 17:05:41
+ * @LastEditTime: 2024-07-22 18:21:12
  * @Description: dox 解析
 -->
 <template>
@@ -53,10 +53,8 @@
 
 <script setup>
 import hljs from 'highlight.js';
-import lodash from 'lodash';
+import { filter, map } from 'lodash';
 import { defineProps, ref } from 'vue';
-
-const { filter, map } = lodash;
 
 const props = defineProps(['data']);
 
@@ -136,15 +134,13 @@ const handleShowCode = item => {
     &:target {
         box-shadow: var(--el-box-shadow-light);
     }
-    ::v-deep {
-        .el-card__header {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        .el-card__body {
-            padding: 10px 20px;
-        }
+    :deep(.el-card__header) {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    :deep(.el-card__body) {
+        padding: 10px 20px;
     }
     .el-card-extra {
         display: flex;
