@@ -2,7 +2,7 @@
  * @Author: shuoshubao
  * @Date: 2024-07-21 01:46:48
  * @LastEditors: shuoshubao
- * @LastEditTime: 2024-07-22 13:46:30
+ * @LastEditTime: 2024-07-22 17:05:41
  * @Description: dox 解析
 -->
 <template>
@@ -116,6 +116,21 @@ const handleShowCode = item => {
 };
 </script>
 
+<style lang="scss">
+@media (min-width: 960px) {
+    .VPContent {
+        .VPDoc {
+            padding: 20px;
+            & > .container {
+                & > .content {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+</style>
+
 <style lang="scss" scoped>
 .item-card {
     &:target {
@@ -125,10 +140,10 @@ const handleShowCode = item => {
         .el-card__header {
             display: flex;
             align-items: center;
-            padding: 10px;
+            padding: 10px 20px;
         }
         .el-card__body {
-            padding: 10px;
+            padding: 10px 20px;
         }
     }
     .el-card-extra {
