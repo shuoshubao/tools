@@ -1,6 +1,5 @@
 import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json';
-import terser from '@rollup/plugin-terser';
 import pkg from './package.json';
 
 const createComment = data => {
@@ -46,15 +45,5 @@ export default [
             banner: getBanner()
         },
         plugins
-    },
-    {
-        input: 'lib/index.js',
-        output: {
-            name: 'tools',
-            file: 'dist/index.min.js',
-            format: 'umd',
-            banner: getBanner()
-        },
-        plugins: [...plugins, terser()]
     }
 ];

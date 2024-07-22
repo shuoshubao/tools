@@ -2,7 +2,7 @@
  * @Author: shuoshubao
  * @Date: 2024-07-21 01:46:48
  * @LastEditors: shuoshubao
- * @LastEditTime: 2024-07-21 19:58:07
+ * @LastEditTime: 2024-07-22 13:16:45
  * @Description: dox 解析
 -->
 <template>
@@ -66,40 +66,45 @@ const delHtmlTag = (str = '') => {
 };
 
 const CommentsList = ref(
-    props.data.map(item => {
-        const {
-            ctx: { name },
-            description,
-            tags
-        } = item;
+    props.data
+        .filter(item => {
+            return item.ctx;
+        })
+        .map(item => {
+            const {
+                ctx: { name },
+                description,
+                tags
+            } = item;
 
-        const Arguments = filter(tags, { type: 'param' });
+            const Arguments = filter(tags, { type: 'param' });
 
-        const See = filter(tags, { type: 'see' });
+            const See = filter(tags, { type: 'see' });
 
-        const Returns = filter(tags, { type: 'return' });
+            const Returns = filter(tags, { type: 'return' });
 
-        const Examples = filter(tags, { type: 'example' });
+            const Examples = filter(tags, { type: 'example' });
 
-        const paramsText = map(Arguments, 'name').join(', ');
+            const paramsText = map(Arguments, 'name').join(', ');
 
-        const callText = `(${paramsText})`;
+            const callText = `(${paramsText})`;
 
-        return {
-            name,
-            callText,
-            description: delHtmlTag(description.summary),
-            Arguments,
-            See,
-            Returns,
-            Examples
-        };
-    })
+            return {
+                ...item,
+                name,
+                callText,
+                description: delHtmlTag(description.summary),
+                Arguments,
+                See,
+                Returns,
+                Examples
+            };
+        })
 );
 
 const handleShowCode = item => {
     sourceCodeDialog.value.visible = true;
-    sourceCodeDialog.value.title = item.funcName;
+    sourceCodeDialog.value.title = item.name;
     sourceCodeDialog.value.code = hljs.highlight(item.code.trim(), { language: 'js' }).value;
 };
 </script>

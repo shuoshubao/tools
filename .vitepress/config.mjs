@@ -67,7 +67,7 @@ export default defineConfig({
     base: isProduction ? '/tools/' : '/',
     outDir: './docs',
     title: '工具库',
-    description: '基于大量业务项目提取的工具方法集',
+    description: '超实用的工具方法集合',
     head: [
         [
             'link',
@@ -97,10 +97,6 @@ export default defineConfig({
             {
                 text: '简介',
                 link: '/'
-            },
-            {
-                text: '安装',
-                link: '/install'
             },
             {
                 text: '文档',
