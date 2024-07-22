@@ -1,5 +1,5 @@
 import test from 'ava';
-import { queryParse, queryStringify } from '../../lib/qs';
+import { queryParse, queryStringify } from '../../lib/route';
 
 test('queryParse', async t => {
     const { deepEqual } = t;
