@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.0 (2024-08-01)
+
+### Features
+
+* `getImageSize` 增加设置 `crossOrigin=anonymous`
+
+### BREAKING CHANGE
+
+* 移除 getAntdLocaleZhCN
+* 移除 defineMomentLocaleZhCn
+* 移除 changeImageUrlToBase64
+* 移除 isAndroid
+* 移除 isIOS
+* 移除 isIPhone
+
+
+
+
+
 ## [0.4.1](https://github.com/shuoshubao/nbfe/compare/@nbfe/tools@0.4.0...@nbfe/tools@0.4.1) (2023-03-03)
 
 
