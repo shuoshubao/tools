@@ -110,9 +110,9 @@ getValueInCollection('优秀', data, { key: 'code', valueKey: 'desc' })
 getValueInCollection('优秀', data, { key: 'code', valueKey: 'desc' })<br />
 // =&gt; 5</p>`},{type:"example",string:`
 const data = [{ code: 5, desc: '优秀' }, { code: 4, desc: '良好' }, { code: 3, desc: '及格' }];
-getValueInCollection(5, data, { valueKey: 'code', key: 'desc' })
+getValueInCollection(5, data, { valueKey: 'desc', key: 'code' })
 // => '优秀'`,html:`<p>const data = [{ code: 5, desc: '优秀' }, { code: 4, desc: '良好' }, { code: 3, desc: '及格' }];<br />
-getValueInCollection(5, data, { valueKey: 'code', key: 'desc' })<br />
+getValueInCollection(5, data, { valueKey: 'desc', key: 'code' })<br />
 // =&gt; '优秀'</p>`}],description:{full:`<p>从集合中取值<br />
 比 getLabelByValue 更宽松, 容错, 默认值</p>`,summary:`<p>从集合中取值<br />
 比 getLabelByValue 更宽松, 容错, 默认值</p>`,body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:157,codeStart:177,code:`const getValueInCollection = (value, data = [], options = {}) => {
