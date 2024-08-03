@@ -54,7 +54,7 @@ const toolsNumber = ref(0);
 
 
 onMounted(() => {
-    toolsNumber.value=Object.keys(window.tools).length - 1;
+    toolsNumber.value=Object.keys(window.tools).length;
 });
 </script>
 

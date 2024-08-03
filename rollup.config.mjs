@@ -1,6 +1,5 @@
-import babel from '@rollup/plugin-babel';
-import json from '@rollup/plugin-json';
-import pkg from './package.json';
+import fse from 'fs-extra';
+import cleanup from 'rollup-plugin-cleanup';
 
 const createComment = data => {
     return [
@@ -13,17 +12,14 @@ const createComment = data => {
 };
 
 const getBanner = () => {
-    const { name, version, author, license } = pkg;
+    const { name, version, author, license } = fse.readJsonSync('./package.json');
     const data = [`${name} v${version}`, `(c) 2019-${new Date().getFullYear()} ${author}`, `Released under the ${license} License.`];
     return createComment(data);
 };
 
 const plugins = [
-    json(),
-    babel({
-        babelrc: false,
-        presets: ['@babel/preset-env'],
-        plugins: ['@babel/plugin-proposal-class-properties']
+    cleanup({
+        maxEmptyLines: 1
     })
 ];
 
@@ -33,7 +29,10 @@ export default [
         output: {
             file: 'dist/index.js',
             format: 'cjs',
-            banner: getBanner()
+            banner: getBanner(),
+            generatedCode: {
+                constBindings: true
+            }
         },
         plugins
     },
@@ -42,7 +41,10 @@ export default [
         output: {
             file: 'dist/index.esm.js',
             format: 'esm',
-            banner: getBanner()
+            banner: getBanner(),
+            generatedCode: {
+                constBindings: true
+            }
         },
         plugins
     }
