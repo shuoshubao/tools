@@ -31,16 +31,18 @@ const DocsSidebar = [
     };
 });
 
-ensureDirSync('./docs');
+const TempDocsDir = 'documents';
 
-writeFileSync('./docs/dox.js', `export default  ${JSON.stringify(DocsSidebar, ' ', 4)}`);
+ensureDirSync(`./${TempDocsDir}`);
+
+writeFileSync(`./${TempDocsDir}/dox.js`, `export default  ${JSON.stringify(DocsSidebar, ' ', 4)}`);
 
 DocsSidebar.forEach(item => {
     const { value, comments } = item;
 
-    const dataFile = `docs/${value}.dox.json`;
+    const dataFile = `${TempDocsDir}/${value}.dox.json`;
 
-    const mdFile = `docs/${value}.md`;
+    const mdFile = `${TempDocsDir}/${value}.md`;
 
     const mdContent = `
 ---
@@ -66,7 +68,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
     base: isProduction ? '/tools/' : '/',
-    outDir: './documents',
+    outDir: './docs',
     title: '工具库',
     description: '超实用的工具方法集合',
     head: [
@@ -92,6 +94,9 @@ export default defineConfig({
             }
         ]
     ],
+    rewrites: {
+        [`${TempDocsDir}/:page`]: 'docs/:page'
+    },
     themeConfig: {
         logo: 'https://vuejs.org/logo.svg',
         nav: [
@@ -113,7 +118,6 @@ export default defineConfig({
                 link: '/CHANGELOG'
             }
         ],
-
         sidebar: {
             '/docs/': {
                 base: '/docs/',
@@ -134,21 +138,17 @@ export default defineConfig({
                 })
             }
         },
-
         footer: {
             message: '基于 MIT 许可发布',
             copyright: `版权所有 © 2019-${new Date().getFullYear()} 硕鼠宝`
         },
-
         docFooter: {
             prev: false,
             next: false
         },
-
         outline: {
             label: '大纲'
         },
-
         lastUpdated: {
             text: '最后更新于',
             formatOptions: {
@@ -156,7 +156,6 @@ export default defineConfig({
                 timeStyle: 'medium'
             }
         },
-
         langMenuLabel: '多语言',
         returnToTopLabel: '回到顶部',
         sidebarMenuLabel: '菜单',
