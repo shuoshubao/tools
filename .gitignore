@@ -7,7 +7,7 @@ npm-debug.log*
 coverage
 dist
 
-documents
+vitepress-docs
 docs
 
 .vitepress/cache
