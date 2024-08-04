@@ -3,36 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.2 (2024-08-04)
+
+### Features
+
+- 单测框架由 `ava` 切换至 `vitepress`
+
+## 0.6.1 (2024-08-02)
+
+### Features
+
+- `getImageSize` 去掉 `crossOrigin=anonymous`, 可自行配置额外属性
+
 ## 0.6.0 (2024-08-01)
 
 ### Features
 
-* `getImageSize` 增加设置 `crossOrigin=anonymous`
+- `getImageSize` 增加设置 `crossOrigin=anonymous`
 
 ### BREAKING CHANGE
 
-* 移除 getAntdLocaleZhCN
-* 移除 defineMomentLocaleZhCn
-* 移除 changeImageUrlToBase64
-* 移除 isAndroid
-* 移除 isIOS
-* 移除 isIPhone
-
-
-
-
+- 移除 getAntdLocaleZhCN
+- 移除 defineMomentLocaleZhCn
+- 移除 changeImageUrlToBase64
+- 移除 isAndroid
+- 移除 isIOS
+- 移除 isIPhone
 
 ## [0.4.1](https://github.com/shuoshubao/nbfe/compare/@nbfe/tools@0.4.0...@nbfe/tools@0.4.1) (2023-03-03)
 
 
 ### Features
 
-* 新增 arrayMove; 数组交换位置 ([933b395](https://github.com/shuoshubao/nbfe/commit/933b395be4357dc0134e9a856a0aa92e4e1b8456))
-* add homepage ([97f71b5](https://github.com/shuoshubao/nbfe/commit/97f71b59f9bb97d743d4db2f46dd9be9bad43978))
-
-
-
-
+- 新增 arrayMove; 数组交换位置 ([933b395](https://github.com/shuoshubao/nbfe/commit/933b395be4357dc0134e9a856a0aa92e4e1b8456))
+- add homepage ([97f71b5](https://github.com/shuoshubao/nbfe/commit/97f71b59f9bb97d743d4db2f46dd9be9bad43978))
 
 # [0.4.0](https://github.com/shuoshubao/nbfe/compare/@nbfe/tools@0.3.0...@nbfe/tools@0.4.0) (2023-01-02)
 

@@ -9,11 +9,14 @@ hero:
         - theme: brand
           text: GitHub
           link: https://github.com/shuoshubao/tools
-        - theme: alt
+        - theme: brand
           text: Npm
           link: https://www.npmjs.com/package/@nbfe/tools
         - theme: alt
           text: 单测报告
+          link: https://shuoshubao.github.io/tools/vitest/
+        - theme: alt
+          text: 单测覆盖率
           link: https://shuoshubao.github.io/tools/coverage/
 
 features:
