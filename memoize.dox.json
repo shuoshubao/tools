@@ -1,0 +1,57 @@
+[
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Function} fn     缓存的函数",
+                "name": "fn",
+                "description": "<p>缓存的函数</p>",
+                "types": [
+                    "Function"
+                ],
+                "typesDescription": "<code>Function</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Function}        包装的函数",
+                "types": [
+                    "Function"
+                ],
+                "typesDescription": "<code>Function</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>包装的函数</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst add = (a, b) => {\n  return a + b;\n}\n\nconst memoizedAdd = memoize(add);\n\nmemoizedAdd(1, 2) // 3\nmemoizedAdd(1, 2) // 3",
+                "html": "<p>const add = (a, b) =&gt; {<br />\nreturn a + b;<br />\n}</p>\n<p>const memoizedAdd = memoize(add);</p>\n<p>memoizedAdd(1, 2) // 3<br />\nmemoizedAdd(1, 2) // 3</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>memoize/cache</p>",
+            "summary": "<p>memoize/cache</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 3,
+        "codeStart": 18,
+        "code": "const memoize = fn => {\n    const caches = [];\n    const memoized = (...args) => {\n        const item = caches.find(v => {\n            return isEqual(v.args, args);\n        });\n        if (item) {\n            return item.data;\n        }\n        const data = fn(...args);\n        caches.unshift({\n            args,\n            data\n        });\n        return data;\n    };\n    memoized.clear = () => {\n        caches.splice(0, Infinity);\n    };\n    return memoized;\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "memoize",
+            "value": "fn => {",
+            "string": "memoize"
+        }
+    }
+]

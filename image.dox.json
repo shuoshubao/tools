@@ -1,0 +1,71 @@
+[
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{String} url 图片的url",
+                "name": "url",
+                "description": "<p>图片的url</p>",
+                "types": [
+                    "String"
+                ],
+                "typesDescription": "<code>String</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Object} attrs 图片的额外属性",
+                "name": "attrs",
+                "description": "<p>图片的额外属性</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Object}     图片的尺寸 { width, height }",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>图片的尺寸 { width, height }</p>"
+            },
+            {
+                "type": "example",
+                "string": "\n(async() => {\n  const size = await getImageSize('https://github.githubassets.com/favicons/favicon.png');\n  console.log(size);\n})();\n\n// => { width: 24, height: 24 }",
+                "html": "<p>(async() =&gt; {<br />\nconst size = await getImageSize('https://github.githubassets.com/favicons/favicon.png');<br />\nconsole.log(size);<br />\n})();</p>\n<p>// =&gt; { width: 24, height: 24 }</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>获取图片的尺寸</p>",
+            "summary": "<p>获取图片的尺寸</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 4,
+        "codeStart": 18,
+        "code": "const getImageSize = (url = '', attrs = {}) => {\n    return new Promise(reslove => {\n        const img = new Image();\n        setAttrs(img, {\n            src: url,\n            ...attrs\n        });\n        img.onload = async () => {\n            reslove(pick(img, ['width', 'height']));\n        };\n        img.onerror = async () => {\n            reslove({ width: 0, height: 0 });\n        };\n    });\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "getImageSize",
+            "value": "(url = '', attrs = {}) => {",
+            "string": "getImageSize"
+        }
+    }
+]

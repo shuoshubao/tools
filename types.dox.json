@@ -1,0 +1,750 @@
+[
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} value    值",
+                "name": "value",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{String}     构造函数名",
+                "types": [
+                    "String"
+                ],
+                "typesDescription": "<code>String</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>构造函数名</p>"
+            },
+            {
+                "type": "example",
+                "string": "\ngetType()\n// => 'Undefined'",
+                "html": "<p>getType()<br />\n// =&gt; 'Undefined'</p>"
+            },
+            {
+                "type": "example",
+                "string": "\ngetType(null)\n// => 'Null'",
+                "html": "<p>getType(null)<br />\n// =&gt; 'Null'</p>"
+            },
+            {
+                "type": "example",
+                "string": "\ngetType(() => {})\n// => 'Function'",
+                "html": "<p>getType(() =&gt; {})<br />\n// =&gt; 'Function'</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>获取类型</p>",
+            "summary": "<p>获取类型</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 3,
+        "codeStart": 22,
+        "code": "const getType = value => {\n    return Object.prototype.toString.call(value).slice(8, -1);\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "getType",
+            "value": "value => {",
+            "string": "getType"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Array}  [arr=[]] 数组",
+                "name": "[arr=[]]",
+                "description": "<p>数组</p>",
+                "types": [
+                    "Array"
+                ],
+                "typesDescription": "<code>Array</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     数组是否存在重复项",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>数组是否存在重复项</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisUniq();\n// => true",
+                "html": "<p>isUniq();<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisUniq([1, 2, 3]);\n// => true",
+                "html": "<p>isUniq([1, 2, 3]);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisUniq([1, 2, 3, 2]);\n// => false",
+                "html": "<p>isUniq([1, 2, 3, 2]);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>重复数组</p>",
+            "summary": "<p>重复数组</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 26,
+        "codeStart": 45,
+        "code": "const isUniq = (arr = []) => {\n    return uniq(arr).length === arr.length;\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isUniq",
+            "value": "(arr = []) => {",
+            "string": "isUniq"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} value 值",
+                "name": "value",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     是否是空字符串",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>是否是空字符串</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyString('');\n// => true",
+                "html": "<p>isEmptyString('');<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyString(null);\n// => false",
+                "html": "<p>isEmptyString(null);<br />\n// =&gt; false</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyString([]);\n// => false",
+                "html": "<p>isEmptyString([]);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>空字符串</p>",
+            "summary": "<p>空字符串</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 49,
+        "codeStart": 68,
+        "code": "const isEmptyString = value => {\n    return value === '';\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isEmptyString",
+            "value": "value => {",
+            "string": "isEmptyString"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} value 值",
+                "name": "value",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     是否为空值",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>是否为空值</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyValue(null);\n// => true\nisEmptyValue(undefined);\n// => true\nisEmptyValue('');\n// => true\nisEmptyValue([]);\n// => false\nisEmptyValue(false);\n// => false\nisEmptyValue(123);\n// => false",
+                "html": "<p>isEmptyValue(null);<br />\n// =&gt; true<br />\nisEmptyValue(undefined);<br />\n// =&gt; true<br />\nisEmptyValue('');<br />\n// =&gt; true<br />\nisEmptyValue([]);<br />\n// =&gt; false<br />\nisEmptyValue(false);<br />\n// =&gt; false<br />\nisEmptyValue(123);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>空值: null undefined ''</p>",
+            "summary": "<p>空值: null undefined ''</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 72,
+        "codeStart": 91,
+        "code": "const isEmptyValue = value => {\n    return [isNull, isUndefined, isEmptyString].some(v => v(value));\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isEmptyValue",
+            "value": "value => {",
+            "string": "isEmptyValue"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} value 值",
+                "name": "value",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     是否是Promise",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>是否是Promise</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst p1 = new Promise((resolve, reject) => {\n\n});\nisPromise(p1);\n// => false\n\nisPromise(1);\n// => false",
+                "html": "<p>const p1 = new Promise((resolve, reject) =&gt; {</p>\n<p>});<br />\nisPromise(p1);<br />\n// =&gt; false</p>\n<p>isPromise(1);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>Promise</p>",
+            "summary": "<p>Promise</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 95,
+        "codeStart": 110,
+        "code": "const isPromise = value => {\n    return getType(value) === 'Promise';\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isPromise",
+            "value": "value => {",
+            "string": "isPromise"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} value 值",
+                "name": "value",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     是否是Blob类型",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>是否是Blob类型</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisBlob(new Blob());\n// => true",
+                "html": "<p>isBlob(new Blob());<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisBlob(123);\n// => false",
+                "html": "<p>isBlob(123);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>Blob</p>",
+            "summary": "<p>Blob</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 114,
+        "codeStart": 128,
+        "code": "const isBlob = value => {\n    return getType(value) === 'Blob';\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isBlob",
+            "value": "value => {",
+            "string": "isBlob"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} arr 值",
+                "name": "arr",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     是否是空数组",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>是否是空数组</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyArray([]);\n// => true",
+                "html": "<p>isEmptyArray([]);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyArray([1, 2]);\n// => false",
+                "html": "<p>isEmptyArray([1, 2]);<br />\n// =&gt; false</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyArray('abc');\n// => false",
+                "html": "<p>isEmptyArray('abc');<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>空数组</p>",
+            "summary": "<p>空数组</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 132,
+        "codeStart": 151,
+        "code": "const isEmptyArray = arr => {\n    return Array.isArray(arr) && arr.length === 0;\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isEmptyArray",
+            "value": "arr => {",
+            "string": "isEmptyArray"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} obj 值",
+                "name": "obj",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}     是否是空对象 {}",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>是否是空对象 {}</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyObject({});\n// => true",
+                "html": "<p>isEmptyObject({});<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyObject({ a: 1 });\n// => false",
+                "html": "<p>isEmptyObject({ a: 1 });<br />\n// =&gt; false</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEmptyObject(null);\n// => false",
+                "html": "<p>isEmptyObject(null);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>空对象</p>",
+            "summary": "<p>空对象</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 155,
+        "codeStart": 174,
+        "code": "const isEmptyObject = obj => {\n    return obj && getType(obj) === 'Object' && isEmptyArray(Object.keys(obj));\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isEmptyObject",
+            "value": "obj => {",
+            "string": "isEmptyObject"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{...*} args 值",
+                "name": "args",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "...*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": true
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}         数组每一项都是truthy",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>数组每一项都是truthy</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEveryTruthy(1, 2, 3);\n// true",
+                "html": "<p>isEveryTruthy(1, 2, 3);<br />\n// true</p>"
+            },
+            {
+                "type": "example",
+                "string": "isEveryTruthy([1, 2, 3]);\n// true",
+                "html": "<p>isEveryTruthy([1, 2, 3]);<br />\n// true</p>"
+            },
+            {
+                "type": "example",
+                "string": "isEveryTruthy(0, 2, 3);\n// false",
+                "html": "<p>isEveryTruthy(0, 2, 3);<br />\n// false</p>"
+            },
+            {
+                "type": "example",
+                "string": "isEveryTruthy(1 > 0, 2 != 1, 3);\n// true",
+                "html": "<p>isEveryTruthy(1 &gt; 0, 2 != 1, 3);<br />\n// true</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>全真</p>",
+            "summary": "<p>全真</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 178,
+        "codeStart": 199,
+        "code": "const isEveryTruthy = (...args) => {\n    return [].concat(...args).every(Boolean);\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isEveryTruthy",
+            "value": "(...args) => {",
+            "string": "isEveryTruthy"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{...*} args 值",
+                "name": "args",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "...*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": true
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}         数组每一项都是falsy",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>数组每一项都是falsy</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEveryFalsy(false, '', 0);\n// => true",
+                "html": "<p>isEveryFalsy(false, '', 0);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEveryFalsy([false, '', 0]);\n// => true",
+                "html": "<p>isEveryFalsy([false, '', 0]);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisEveryFalsy(false, '', 2 > 1);\n// => false",
+                "html": "<p>isEveryFalsy(false, '', 2 &gt; 1);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>全假</p>",
+            "summary": "<p>全假</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 203,
+        "codeStart": 222,
+        "code": "const isEveryFalsy = (...args) => {\n    return [].concat(...args).every(v => !v);\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isEveryFalsy",
+            "value": "(...args) => {",
+            "string": "isEveryFalsy"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{...*} args 值",
+                "name": "args",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "...*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": true
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}         部分真",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>部分真</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeTruthy(1, 2, 3);\n// => true",
+                "html": "<p>isSomeTruthy(1, 2, 3);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeTruthy([1, 2]);\n// => true",
+                "html": "<p>isSomeTruthy([1, 2]);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeTruthy(0, null);\n// => false",
+                "html": "<p>isSomeTruthy(0, null);<br />\n// =&gt; false</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeTruthy([]);\n// => false",
+                "html": "<p>isSomeTruthy([]);<br />\n// =&gt; false</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeTruthy([0, false]);\n// => false",
+                "html": "<p>isSomeTruthy([0, false]);<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>部分真</p>",
+            "summary": "<p>部分真</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 226,
+        "codeStart": 255,
+        "code": "const isSomeTruthy = (...args) => {\n    return [].concat(...args).some(Boolean);\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isSomeTruthy",
+            "value": "(...args) => {",
+            "string": "isSomeTruthy"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{...*} args 值",
+                "name": "args",
+                "description": "<p>值</p>",
+                "types": "[object Object]",
+                "typesDescription": "...*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": true
+            },
+            {
+                "type": "return",
+                "string": "{Boolean}         部分假",
+                "types": [
+                    "Boolean"
+                ],
+                "typesDescription": "<code>Boolean</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>部分假</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeFalsy(0, 1, 2);\n// => true",
+                "html": "<p>isSomeFalsy(0, 1, 2);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeFalsy([0, null]);\n// => true",
+                "html": "<p>isSomeFalsy([0, null]);<br />\n// =&gt; true</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nisSomeFalsy(1, 2, true, 'false');\n// => false",
+                "html": "<p>isSomeFalsy(1, 2, true, 'false');<br />\n// =&gt; false</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>部分假</p>",
+            "summary": "<p>部分假</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 259,
+        "codeStart": 278,
+        "code": "const isSomeFalsy = (...args) => {\n    return [].concat(...args).some(v => !v);\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "isSomeFalsy",
+            "value": "(...args) => {",
+            "string": "isSomeFalsy"
+        }
+    }
+]

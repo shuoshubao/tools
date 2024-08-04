@@ -1,0 +1,418 @@
+[
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Array}    arr         [数组]",
+                "name": "arr",
+                "description": "<p>[数组]</p>",
+                "types": [
+                    "Array"
+                ],
+                "typesDescription": "<code>Array</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Number}   fromIndex   起始位置",
+                "name": "fromIndex",
+                "description": "<p>起始位置</p>",
+                "types": [
+                    "Number"
+                ],
+                "typesDescription": "<code>Number</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Number}   toIndex     结束位置",
+                "name": "toIndex",
+                "description": "<p>结束位置</p>",
+                "types": [
+                    "Number"
+                ],
+                "typesDescription": "<code>Number</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Array}                源数据被修改",
+                "types": [
+                    "Array"
+                ],
+                "typesDescription": "<code>Array</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>源数据被修改</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst arr1 = [11, 22, 33, 44, 55, 66]\narrayMove(arr1, 0, 1)\nconsole.log(arr1)",
+                "html": "<p>const arr1 = [11, 22, 33, 44, 55, 66]<br />\narrayMove(arr1, 0, 1)<br />\nconsole.log(arr1)</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst arr2 = [11, 22, 33, 44, 55, 66]\narrayMove(arr2, 0, -1)\nconsole.log(arr2)",
+                "html": "<p>const arr2 = [11, 22, 33, 44, 55, 66]<br />\narrayMove(arr2, 0, -1)<br />\nconsole.log(arr2)</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>数组交换位置</p>",
+            "summary": "<p>数组交换位置</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 8,
+        "codeStart": 26,
+        "code": "const arrayMove = (arr, fromIndex, toIndex) => {\n    const { length } = arr;\n    const start = getPositiveIndex(fromIndex, length);\n    const end = getPositiveIndex(toIndex, length);\n    const ref = [arr[start], arr[end]];\n    arr[start] = ref[1];\n    arr[end] = ref[0];\n    return arr;\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "arrayMove",
+            "value": "(arr, fromIndex, toIndex) => {",
+            "string": "arrayMove"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Object} [data] 数据源",
+                "name": "[data]",
+                "description": "<p>数据源</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Array}  [keys] 需要保留的属性列表",
+                "name": "[keys]",
+                "description": "<p>需要保留的属性列表</p>",
+                "types": [
+                    "Array"
+                ],
+                "typesDescription": "<code>Array</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{*}      修改数据源",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>修改数据源</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst data = { a: 1, b: 2, c: 3 }\nreserveProperties(data, ['a'])\nconsole.log(data);\n\n// => { a: 1 };",
+                "html": "<p>const data = { a: 1, b: 2, c: 3 }<br />\nreserveProperties(data, ['a'])<br />\nconsole.log(data);</p>\n<p>// =&gt; { a: 1 };</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>只保留对象的部分属性(删除之外的属性)</p>",
+            "summary": "<p>只保留对象的部分属性(删除之外的属性)</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 36,
+        "codeStart": 50,
+        "code": "const reserveProperties = (data = {}, keys = []) => {\n    Object.keys(data)\n        .filter(v => !keys.includes(v))\n        .forEach(v => {\n            delete data[v];\n        });\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "reserveProperties",
+            "value": "(data = {}, keys = []) => {",
+            "string": "reserveProperties"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Object} [data] 数据源",
+                "name": "[data]",
+                "description": "<p>数据源</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Array}  [keys] 需要删除的属性列表",
+                "name": "[keys]",
+                "description": "<p>需要删除的属性列表</p>",
+                "types": [
+                    "Array"
+                ],
+                "typesDescription": "<code>Array</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{*}      修改数据源",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>修改数据源</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst data = { a: 1, b: 2, c: 3 };\nremoveProperties(data, ['a']);\nconsole.log(data);\n// => { b: 2, c: 3 };",
+                "html": "<p>const data = { a: 1, b: 2, c: 3 };<br />\nremoveProperties(data, ['a']);<br />\nconsole.log(data);<br />\n// =&gt; { b: 2, c: 3 };</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>批量删除属性</p>",
+            "summary": "<p>批量删除属性</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 58,
+        "codeStart": 70,
+        "code": "const removeProperties = (data = {}, keys = []) => {\n    keys.forEach(v => {\n        delete data[v];\n    });\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "removeProperties",
+            "value": "(data = {}, keys = []) => {",
+            "string": "removeProperties"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Object} [data] 数据源",
+                "name": "[data]",
+                "description": "<p>数据源</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{*}      修改数据源",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>修改数据源</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst data = { a: '', b: 0, c: false, d: null, e: { a: 0 } };\nremoveEmptyProperties(data);\nconsole.log(data);\n// => { b: 0, c: false, e: { a: 0 } };",
+                "html": "<p>const data = { a: '', b: 0, c: false, d: null, e: { a: 0 } };<br />\nremoveEmptyProperties(data);<br />\nconsole.log(data);<br />\n// =&gt; { b: 0, c: false, e: { a: 0 } };</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>批量删除属性值为空的属性</p>",
+            "summary": "<p>批量删除属性值为空的属性</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 76,
+        "codeStart": 87,
+        "code": "const removeEmptyProperties = (data = {}) => {\n    Object.entries(data).forEach(([k, v]) => {\n        if (isEmptyValue(v)) {\n            delete data[k];\n        }\n    });\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "removeEmptyProperties",
+            "value": "(data = {}) => {",
+            "string": "removeEmptyProperties"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Array}  [keys]      属性列表",
+                "name": "[keys]",
+                "description": "<p>属性列表</p>",
+                "types": [
+                    "Array"
+                ],
+                "typesDescription": "<code>Array</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{String} [emptyText] 空值",
+                "name": "[emptyText]",
+                "description": "<p>空值</p>",
+                "types": [
+                    "String"
+                ],
+                "typesDescription": "<code>String</code>",
+                "optional": true,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{Object}           [值全为空的对象]",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>[值全为空的对象]</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nproduceEmptyObject(['a', 'b']);\n// => { a: '', b: '' }",
+                "html": "<p>produceEmptyObject(['a', 'b']);<br />\n// =&gt; { a: '', b: '' }</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nproduceEmptyObject(['a', 'b'], null);\n// => { a: null, b: null }",
+                "html": "<p>produceEmptyObject(['a', 'b'], null);<br />\n// =&gt; { a: null, b: null }</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>产生一个值全为空的对象</p>",
+            "summary": "<p>产生一个值全为空的对象</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 95,
+        "codeStart": 110,
+        "code": "const produceEmptyObject = (keys = [], emptyText = '') => {\n    return keys.reduce((prev, cur) => {\n        prev[cur] = emptyText;\n        return prev;\n    }, {});\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "produceEmptyObject",
+            "value": "(keys = [], emptyText = '') => {",
+            "string": "produceEmptyObject"
+        }
+    },
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{Object} data     数据源",
+                "name": "data",
+                "description": "<p>数据源</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Object} formater [{ key, value }]",
+                "name": "formater",
+                "description": "<p>[{ key, value }]</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{*}      修改数据源",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>修改数据源</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nconst data = {\n    a: 1,\n    b: null,\n    c: '',\n    d: ' '\n};\nconst formater = {\n    a: '',\n    b: -1,\n    c: -1\n};\nformatEmptyToDefault(data, formater);\nconsole.log(data);\n// => { a: 1, b: -1, c: -1, d: ' ' }",
+                "html": "<p>const data = {<br />\na: 1,<br />\nb: null,<br />\nc: '',<br />\nd: ' '<br />\n};<br />\nconst formater = {<br />\na: '',<br />\nb: -1,<br />\nc: -1<br />\n};<br />\nformatEmptyToDefault(data, formater);<br />\nconsole.log(data);<br />\n// =&gt; { a: 1, b: -1, c: -1, d: ' ' }</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>将数据中的空值替换为默认值</p>",
+            "summary": "<p>将数据中的空值替换为默认值</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 117,
+        "codeStart": 139,
+        "code": "const formatEmptyToDefault = (data = {}, formater = {}) => {\n    Object.entries(data).forEach(([k, v]) => {\n        Object.entries(formater).forEach(([k2, v2]) => {\n            // eslint-disable-next-line sonarjs/no-collapsible-if\n            if (k2 === k) {\n                if (isEmptyValue(v)) {\n                    data[k] = v2;\n                }\n            }\n        });\n    });\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "formatEmptyToDefault",
+            "value": "(data = {}, formater = {}) => {",
+            "string": "formatEmptyToDefault"
+        }
+    }
+]

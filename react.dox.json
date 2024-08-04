@@ -1,0 +1,67 @@
+[
+    {
+        "tags": [
+            {
+                "type": "param",
+                "string": "{*} context  this",
+                "name": "context",
+                "description": "<p>this</p>",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "param",
+                "string": "{Object} newState 新的状态",
+                "name": "newState",
+                "description": "<p>新的状态</p>",
+                "types": [
+                    "Object"
+                ],
+                "typesDescription": "<code>Object</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false
+            },
+            {
+                "type": "return",
+                "string": "{*}          无",
+                "types": "[object Object]",
+                "typesDescription": "*",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "description": "<p>无</p>"
+            },
+            {
+                "type": "example",
+                "string": "\nthis.setState({ a: 1 }, () => {\n  console.log('do something here');\n});\n// 等价于\nawait setAsyncState(this, { a: 1 });\nconsole.log('do something here');",
+                "html": "<p>this.setState({ a: 1 }, () =&gt; {<br />\nconsole.log('do something here');<br />\n});<br />\n// 等价于<br />\nawait setAsyncState(this, { a: 1 });<br />\nconsole.log('do something here');</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>setState =&gt; promise</p>",
+            "summary": "<p>setState =&gt; promise</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 1,
+        "codeStart": 15,
+        "code": "const setAsyncState = (context, newState) => {\n    return new Promise(resolve => {\n        context.setState(newState, resolve);\n    });\n};",
+        "ctx": {
+            "type": "declaration",
+            "name": "setAsyncState",
+            "value": "(context, newState) => {",
+            "string": "setAsyncState"
+        }
+    }
+]

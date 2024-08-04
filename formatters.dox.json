@@ -1,0 +1,38 @@
+[
+    {
+        "tags": [
+            {
+                "type": "type",
+                "string": "{Formatters}",
+                "types": [
+                    "Formatters"
+                ],
+                "typesDescription": "<code>Formatters</code>",
+                "optional": false,
+                "nullable": false,
+                "nonNullable": false,
+                "variable": false,
+                "html": "<p>{Formatters}</p>"
+            }
+        ],
+        "description": {
+            "full": "<p>文本格式化</p>",
+            "summary": "<p>文本格式化</p>",
+            "body": ""
+        },
+        "isPrivate": false,
+        "isConstructor": false,
+        "isClass": false,
+        "isEvent": false,
+        "ignore": false,
+        "line": 26,
+        "codeStart": 30,
+        "code": "const formatters = new Formatters();",
+        "ctx": {
+            "type": "declaration",
+            "name": "formatters",
+            "value": "new Formatters()",
+            "string": "formatters"
+        }
+    }
+]
