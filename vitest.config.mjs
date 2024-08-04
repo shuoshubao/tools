@@ -2,7 +2,7 @@
  * @Author: fangtao01
  * @Date: 2024-05-30 15:12:03
  * @LastEditors: shuoshubao
- * @LastEditTime: 2024-08-04 01:06:28
+ * @LastEditTime: 2024-08-04 13:53:29
  * @Description: Vitest 配置
  * @Link: https://cn.vitest.dev
  */
@@ -15,11 +15,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default mergeConfig({
     test: {
         reporters: ['html'],
-        outputFile: './docs/vitest/index.html',
+        outputFile: './documents/vitest/index.html',
         coverage: {
             enabled: true,
             reporter: ['html', 'istanbul-reporter-html'],
-            reportsDirectory: './docs/coverage',
+            reportsDirectory: './documents/coverage',
             include: ['**/lib/*.js']
         }
     },
