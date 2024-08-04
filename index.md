@@ -64,7 +64,7 @@ onMounted(() => {
     <el-descriptions-item label="名称">{{ pkg.name }}</el-descriptions-item>
     <el-descriptions-item label="版本号">{{ pkg.version }}</el-descriptions-item>
     <el-descriptions-item label="测试框架">
-        <el-link href="https://github.com/avajs/ava">ava</el-link>
+        <el-link href="https://vitest.dev">Vitest</el-link>
     </el-descriptions-item>
     <el-descriptions-item label="函数数量">{{ toolsNumber }}</el-descriptions-item>
 </el-descriptions>

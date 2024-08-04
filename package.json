@@ -21,37 +21,28 @@
         "docs:dev": "vitepress dev",
         "docs:preview": "vitepress preview",
         "docs:build": "vitepress build",
-        "test": "ava --verbose",
-        "test:watch": "ava --verbose --watch",
-        "coverage": "nyc ava",
-        "coverage:summary": "nyc --reporter=istanbul-reporter-html --reporter=text-summary --report-dir=./documents/coverage ava",
+        "test": "vitest --ui",
         "build": "rm -rf dist && rollup -c",
-        "deploy": "npm run build && npm run docs:build && npm run coverage:summary",
+        "deploy": "npm run build && npm run docs:build && vitest run",
         "prepublishOnly": "npm run build"
     },
     "dependencies": {
         "lodash": "^4.17.21"
     },
     "devDependencies": {
-        "@ava/babel": "^1.0.1",
         "@nbfe/js2html": "^1.2.0",
+        "@vitest/coverage-v8": "^2.0.5",
+        "@vitest/ui": "^2.0.5",
         "async-validator": "^3.4.0",
-        "ava": "^3.12.1",
-        "browser-env": "^3.3.0",
-        "core-js": "^3.27.2",
         "dox": "^1.0.0",
         "element-plus": "^2.7.7",
-        "esm": "^3.2.25",
         "fs-extra": "^11.1.0",
         "highlight.js": "^11.7.0",
         "istanbul-reporter-html": "^0.6.0",
         "lodash-es": "^4.17.21",
-        "moment": "^2.27.0",
-        "node-fetch": "^2.6.0",
-        "nyc": "^15.1.0",
         "rollup": "^4.20.0",
         "rollup-plugin-cleanup": "^3.2.1",
-        "sass": "^1.77.8",
-        "vitepress": "^1.3.1"
+        "vitepress": "^1.3.1",
+        "vitest": "^2.0.5"
     }
 }

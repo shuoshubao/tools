@@ -12,7 +12,7 @@ npm run docs:dev
 
 ## 单测
 
-为保证工具方法的质量, 每个方法必须编写单测. 本项目采用的测试库是 [ava](https://github.com/avajs/ava-docs/blob/main/zh_CN/readme.md)
+为保证工具方法的质量, 每个方法必须编写单测. 本项目采用的测试库是 [Vitest](https://vitest.dev)
 
 ## 打包
 
