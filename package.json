@@ -22,7 +22,7 @@
         "docs:preview": "vitepress preview",
         "docs:build": "vitepress build",
         "test": "vitest --ui",
-        "build": "rm -rf dist && rollup -c",
+        "build": "rollup -c",
         "deploy": "npm run build && npm run docs:build && vitest run",
         "prepublishOnly": "npm run build"
     },
