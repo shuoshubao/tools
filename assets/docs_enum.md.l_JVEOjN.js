@@ -86,6 +86,7 @@ convertDataToCascader(res, { path: 'data.list', valueKey: 'code', labelKey: 'des
 convertDataToCascader(res, { path: 'data.list', valueKey: 'code', labelKey: 'desc', childrenKey: 'list' })<br />
 // =&gt; [{ value: 5, label: '优秀' }, { value: 4, label: '良好' }, { value: 3, label: '及格', children: [{ value: 3.5, label: '一般' }] }]</p>`}],description:{full:"<p>将任意数据返回转换成 Cascader: [{ value, label, children: [{ value, label }]}]</p>",summary:"<p>将任意数据返回转换成 Cascader: [{ value, label, children: [{ value, label }]}]</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:125,codeStart:136,code:`const convertDataToCascader = (res, config) => {
     const { path = '', valueKey = 'value', labelKey = 'label', childrenKey = 'children', renderLabel = node => node.label } = config;
+
     const convertData = data => {
         return data.reduce((prev, cur) => {
             const item = {
@@ -97,11 +98,16 @@ convertDataToCascader(res, { path: 'data.list', valueKey: 'code', labelKey: 'des
             if (cur[childrenKey]) {
                 item.children = convertData(cur[childrenKey]);
             }
+            if (isEmptyArray(item.children)) {
+                delete item.children;
+            }
             prev.push(item);
             return prev;
         }, []);
     };
+
     const list = path ? get(res, path, []) : res;
+
     return convertData(list);
 };`,ctx:{type:"declaration",name:"convertDataToCascader",value:"(res, config) => {",string:"convertDataToCascader"}},{tags:[{type:"see",string:"getLabelByValue",local:"getLabelByValue",html:"<p>getLabelByValue</p>"},{type:"param",string:"{*} value      值",name:"value",description:"<p>值</p>",types:"[object Object]",typesDescription:"*",optional:!1,nullable:!1,nonNullable:!1,variable:!1},{type:"param",string:"{Array}  data 数据源",name:"data",description:"<p>数据源</p>",types:["Array"],typesDescription:"<code>Array</code>",optional:!1,nullable:!1,nonNullable:!1,variable:!1},{type:"param",string:"{Object} options    { key = '', valueKey = '', emptyText = '--' }",name:"options",description:"<p>{ key = '', valueKey = '', emptyText = '--' }</p>",types:["Object"],typesDescription:"<code>Object</code>",optional:!1,nullable:!1,nonNullable:!1,variable:!1},{type:"return",string:"{*}            值",types:"[object Object]",typesDescription:"*",optional:!1,nullable:!1,nonNullable:!1,variable:!1,description:"<p>值</p>"},{type:"example",string:`
 const data = [{ code: 5, desc: '优秀' }, { code: 4, desc: '良好' }, { code: 3, desc: '及格' }];
@@ -115,7 +121,7 @@ getValueInCollection(5, data, { valueKey: 'desc', key: 'code' })
 getValueInCollection(5, data, { valueKey: 'desc', key: 'code' })<br />
 // =&gt; '优秀'</p>`}],description:{full:`<p>从集合中取值<br />
 比 getLabelByValue 更宽松, 容错, 默认值</p>`,summary:`<p>从集合中取值<br />
-比 getLabelByValue 更宽松, 容错, 默认值</p>`,body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:157,codeStart:177,code:`const getValueInCollection = (value, data = [], options = {}) => {
+比 getLabelByValue 更宽松, 容错, 默认值</p>`,body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:163,codeStart:183,code:`const getValueInCollection = (value, data = [], options = {}) => {
     const { key = '', valueKey = '', emptyText = '--' } = options;
     const item = data.find(v => {
         return String(value) === String(v[key]);
@@ -124,4 +130,4 @@ getValueInCollection(5, data, { valueKey: 'desc', key: 'code' })<br />
         return item[valueKey];
     }
     return emptyText;
-};`,ctx:{type:"declaration",name:"getValueInCollection",value:"(value, data = [], options = {}) => {",string:"getValueInCollection"}}],b=JSON.parse('{"title":"","description":"","frontmatter":{"aside":false},"headers":[],"relativePath":"docs/enum.md","filePath":"vitepress-docs/enum.md","lastUpdated":null}'),c={name:"docs/enum.md"},y=Object.assign(c,{setup(i){const e=l(o);return(p,d)=>{const a=t("Dox");return r(),n("div",null,[s(a,{data:e.value},null,8,["data"])])}}});export{b as __pageData,y as default};
+};`,ctx:{type:"declaration",name:"getValueInCollection",value:"(value, data = [], options = {}) => {",string:"getValueInCollection"}}],b=JSON.parse('{"title":"","description":"","frontmatter":{"aside":false},"headers":[],"relativePath":"docs/enum.md","filePath":"vitepress-docs/enum.md","lastUpdated":null}'),i={name:"docs/enum.md"},y=Object.assign(i,{setup(c){const e=l(o);return(p,d)=>{const a=t("Dox");return r(),n("div",null,[s(a,{data:e.value},null,8,["data"])])}}});export{b as __pageData,y as default};
