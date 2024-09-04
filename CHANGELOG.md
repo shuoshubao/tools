@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.3 (2024-09-04)
+
+### Features
+
+- `convertDataToCascader` 删除空的 children
+
 ## 0.6.2 (2024-08-04)
 
 ### Features
