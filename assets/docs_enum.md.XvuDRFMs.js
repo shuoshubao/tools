@@ -16,11 +16,11 @@ getLabelByValue(5, data)<br />
     }
     return emptyText;
 };`,ctx:{type:"declaration",name:"getLabelByValue",value:"(value, data = [], emptyText = '--') => {",string:"getLabelByValue"}},{tags:[{type:"param",string:"{Object} [data={}] json数据",name:"[data={}]",description:"<p>json数据</p>",types:["Object"],typesDescription:"<code>Object</code>",optional:!0,nullable:!1,nonNullable:!1,variable:!1},{type:"return",string:"{Array}      标准的枚举数据格式 [{ value, label }]",types:["Array"],typesDescription:"<code>Array</code>",optional:!1,nullable:!1,nonNullable:!1,variable:!1,description:"<p>标准的枚举数据格式 [{ value, label }]</p>"},{type:"example",string:`
-const data = { 优秀: 5, 良好: 4, 及格: 3 }
+const data = { 5: '优秀', 4: '良好', 3: '及格' }
 convertJsonToEnum(data)
-// => [{ value: 5, label: '优秀' }, { value: 4, label: '良好' }, { value: 3, label: '及格' }]`,html:`<p>const data = { 优秀: 5, 良好: 4, 及格: 3 }<br />
+// => [{ value: '3', label: '及格' }, { value: '4', label: '良好' }, { value: '5', label: '优秀' }]`,html:`<p>const data = { 5: '优秀', 4: '良好', 3: '及格' }<br />
 convertJsonToEnum(data)<br />
-// =&gt; [{ value: 5, label: '优秀' }, { value: 4, label: '良好' }, { value: 3, label: '及格' }]</p>`}],description:{full:"<p>将 json 转换成 [{ value, label }]</p>",summary:"<p>将 json 转换成 [{ value, label }]</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:36,codeStart:46,code:`const convertJsonToEnum = (data = {}) => {
+// =&gt; [{ value: '3', label: '及格' }, { value: '4', label: '良好' }, { value: '5', label: '优秀' }]</p>`}],description:{full:"<p>将 json 转换成 [{ value, label }]</p>",summary:"<p>将 json 转换成 [{ value, label }]</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:36,codeStart:46,code:`const convertJsonToEnum = (data = {}) => {
     return Object.entries(data).reduce((prev, [k, v]) => {
         prev.push({
             value: k,
