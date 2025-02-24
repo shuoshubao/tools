@@ -1,3 +1,6 @@
+import commonjs from '@rollup/plugin-commonjs';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 import fse from 'fs-extra';
 import cleanup from 'rollup-plugin-cleanup';
 
@@ -27,8 +30,8 @@ export default [
     {
         input: 'lib/index.js',
         output: {
-            file: 'dist/index.js',
             format: 'cjs',
+            file: 'dist/index.js',
             banner: getBanner(),
             generatedCode: {
                 constBindings: true
@@ -39,13 +42,30 @@ export default [
     {
         input: 'lib/index.js',
         output: {
-            file: 'dist/index.esm.js',
             format: 'esm',
+            file: 'dist/index.esm.js',
             banner: getBanner(),
             generatedCode: {
                 constBindings: true
             }
         },
         plugins
+    },
+    {
+        input: 'lib/index.js',
+        output: {
+            format: 'umd',
+            name: 'tools',
+            file: 'dist/index.umd.js',
+            banner: getBanner(),
+            generatedCode: {
+                constBindings: true
+            },
+            globals: {
+                lodash: '_'
+            }
+        },
+        external: ['lodash'],
+        plugins: [...plugins, nodeResolve(), commonjs(), terser()]
     }
 ];
