@@ -58,7 +58,7 @@ convertDataToEnum(res, { path: 'data.list', valueKey: 'code', labelKey: 'desc' }
         labelKey = 'label',
         renderLabel = node => node.label
     } = options;
-    const list = path ? get(res, path, []) : res;
+    const list = path ? get(res, path, []) ?? [] : res;
     return list.map(v => {
         // 数组的每一项是基本类型: number | string
         if (typeof v !== 'object') {
@@ -106,7 +106,7 @@ convertDataToCascader(res, { path: 'data.list', valueKey: 'code', labelKey: 'des
         }, []);
     };
 
-    const list = path ? get(res, path, []) : res;
+    const list = path ? get(res, path, []) ?? [] : res;
 
     return convertData(list);
 };`,ctx:{type:"declaration",name:"convertDataToCascader",value:"(res, config) => {",string:"convertDataToCascader"}},{tags:[{type:"see",string:"getLabelByValue",local:"getLabelByValue",html:"<p>getLabelByValue</p>"},{type:"param",string:"{*} value      值",name:"value",description:"<p>值</p>",types:"[object Object]",typesDescription:"*",optional:!1,nullable:!1,nonNullable:!1,variable:!1},{type:"param",string:"{Array}  data 数据源",name:"data",description:"<p>数据源</p>",types:["Array"],typesDescription:"<code>Array</code>",optional:!1,nullable:!1,nonNullable:!1,variable:!1},{type:"param",string:"{Object} options    { key = '', valueKey = '', emptyText = '--' }",name:"options",description:"<p>{ key = '', valueKey = '', emptyText = '--' }</p>",types:["Object"],typesDescription:"<code>Object</code>",optional:!1,nullable:!1,nonNullable:!1,variable:!1},{type:"return",string:"{*}            值",types:"[object Object]",typesDescription:"*",optional:!1,nullable:!1,nonNullable:!1,variable:!1,description:"<p>值</p>"},{type:"example",string:`
