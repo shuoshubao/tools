@@ -12,9 +12,12 @@ console.log(arr2)</p>`}],description:{full:"<p>数组交换位置</p>",summary:"
     const { length } = arr;
     const start = getPositiveIndex(fromIndex, length);
     const end = getPositiveIndex(toIndex, length);
+    if (start === end) {
+        return arr;
+    }
     const ref = [arr[start], arr[end]];
-    arr[start] = ref[1];
-    arr[end] = ref[0];
+    arr.splice(start, 1, ref[1]);
+    arr.splice(end, 1, ref[0]);
     return arr;
 };`,ctx:{type:"declaration",name:"arrayMove",value:"(arr, fromIndex, toIndex) => {",string:"arrayMove"}},{tags:[{type:"param",string:"{Object} [data] 数据源",name:"[data]",description:"<p>数据源</p>",types:["Object"],typesDescription:"<code>Object</code>",optional:!0,nullable:!1,nonNullable:!1,variable:!1},{type:"param",string:"{Array}  [keys] 需要保留的属性列表",name:"[keys]",description:"<p>需要保留的属性列表</p>",types:["Array"],typesDescription:"<code>Array</code>",optional:!0,nullable:!1,nonNullable:!1,variable:!1},{type:"return",string:"{*}      修改数据源",types:"[object Object]",typesDescription:"*",optional:!1,nullable:!1,nonNullable:!1,variable:!1,description:"<p>修改数据源</p>"},{type:"example",string:`
 const data = { a: 1, b: 2, c: 3 }
@@ -24,7 +27,7 @@ console.log(data);
 // => { a: 1 };`,html:`<p>const data = { a: 1, b: 2, c: 3 }<br />
 reserveProperties(data, ['a'])<br />
 console.log(data);</p>
-<p>// =&gt; { a: 1 };</p>`}],description:{full:"<p>只保留对象的部分属性(删除之外的属性)</p>",summary:"<p>只保留对象的部分属性(删除之外的属性)</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:36,codeStart:50,code:`const reserveProperties = (data = {}, keys = []) => {
+<p>// =&gt; { a: 1 };</p>`}],description:{full:"<p>只保留对象的部分属性(删除之外的属性)</p>",summary:"<p>只保留对象的部分属性(删除之外的属性)</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:39,codeStart:53,code:`const reserveProperties = (data = {}, keys = []) => {
     Object.keys(data)
         .filter(v => !keys.includes(v))
         .forEach(v => {
@@ -37,7 +40,7 @@ console.log(data);
 // => { b: 2, c: 3 };`,html:`<p>const data = { a: 1, b: 2, c: 3 };<br />
 removeProperties(data, ['a']);<br />
 console.log(data);<br />
-// =&gt; { b: 2, c: 3 };</p>`}],description:{full:"<p>批量删除属性</p>",summary:"<p>批量删除属性</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:58,codeStart:70,code:`const removeProperties = (data = {}, keys = []) => {
+// =&gt; { b: 2, c: 3 };</p>`}],description:{full:"<p>批量删除属性</p>",summary:"<p>批量删除属性</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:61,codeStart:73,code:`const removeProperties = (data = {}, keys = []) => {
     keys.forEach(v => {
         delete data[v];
     });
@@ -48,7 +51,7 @@ console.log(data);
 // => { b: 0, c: false, e: { a: 0 } };`,html:`<p>const data = { a: '', b: 0, c: false, d: null, e: { a: 0 } };<br />
 removeEmptyProperties(data);<br />
 console.log(data);<br />
-// =&gt; { b: 0, c: false, e: { a: 0 } };</p>`}],description:{full:"<p>批量删除属性值为空的属性</p>",summary:"<p>批量删除属性值为空的属性</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:76,codeStart:87,code:`const removeEmptyProperties = (data = {}) => {
+// =&gt; { b: 0, c: false, e: { a: 0 } };</p>`}],description:{full:"<p>批量删除属性值为空的属性</p>",summary:"<p>批量删除属性值为空的属性</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:79,codeStart:90,code:`const removeEmptyProperties = (data = {}) => {
     Object.entries(data).forEach(([k, v]) => {
         if (isEmptyValue(v)) {
             delete data[k];
@@ -60,7 +63,7 @@ produceEmptyObject(['a', 'b']);
 // =&gt; { a: '', b: '' }</p>`},{type:"example",string:`
 produceEmptyObject(['a', 'b'], null);
 // => { a: null, b: null }`,html:`<p>produceEmptyObject(['a', 'b'], null);<br />
-// =&gt; { a: null, b: null }</p>`}],description:{full:"<p>产生一个值全为空的对象</p>",summary:"<p>产生一个值全为空的对象</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:95,codeStart:110,code:`const produceEmptyObject = (keys = [], emptyText = '') => {
+// =&gt; { a: null, b: null }</p>`}],description:{full:"<p>产生一个值全为空的对象</p>",summary:"<p>产生一个值全为空的对象</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:98,codeStart:113,code:`const produceEmptyObject = (keys = [], emptyText = '') => {
     return keys.reduce((prev, cur) => {
         prev[cur] = emptyText;
         return prev;
@@ -92,7 +95,7 @@ c: -1<br />
 };<br />
 formatEmptyToDefault(data, formater);<br />
 console.log(data);<br />
-// =&gt; { a: 1, b: -1, c: -1, d: ' ' }</p>`}],description:{full:"<p>将数据中的空值替换为默认值</p>",summary:"<p>将数据中的空值替换为默认值</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:117,codeStart:139,code:`const formatEmptyToDefault = (data = {}, formater = {}) => {
+// =&gt; { a: 1, b: -1, c: -1, d: ' ' }</p>`}],description:{full:"<p>将数据中的空值替换为默认值</p>",summary:"<p>将数据中的空值替换为默认值</p>",body:""},isPrivate:!1,isConstructor:!1,isClass:!1,isEvent:!1,ignore:!1,line:120,codeStart:142,code:`const formatEmptyToDefault = (data = {}, formater = {}) => {
     Object.entries(data).forEach(([k, v]) => {
         Object.entries(formater).forEach(([k2, v2]) => {
             // eslint-disable-next-line sonarjs/no-collapsible-if

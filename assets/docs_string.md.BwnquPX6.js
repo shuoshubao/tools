@@ -33,8 +33,8 @@ getPercentageHtml(0.23)
 // => '<span style="color: #00b365;">23%</span>'`,html:`<p>getPercentageHtml(0.23)<br />
 // =&gt; '<span style="color: #00b365;">23%</span>'</p>`},{type:"example",string:`
 getPercentageHtml(-0.23)
-// => '<span style="color: #00b365;">-23%</span>'`,html:`<p>getPercentageHtml(-0.23)<br />
-// =&gt; '<span style="color: #00b365;">-23%</span>'</p>`},{type:"example",string:`
+// => '<span style="color: #f5483b;">-23%</span>'`,html:`<p>getPercentageHtml(-0.23)<br />
+// =&gt; '<span style="color: #f5483b;">-23%</span>'</p>`},{type:"example",string:`
 getPercentageHtml(0.23, { disabled: true })
 // => '23%'`,html:`<p>getPercentageHtml(0.23, { disabled: true })<br />
 // =&gt; '23%'</p>`}],description:{full:`<p>百分比html<br />
